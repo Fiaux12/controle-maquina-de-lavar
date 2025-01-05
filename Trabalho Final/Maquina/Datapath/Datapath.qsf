@@ -18,14 +18,14 @@
 #
 # Quartus II 64-Bit
 # Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-# Date created = 17:09:36  January 05, 2025
+# Date created = 17:25:36  January 05, 2025
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		Logica_Combinacional_assignment_defaults.qdf
+#		Datapath_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -38,9 +38,9 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C35F672C6
-set_global_assignment -name TOP_LEVEL_ENTITY Logica_Combinacional
+set_global_assignment -name TOP_LEVEL_ENTITY Datapath
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:09:36  JANUARY 05, 2025"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:25:36  JANUARY 05, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -48,4 +48,7 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_global_assignment -name VHDL_FILE Logica_Combinacional.vhd
+set_global_assignment -name VHDL_FILE ../../Reg_W/RegW/RegW.vhd
+set_global_assignment -name VHDL_FILE ../../Contador/Contador/Contador.vhd
+set_global_assignment -name VHDL_FILE ../../BCD_7seg/BCD_7seg/BCD_7seg.vhd
+set_global_assignment -name VHDL_FILE Datapath.vhd
