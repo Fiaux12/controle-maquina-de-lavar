@@ -1,0 +1,43 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity contador is
+    Port (
+        clock        : in std_logic;                 
+        reset        : in std_logic;                 
+        load       : in std_logic;                 
+        enable     : in std_logic;                 
+        valor_in   : in unsigned(15 downto 0);     
+        contador   : out unsigned(15 downto 0);    
+        zerado     : out std_logic                 -- Sinal de que o contador chegou a zero
+    );
+end contador;
+
+architecture Behavioral of contador is
+    signal contador_reg : unsigned(15 downto 0) := (others => '0'); -- Registrador interno
+begin
+
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if rst = '1' then
+                -- Reset síncrono
+                contador_reg <= (others => '0');
+            elsif load = '1' then
+                -- Carregar valor inicial
+                contador_reg <= valor_in;
+            elsif enable = '1' then
+                -- Decrementar contador se não estiver zerado
+                if contador_reg > 0 then
+                    contador_reg <= contador_reg - 1;
+                end if;
+            end if;
+        end if;
+    end process;
+
+    -- Saídas
+    contador <= contador_reg; -- Atualiza a saída do contador
+    zerado <= '1' when contador_reg = 0 else '0'; -- Indica se o contador chegou a zero
+
+end Behavioral;

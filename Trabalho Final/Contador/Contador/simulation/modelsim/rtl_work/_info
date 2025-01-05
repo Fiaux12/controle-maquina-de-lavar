@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\amand\OneDrive\Documentos\Faculdade\LSD\Trabalho Final\Contador\Contador\simulation\modelsim
+Econtador
+Z1 w1736105838
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\amand\OneDrive\Documentos\Faculdade\LSD\Trabalho Final\Contador\Contador\simulation\modelsim
+Z6 8C:/Users/amand/OneDrive/Documentos/Faculdade/LSD/Trabalho Final/Contador/Contador/Contador.vhd
+Z7 FC:/Users/amand/OneDrive/Documentos/Faculdade/LSD/Trabalho Final/Contador/Contador/Contador.vhd
+l0
+L5
+Ve8mZoIM3nlGSz<n3I>Tc^3
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1736107323.209000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/OneDrive/Documentos/Faculdade/LSD/Trabalho Final/Contador/Contador/Contador.vhd|
+Z11 !s107 C:/Users/amand/OneDrive/Documentos/Faculdade/LSD/Trabalho Final/Contador/Contador/Contador.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 EVC16E_NR;AYJ:h`ROBV83
+!i10b 1
+Acont
+R2
+R3
+R4
+DEx4 work 8 contador 0 22 e8mZoIM3nlGSz<n3I>Tc^3
+l17
+L15
+VZoG0A9Y4[cKGWzEfnFn?`2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 NG7<JPIlb1S119g@7WYhc3
+!i10b 1
+Etb_contador
+Z14 w1736107301
+R2
+R3
+R4
+R5
+Z15 8C:/Users/amand/OneDrive/Documentos/Faculdade/LSD/Trabalho Final/Contador/Contador/tb_contador.vhd
+Z16 FC:/Users/amand/OneDrive/Documentos/Faculdade/LSD/Trabalho Final/Contador/Contador/tb_contador.vhd
+l0
+L5
+V<L:A5;W@W:LHho]ELJde51
+!s100 Q=`H=>YDCX]bd[[FW@o@M2
+R8
+31
+!i10b 1
+Z17 !s108 1736107323.299000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/OneDrive/Documentos/Faculdade/LSD/Trabalho Final/Contador/Contador/tb_contador.vhd|
+Z19 !s107 C:/Users/amand/OneDrive/Documentos/Faculdade/LSD/Trabalho Final/Contador/Contador/tb_contador.vhd|
+R12
+R13
+Acomp
+R2
+R3
+R4
+DEx4 work 11 tb_contador 0 22 <L:A5;W@W:LHho]ELJde51
+l25
+L8
+V9hId8Hg3?E<`66d1a]jPn0
+!s100 U7fn6CIoelDgBlddbTkjC2
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13
