@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\amand\Documents\GitHub\controle-maquina-de-lavar\Trabalho Final\Temporizador\Temporizador\simulation\modelsim
+Etb_temporizador
+Z1 w1736125238
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\amand\Documents\GitHub\controle-maquina-de-lavar\Trabalho Final\Temporizador\Temporizador\simulation\modelsim
+Z6 8C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/tb_temporizador.vhd
+Z7 FC:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/tb_temporizador.vhd
+l0
+L5
+V@?P;UBXWD09cenWV6>f^J2
+!s100 4]LDllK<4X]4Lh?DBI;W51
+Z8 OV;C;10.1d;51
+31
+!i10b 1
+Z9 !s108 1736125438.889000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/tb_temporizador.vhd|
+Z11 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/tb_temporizador.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+Atemp
+R2
+R3
+R4
+DEx4 work 15 tb_temporizador 0 22 @?P;UBXWD09cenWV6>f^J2
+l25
+L8
+VkjQm[2=<QRGR@@ZCK8W^I2
+!s100 MO73INC6gz9l7UknM7Ho10
+R8
+31
+!i10b 1
+R9
+R10
+R11
+R12
+R13
+Etemporizador
+Z14 w1736125158
+R2
+R3
+R4
+R5
+Z15 8C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd
+Z16 FC:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd
+l0
+L5
+Vg]1gNf40B<N9@k_L3zcmC0
+R8
+31
+Z17 !s108 1736125438.828000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd|
+Z19 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd|
+R12
+R13
+!s100 CB6PoL5Y^U0UUHMOjKFC^3
+!i10b 1
+Atemp
+R2
+R3
+R4
+DEx4 work 12 temporizador 0 22 g]1gNf40B<N9@k_L3zcmC0
+l17
+L15
+V]VVMl]SdNAC[RLW9jRA:@1
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 ^m`EHH5_AQGlbiE<C<[1R2
+!i10b 1
