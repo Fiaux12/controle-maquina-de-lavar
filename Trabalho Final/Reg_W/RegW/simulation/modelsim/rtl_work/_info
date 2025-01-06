@@ -2,22 +2,22 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\altera\projetos\RegW\simulation\modelsim
+Z0 dC:\Users\amand\Documents\GitHub\controle-maquina-de-lavar\Trabalho Final\Reg_W\RegW\simulation\modelsim
 Eregw
-Z1 w1730263925
+Z1 w1734274864
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z4 dC:\altera\projetos\RegW\simulation\modelsim
-Z5 8C:/altera/projetos/RegW/RegW.vhd
-Z6 FC:/altera/projetos/RegW/RegW.vhd
+Z4 dC:\Users\amand\Documents\GitHub\controle-maquina-de-lavar\Trabalho Final\Reg_W\RegW\simulation\modelsim
+Z5 8C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd
+Z6 FC:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd
 l0
 L4
 VJlT9:3:G=bSJ8cXG;2kSC2
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1730265305.296000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/altera/projetos/RegW/RegW.vhd|
-Z10 !s107 C:/altera/projetos/RegW/RegW.vhd|
+Z8 !s108 1736126157.144000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd|
+Z10 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd|
 Z11 o-93 -work work -O0
 Z12 tExplicit 1
 !s100 keCj>i:3`ON_T7S5AlOJ11
@@ -39,12 +39,12 @@ R12
 !s100 _0HKVA`:nFjB@3n_XAh>^1
 !i10b 1
 Etb_regw
-Z13 w1730265281
+R1
 R2
 R3
 R4
-Z14 8C:/altera/projetos/RegW/tb_RegW.vhd
-Z15 FC:/altera/projetos/RegW/tb_RegW.vhd
+Z13 8C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/tb_RegW.vhd
+Z14 FC:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/tb_RegW.vhd
 l0
 L4
 VZQP2foWRMcA8T8JN^enXg1
@@ -52,9 +52,9 @@ VZQP2foWRMcA8T8JN^enXg1
 R7
 31
 !i10b 1
-Z16 !s108 1730265305.372000
-Z17 !s90 -reportprogress|300|-93|-work|work|C:/altera/projetos/RegW/tb_RegW.vhd|
-Z18 !s107 C:/altera/projetos/RegW/tb_RegW.vhd|
+Z15 !s108 1736126157.192000
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/tb_RegW.vhd|
+Z17 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/tb_RegW.vhd|
 R11
 R12
 Abehavioral
@@ -68,8 +68,8 @@ VV6KA@UU]Ud4_c?`bSd:9W2
 R7
 31
 !i10b 1
+R15
 R16
 R17
-R18
 R11
 R12

@@ -1,7 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, D:/Hermes/PN2/Aula 8/Tudo/RegW/RegW/RegW.vhd
-source_file = 1, D:/Hermes/PN2/Aula 8/Tudo/RegW/RegW/tb_RegW.vhd
-source_file = 1, D:/Hermes/PN2/Aula 8/Tudo/RegW/RegW/db/RegW.cbx.xml
+source_file = 1, C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd
+source_file = 1, C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/tb_RegW.vhd
+source_file = 1, C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/db/RegW.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
