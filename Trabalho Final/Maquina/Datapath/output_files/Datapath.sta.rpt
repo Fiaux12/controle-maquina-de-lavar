@@ -1,0 +1,1240 @@
+TimeQuest Timing Analyzer report for Datapath
+Sun Jan 19 22:56:37 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Hold: 'clock'
+ 13. Slow Model Minimum Pulse Width: 'clock'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clock'
+ 24. Fast Model Hold: 'clock'
+ 25. Fast Model Minimum Pulse Width: 'clock'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Datapath                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 209.34 MHz ; 209.34 MHz      ; clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -3.777 ; -134.162      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -49.380               ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                                                                           ;
++--------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                       ; To Node                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.777 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.015      ; 4.828      ;
+; -3.753 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.789      ;
+; -3.688 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.724      ;
+; -3.617 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.653      ;
+; -3.611 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[22]    ; clock        ; clock       ; 1.000        ; -0.006     ; 4.641      ;
+; -3.604 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.640      ;
+; -3.540 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.576      ;
+; -3.478 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 1.000        ; 0.003      ; 4.517      ;
+; -3.475 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[20]    ; clock        ; clock       ; 1.000        ; -0.006     ; 4.505      ;
+; -3.474 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 1.000        ; 0.003      ; 4.513      ;
+; -3.427 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.021      ; 4.484      ;
+; -3.405 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 1.000        ; 0.009      ; 4.450      ;
+; -3.403 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[25]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.439      ;
+; -3.403 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 1.000        ; 0.006      ; 4.445      ;
+; -3.401 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 1.000        ; 0.009      ; 4.446      ;
+; -3.396 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[16]    ; clock        ; clock       ; 1.000        ; -0.006     ; 4.426      ;
+; -3.395 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[18]    ; clock        ; clock       ; 1.000        ; -0.006     ; 4.425      ;
+; -3.394 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 1.000        ; -0.006     ; 4.424      ;
+; -3.394 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[21]    ; clock        ; clock       ; 1.000        ; -0.006     ; 4.424      ;
+; -3.393 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[1]     ; clock        ; clock       ; 1.000        ; -0.006     ; 4.423      ;
+; -3.393 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[22]    ; clock        ; clock       ; 1.000        ; -0.006     ; 4.423      ;
+; -3.393 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[20]    ; clock        ; clock       ; 1.000        ; -0.006     ; 4.423      ;
+; -3.389 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 1.000        ; -0.006     ; 4.419      ;
+; -3.388 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.021      ; 4.445      ;
+; -3.387 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[8]     ; clock        ; clock       ; 1.000        ; -0.006     ; 4.417      ;
+; -3.386 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[10]    ; clock        ; clock       ; 1.000        ; -0.006     ; 4.416      ;
+; -3.385 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 1.000        ; -0.006     ; 4.415      ;
+; -3.385 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[17]    ; clock        ; clock       ; 1.000        ; -0.006     ; 4.415      ;
+; -3.384 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[6]     ; clock        ; clock       ; 1.000        ; -0.006     ; 4.414      ;
+; -3.383 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[2]     ; clock        ; clock       ; 1.000        ; -0.006     ; 4.413      ;
+; -3.380 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 1.000        ; 0.008      ; 4.424      ;
+; -3.378 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[5]     ; clock        ; clock       ; 1.000        ; 0.008      ; 4.422      ;
+; -3.376 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[3]     ; clock        ; clock       ; 1.000        ; 0.008      ; 4.420      ;
+; -3.376 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 1.000        ; 0.008      ; 4.420      ;
+; -3.364 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 1.000        ; 0.006      ; 4.406      ;
+; -3.338 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 1.000        ; 0.006      ; 4.380      ;
+; -3.331 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[21]    ; clock        ; clock       ; 1.000        ; -0.006     ; 4.361      ;
+; -3.324 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[24]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.360      ;
+; -3.323 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[16]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.359      ;
+; -3.322 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[18]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.358      ;
+; -3.321 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.357      ;
+; -3.321 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[21]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.357      ;
+; -3.320 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[1]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.356      ;
+; -3.320 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[22]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.356      ;
+; -3.320 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[20]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.356      ;
+; -3.319 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[18]    ; clock        ; clock       ; 1.000        ; -0.006     ; 4.349      ;
+; -3.316 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.352      ;
+; -3.314 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[8]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.350      ;
+; -3.313 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[15]    ; clock        ; clock       ; 1.000        ; -0.005     ; 4.344      ;
+; -3.313 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[10]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.349      ;
+; -3.312 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[11]    ; clock        ; clock       ; 1.000        ; -0.005     ; 4.343      ;
+; -3.312 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter_out[0] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.343      ;
+; -3.312 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.348      ;
+; -3.312 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[17]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.348      ;
+; -3.311 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[6]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.347      ;
+; -3.310 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[2]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.346      ;
+; -3.307 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[12]    ; clock        ; clock       ; 1.000        ; -0.005     ; 4.338      ;
+; -3.307 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[13]    ; clock        ; clock       ; 1.000        ; -0.005     ; 4.338      ;
+; -3.306 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter_out[1] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.337      ;
+; -3.305 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter_out[2] ; clock        ; clock       ; 1.000        ; -0.005     ; 4.336      ;
+; -3.305 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.007      ; 4.348      ;
+; -3.305 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[5]     ; clock        ; clock       ; 1.000        ; 0.014      ; 4.355      ;
+; -3.303 ; temporizador:instancia_Temporizador|counter[10] ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 1.000        ; 0.009      ; 4.348      ;
+; -3.303 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[3]     ; clock        ; clock       ; 1.000        ; 0.014      ; 4.353      ;
+; -3.299 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 1.000        ; 0.006      ; 4.341      ;
+; -3.299 ; temporizador:instancia_Temporizador|counter[10] ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 1.000        ; 0.009      ; 4.344      ;
+; -3.298 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[16]    ; clock        ; clock       ; 1.000        ; -0.001     ; 4.333      ;
+; -3.297 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[18]    ; clock        ; clock       ; 1.000        ; -0.001     ; 4.332      ;
+; -3.296 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 1.000        ; -0.001     ; 4.331      ;
+; -3.296 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[21]    ; clock        ; clock       ; 1.000        ; -0.001     ; 4.331      ;
+; -3.295 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[1]     ; clock        ; clock       ; 1.000        ; -0.001     ; 4.330      ;
+; -3.295 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[22]    ; clock        ; clock       ; 1.000        ; -0.001     ; 4.330      ;
+; -3.295 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[20]    ; clock        ; clock       ; 1.000        ; -0.001     ; 4.330      ;
+; -3.291 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 1.000        ; -0.001     ; 4.326      ;
+; -3.289 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[8]     ; clock        ; clock       ; 1.000        ; -0.001     ; 4.324      ;
+; -3.288 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[10]    ; clock        ; clock       ; 1.000        ; -0.001     ; 4.323      ;
+; -3.287 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 1.000        ; -0.001     ; 4.322      ;
+; -3.287 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[17]    ; clock        ; clock       ; 1.000        ; -0.001     ; 4.322      ;
+; -3.286 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[6]     ; clock        ; clock       ; 1.000        ; -0.001     ; 4.321      ;
+; -3.285 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[2]     ; clock        ; clock       ; 1.000        ; -0.001     ; 4.320      ;
+; -3.281 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 1.000        ; -0.008     ; 4.309      ;
+; -3.280 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[0]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.316      ;
+; -3.280 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[5]     ; clock        ; clock       ; 1.000        ; 0.013      ; 4.329      ;
+; -3.278 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[3]     ; clock        ; clock       ; 1.000        ; 0.013      ; 4.327      ;
+; -3.267 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 1.000        ; 0.006      ; 4.309      ;
+; -3.265 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|state[0]       ; clock        ; clock       ; 1.000        ; 0.001      ; 4.302      ;
+; -3.261 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[22]    ; clock        ; clock       ; 1.000        ; 0.000      ; 4.297      ;
+; -3.256 ; temporizador:instancia_Temporizador|counter[19] ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 1.000        ; 0.003      ; 4.295      ;
+; -3.254 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 1.000        ; 0.006      ; 4.296      ;
+; -3.252 ; temporizador:instancia_Temporizador|counter[19] ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 1.000        ; 0.003      ; 4.291      ;
+; -3.246 ; temporizador:instancia_Temporizador|counter[4]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.021      ; 4.303      ;
+; -3.240 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[15]    ; clock        ; clock       ; 1.000        ; 0.001      ; 4.277      ;
+; -3.239 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[11]    ; clock        ; clock       ; 1.000        ; 0.001      ; 4.276      ;
+; -3.239 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter_out[0] ; clock        ; clock       ; 1.000        ; 0.001      ; 4.276      ;
+; -3.234 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[12]    ; clock        ; clock       ; 1.000        ; 0.001      ; 4.271      ;
+; -3.234 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[13]    ; clock        ; clock       ; 1.000        ; 0.001      ; 4.271      ;
+; -3.233 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter_out[1] ; clock        ; clock       ; 1.000        ; 0.001      ; 4.270      ;
+; -3.232 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter_out[2] ; clock        ; clock       ; 1.000        ; 0.001      ; 4.269      ;
+; -3.228 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 1.000        ; 0.006      ; 4.270      ;
+; -3.223 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|state[1]       ; clock        ; clock       ; 1.000        ; 0.003      ; 4.262      ;
++--------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                                           ;
++-------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                       ; To Node                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; temporizador:instancia_Temporizador|state[2]    ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; temporizador:instancia_Temporizador|state[1]    ; temporizador:instancia_Temporizador|state[1]       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|state[0]       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[0]     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.748 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter_out[2] ; clock        ; clock       ; 0.000        ; 0.001      ; 1.015      ;
+; 0.984 ; temporizador:instancia_Temporizador|state[1]    ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 0.000        ; 0.000      ; 1.250      ;
+; 0.992 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter_out[1] ; clock        ; clock       ; 0.000        ; 0.001      ; 1.259      ;
+; 1.115 ; temporizador:instancia_Temporizador|state[2]    ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 0.000        ; 0.000      ; 1.381      ;
+; 1.177 ; temporizador:instancia_Temporizador|timeout     ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 0.000        ; 0.000      ; 1.443      ;
+; 1.220 ; temporizador:instancia_Temporizador|state[2]    ; temporizador:instancia_Temporizador|counter[0]     ; clock        ; clock       ; 0.000        ; -0.003     ; 1.483      ;
+; 1.222 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter_out[0] ; clock        ; clock       ; 0.000        ; -0.005     ; 1.483      ;
+; 1.239 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter_out[3] ; clock        ; clock       ; 0.000        ; -0.020     ; 1.485      ;
+; 1.310 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter_out[3] ; clock        ; clock       ; 0.000        ; -0.013     ; 1.563      ;
+; 1.410 ; temporizador:instancia_Temporizador|state[2]    ; temporizador:instancia_Temporizador|state[1]       ; clock        ; clock       ; 0.000        ; 0.000      ; 1.676      ;
+; 1.451 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|state[1]       ; clock        ; clock       ; 0.000        ; 0.002      ; 1.719      ;
+; 1.498 ; temporizador:instancia_Temporizador|state[1]    ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 0.000        ; 0.000      ; 1.764      ;
+; 1.507 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.773      ;
+; 1.541 ; temporizador:instancia_Temporizador|counter[23] ; temporizador:instancia_Temporizador|counter[23]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.807      ;
+; 1.550 ; temporizador:instancia_Temporizador|counter[28] ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.816      ;
+; 1.553 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.819      ;
+; 1.556 ; temporizador:instancia_Temporizador|counter[25] ; temporizador:instancia_Temporizador|counter[25]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.822      ;
+; 1.558 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[1]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.824      ;
+; 1.582 ; temporizador:instancia_Temporizador|counter[27] ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.848      ;
+; 1.583 ; temporizador:instancia_Temporizador|counter[30] ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.849      ;
+; 1.588 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 0.000        ; -0.015     ; 1.839      ;
+; 1.588 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[19]    ; clock        ; clock       ; 0.000        ; -0.015     ; 1.839      ;
+; 1.589 ; temporizador:instancia_Temporizador|counter[4]  ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.855      ;
+; 1.591 ; temporizador:instancia_Temporizador|counter[8]  ; temporizador:instancia_Temporizador|counter[8]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.857      ;
+; 1.625 ; temporizador:instancia_Temporizador|counter[7]  ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.891      ;
+; 1.707 ; temporizador:instancia_Temporizador|counter[5]  ; temporizador:instancia_Temporizador|counter[5]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.973      ;
+; 1.720 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|state[1]       ; clock        ; clock       ; 0.000        ; -0.012     ; 1.974      ;
+; 1.760 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 0.000        ; 0.002      ; 2.028      ;
+; 1.783 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 0.000        ; 0.014      ; 2.063      ;
+; 1.784 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[14]    ; clock        ; clock       ; 0.000        ; -0.001     ; 2.049      ;
+; 1.784 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[23]    ; clock        ; clock       ; 0.000        ; -0.001     ; 2.049      ;
+; 1.784 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[24]    ; clock        ; clock       ; 0.000        ; -0.001     ; 2.049      ;
+; 1.784 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[25]    ; clock        ; clock       ; 0.000        ; -0.001     ; 2.049      ;
+; 1.784 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 0.000        ; -0.001     ; 2.049      ;
+; 1.784 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 0.000        ; -0.001     ; 2.049      ;
+; 1.784 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 0.000        ; -0.001     ; 2.049      ;
+; 1.784 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 0.000        ; -0.001     ; 2.049      ;
+; 1.784 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 0.000        ; -0.001     ; 2.049      ;
+; 1.784 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[19]    ; clock        ; clock       ; 0.000        ; -0.001     ; 2.049      ;
+; 1.799 ; temporizador:instancia_Temporizador|state[1]    ; temporizador:instancia_Temporizador|state[0]       ; clock        ; clock       ; 0.000        ; -0.002     ; 2.063      ;
+; 1.805 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 0.000        ; -0.015     ; 2.056      ;
+; 1.806 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[14]    ; clock        ; clock       ; 0.000        ; -0.015     ; 2.057      ;
+; 1.806 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 0.000        ; -0.015     ; 2.057      ;
+; 1.807 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 0.000        ; -0.015     ; 2.058      ;
+; 1.807 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[25]    ; clock        ; clock       ; 0.000        ; -0.015     ; 2.058      ;
+; 1.808 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[24]    ; clock        ; clock       ; 0.000        ; -0.015     ; 2.059      ;
+; 1.808 ; temporizador:instancia_Temporizador|state[2]    ; temporizador:instancia_Temporizador|state[0]       ; clock        ; clock       ; 0.000        ; -0.002     ; 2.072      ;
+; 1.809 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 0.000        ; -0.015     ; 2.060      ;
+; 1.810 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[23]    ; clock        ; clock       ; 0.000        ; -0.015     ; 2.061      ;
+; 1.837 ; temporizador:instancia_Temporizador|counter[29] ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.103      ;
+; 1.843 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[11]    ; clock        ; clock       ; 0.000        ; -0.006     ; 2.103      ;
+; 1.843 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[12]    ; clock        ; clock       ; 0.000        ; -0.006     ; 2.103      ;
+; 1.843 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[13]    ; clock        ; clock       ; 0.000        ; -0.006     ; 2.103      ;
+; 1.843 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[15]    ; clock        ; clock       ; 0.000        ; -0.006     ; 2.103      ;
+; 1.853 ; temporizador:instancia_Temporizador|counter[24] ; temporizador:instancia_Temporizador|counter[24]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.119      ;
+; 1.858 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 0.000        ; 0.002      ; 2.126      ;
+; 1.861 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 0.000        ; -0.012     ; 2.115      ;
+; 1.862 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[0]     ; clock        ; clock       ; 0.000        ; -0.001     ; 2.127      ;
+; 1.868 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[2]     ; clock        ; clock       ; 0.000        ; 0.000      ; 2.134      ;
+; 1.879 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[3]     ; clock        ; clock       ; 0.000        ; 0.000      ; 2.145      ;
+; 1.904 ; temporizador:instancia_Temporizador|counter[10] ; temporizador:instancia_Temporizador|counter[10]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.170      ;
+; 1.919 ; temporizador:instancia_Temporizador|counter[30] ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 0.000        ; 0.015      ; 2.200      ;
+; 1.933 ; temporizador:instancia_Temporizador|counter[28] ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.199      ;
+; 1.934 ; temporizador:instancia_Temporizador|state[1]    ; temporizador:instancia_Temporizador|counter[0]     ; clock        ; clock       ; 0.000        ; -0.003     ; 2.197      ;
+; 1.960 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 0.000        ; -0.014     ; 2.212      ;
+; 1.965 ; temporizador:instancia_Temporizador|counter[19] ; temporizador:instancia_Temporizador|counter[19]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.231      ;
+; 1.968 ; temporizador:instancia_Temporizador|counter[8]  ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 0.000        ; 0.000      ; 2.234      ;
+; 1.971 ; temporizador:instancia_Temporizador|counter[27] ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.237      ;
+; 1.992 ; temporizador:instancia_Temporizador|counter[26] ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.258      ;
+; 1.998 ; temporizador:instancia_Temporizador|counter[28] ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.264      ;
+; 2.005 ; temporizador:instancia_Temporizador|counter[25] ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.271      ;
+; 2.011 ; temporizador:instancia_Temporizador|counter[6]  ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 0.000        ; 0.000      ; 2.277      ;
+; 2.016 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|state[0]       ; clock        ; clock       ; 0.000        ; -0.014     ; 2.268      ;
+; 2.022 ; temporizador:instancia_Temporizador|counter[28] ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 0.000        ; 0.015      ; 2.303      ;
+; 2.040 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[0]     ; clock        ; clock       ; 0.000        ; -0.015     ; 2.291      ;
+; 2.042 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[11]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.308      ;
+; 2.042 ; temporizador:instancia_Temporizador|counter[27] ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.308      ;
+; 2.043 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 0.000        ; 0.000      ; 2.309      ;
+; 2.047 ; temporizador:instancia_Temporizador|counter[15] ; temporizador:instancia_Temporizador|counter[15]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.313      ;
+; 2.057 ; temporizador:instancia_Temporizador|counter[12] ; temporizador:instancia_Temporizador|counter[12]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.323      ;
+; 2.057 ; temporizador:instancia_Temporizador|counter[23] ; temporizador:instancia_Temporizador|counter[24]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.323      ;
+; 2.058 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[3]     ; clock        ; clock       ; 0.000        ; 0.007      ; 2.331      ;
+; 2.058 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[5]     ; clock        ; clock       ; 0.000        ; 0.007      ; 2.331      ;
+; 2.061 ; temporizador:instancia_Temporizador|counter[5]  ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 0.000        ; -0.014     ; 2.313      ;
+; 2.066 ; temporizador:instancia_Temporizador|counter[13] ; temporizador:instancia_Temporizador|counter[13]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.332      ;
+; 2.069 ; temporizador:instancia_Temporizador|counter[25] ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 0.000        ; 0.000      ; 2.335      ;
+; 2.077 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[2]     ; clock        ; clock       ; 0.000        ; -0.007     ; 2.336      ;
+; 2.077 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 0.000        ; -0.007     ; 2.336      ;
+; 2.077 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[6]     ; clock        ; clock       ; 0.000        ; -0.007     ; 2.336      ;
+; 2.077 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 0.000        ; -0.007     ; 2.336      ;
+; 2.077 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[8]     ; clock        ; clock       ; 0.000        ; -0.007     ; 2.336      ;
+; 2.077 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 0.000        ; -0.007     ; 2.336      ;
+; 2.077 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[10]    ; clock        ; clock       ; 0.000        ; -0.007     ; 2.336      ;
+; 2.077 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[16]    ; clock        ; clock       ; 0.000        ; -0.007     ; 2.336      ;
+; 2.077 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[17]    ; clock        ; clock       ; 0.000        ; -0.007     ; 2.336      ;
+; 2.077 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[18]    ; clock        ; clock       ; 0.000        ; -0.007     ; 2.336      ;
++-------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[2]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[2]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[3]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[3]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[0]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[0]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[1]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[1]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[2]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[2]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[3]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[3]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[10]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[10]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[11]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[11]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[12]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[12]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[13]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[13]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[14]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[14]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[15]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[15]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[16]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[16]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[17]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[17]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[18]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[18]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[19]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[19]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[20]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[20]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[21]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[21]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[22]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[22]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[23]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[23]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[24]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[24]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[25]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[25]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[26]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[26]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[27]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[27]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[28]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[28]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[29]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[29]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[30]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[30]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[31]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[31]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[9]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[9]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|state[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|state[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|state[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|state[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|state[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|state[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|timeout        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|timeout        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; Load_Modo        ; clock      ; 3.204 ; 3.204 ; Rise       ; clock           ;
+; Load_Vol_Agua    ; clock      ; 3.556 ; 3.556 ; Rise       ; clock           ;
+; Load_temp        ; clock      ; 1.941 ; 1.941 ; Rise       ; clock           ;
+; Modo_Lavagem[*]  ; clock      ; 3.192 ; 3.192 ; Rise       ; clock           ;
+;  Modo_Lavagem[0] ; clock      ; 3.112 ; 3.112 ; Rise       ; clock           ;
+;  Modo_Lavagem[1] ; clock      ; 2.844 ; 2.844 ; Rise       ; clock           ;
+;  Modo_Lavagem[2] ; clock      ; 3.192 ; 3.192 ; Rise       ; clock           ;
+;  Modo_Lavagem[3] ; clock      ; 3.037 ; 3.037 ; Rise       ; clock           ;
+; Reset_Cont       ; clock      ; 1.215 ; 1.215 ; Rise       ; clock           ;
+; Volume_Agua[*]   ; clock      ; 3.171 ; 3.171 ; Rise       ; clock           ;
+;  Volume_Agua[0]  ; clock      ; 3.128 ; 3.128 ; Rise       ; clock           ;
+;  Volume_Agua[1]  ; clock      ; 3.171 ; 3.171 ; Rise       ; clock           ;
+;  Volume_Agua[2]  ; clock      ; 3.146 ; 3.146 ; Rise       ; clock           ;
+;  Volume_Agua[3]  ; clock      ; 3.071 ; 3.071 ; Rise       ; clock           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Hold Times                                                                     ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; Load_Modo        ; clock      ; -2.974 ; -2.974 ; Rise       ; clock           ;
+; Load_Vol_Agua    ; clock      ; -3.326 ; -3.326 ; Rise       ; clock           ;
+; Load_temp        ; clock      ; -0.230 ; -0.230 ; Rise       ; clock           ;
+; Modo_Lavagem[*]  ; clock      ; -2.614 ; -2.614 ; Rise       ; clock           ;
+;  Modo_Lavagem[0] ; clock      ; -2.882 ; -2.882 ; Rise       ; clock           ;
+;  Modo_Lavagem[1] ; clock      ; -2.614 ; -2.614 ; Rise       ; clock           ;
+;  Modo_Lavagem[2] ; clock      ; -2.962 ; -2.962 ; Rise       ; clock           ;
+;  Modo_Lavagem[3] ; clock      ; -2.807 ; -2.807 ; Rise       ; clock           ;
+; Reset_Cont       ; clock      ; -0.985 ; -0.985 ; Rise       ; clock           ;
+; Volume_Agua[*]   ; clock      ; -2.841 ; -2.841 ; Rise       ; clock           ;
+;  Volume_Agua[0]  ; clock      ; -2.898 ; -2.898 ; Rise       ; clock           ;
+;  Volume_Agua[1]  ; clock      ; -2.941 ; -2.941 ; Rise       ; clock           ;
+;  Volume_Agua[2]  ; clock      ; -2.916 ; -2.916 ; Rise       ; clock           ;
+;  Volume_Agua[3]  ; clock      ; -2.841 ; -2.841 ; Rise       ; clock           ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; BCD[*]           ; clock      ; 8.156 ; 8.156 ; Rise       ; clock           ;
+;  BCD[0]          ; clock      ; 8.140 ; 8.140 ; Rise       ; clock           ;
+;  BCD[1]          ; clock      ; 8.110 ; 8.110 ; Rise       ; clock           ;
+;  BCD[2]          ; clock      ; 8.098 ; 8.098 ; Rise       ; clock           ;
+;  BCD[3]          ; clock      ; 8.156 ; 8.156 ; Rise       ; clock           ;
+;  BCD[4]          ; clock      ; 7.826 ; 7.826 ; Rise       ; clock           ;
+;  BCD[5]          ; clock      ; 8.111 ; 8.111 ; Rise       ; clock           ;
+;  BCD[6]          ; clock      ; 8.080 ; 8.080 ; Rise       ; clock           ;
+; Timeout          ; clock      ; 7.012 ; 7.012 ; Rise       ; clock           ;
+; pino_alto        ; clock      ; 7.072 ; 7.072 ; Rise       ; clock           ;
+; pino_baixo       ; clock      ; 7.075 ; 7.075 ; Rise       ; clock           ;
+; pino_delicado    ; clock      ; 7.032 ; 7.032 ; Rise       ; clock           ;
+; pino_economico   ; clock      ; 6.783 ; 6.783 ; Rise       ; clock           ;
+; pino_extra_baixo ; clock      ; 7.035 ; 7.035 ; Rise       ; clock           ;
+; pino_medio       ; clock      ; 7.007 ; 7.007 ; Rise       ; clock           ;
+; pino_normal      ; clock      ; 6.792 ; 6.792 ; Rise       ; clock           ;
+; pino_pesado      ; clock      ; 6.800 ; 6.800 ; Rise       ; clock           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; BCD[*]           ; clock      ; 7.548 ; 7.548 ; Rise       ; clock           ;
+;  BCD[0]          ; clock      ; 7.862 ; 7.862 ; Rise       ; clock           ;
+;  BCD[1]          ; clock      ; 7.832 ; 7.832 ; Rise       ; clock           ;
+;  BCD[2]          ; clock      ; 7.820 ; 7.820 ; Rise       ; clock           ;
+;  BCD[3]          ; clock      ; 7.879 ; 7.879 ; Rise       ; clock           ;
+;  BCD[4]          ; clock      ; 7.548 ; 7.548 ; Rise       ; clock           ;
+;  BCD[5]          ; clock      ; 7.849 ; 7.849 ; Rise       ; clock           ;
+;  BCD[6]          ; clock      ; 7.797 ; 7.797 ; Rise       ; clock           ;
+; Timeout          ; clock      ; 7.012 ; 7.012 ; Rise       ; clock           ;
+; pino_alto        ; clock      ; 6.781 ; 6.781 ; Rise       ; clock           ;
+; pino_baixo       ; clock      ; 6.781 ; 6.781 ; Rise       ; clock           ;
+; pino_delicado    ; clock      ; 6.766 ; 6.766 ; Rise       ; clock           ;
+; pino_economico   ; clock      ; 6.535 ; 6.535 ; Rise       ; clock           ;
+; pino_extra_baixo ; clock      ; 6.754 ; 6.754 ; Rise       ; clock           ;
+; pino_medio       ; clock      ; 6.690 ; 6.690 ; Rise       ; clock           ;
+; pino_normal      ; clock      ; 6.541 ; 6.541 ; Rise       ; clock           ;
+; pino_pesado      ; clock      ; 6.506 ; 6.506 ; Rise       ; clock           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -1.263 ; -39.822       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -49.380               ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                                                           ;
++--------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                       ; To Node                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.263 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.016      ; 2.311      ;
+; -1.250 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.282      ;
+; -1.219 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.251      ;
+; -1.190 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.222      ;
+; -1.185 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.217      ;
+; -1.146 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.178      ;
+; -1.142 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[22]    ; clock        ; clock       ; 1.000        ; -0.006     ; 2.168      ;
+; -1.108 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.022      ; 2.162      ;
+; -1.095 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.133      ;
+; -1.080 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[25]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.112      ;
+; -1.079 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.022      ; 2.133      ;
+; -1.078 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[20]    ; clock        ; clock       ; 1.000        ; -0.006     ; 2.104      ;
+; -1.066 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.104      ;
+; -1.064 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.102      ;
+; -1.051 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.007      ; 2.090      ;
+; -1.038 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[24]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.070      ;
+; -1.038 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 1.000        ; -0.009     ; 2.061      ;
+; -1.035 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[21]    ; clock        ; clock       ; 1.000        ; -0.006     ; 2.061      ;
+; -1.035 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.073      ;
+; -1.035 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.073      ;
+; -1.030 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.068      ;
+; -1.009 ; temporizador:instancia_Temporizador|counter[4]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.022      ; 2.063      ;
+; -1.007 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 1.000        ; -0.009     ; 2.030      ;
+; -1.006 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 1.000        ; 0.004      ; 2.042      ;
+; -1.006 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.044      ;
+; -1.003 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[16]    ; clock        ; clock       ; 1.000        ; -0.006     ; 2.029      ;
+; -1.002 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[18]    ; clock        ; clock       ; 1.000        ; -0.006     ; 2.028      ;
+; -1.001 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.039      ;
+; -1.001 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[20]    ; clock        ; clock       ; 1.000        ; -0.006     ; 2.027      ;
+; -1.001 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[21]    ; clock        ; clock       ; 1.000        ; -0.006     ; 2.027      ;
+; -1.000 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 1.000        ; -0.006     ; 2.026      ;
+; -1.000 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[22]    ; clock        ; clock       ; 1.000        ; -0.006     ; 2.026      ;
+; -0.998 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[1]     ; clock        ; clock       ; 1.000        ; -0.006     ; 2.024      ;
+; -0.996 ; temporizador:instancia_Temporizador|counter[4]  ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.034      ;
+; -0.996 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[18]    ; clock        ; clock       ; 1.000        ; -0.006     ; 2.022      ;
+; -0.995 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[8]     ; clock        ; clock       ; 1.000        ; -0.006     ; 2.021      ;
+; -0.995 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 1.000        ; -0.006     ; 2.021      ;
+; -0.993 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[6]     ; clock        ; clock       ; 1.000        ; -0.006     ; 2.019      ;
+; -0.993 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[10]    ; clock        ; clock       ; 1.000        ; -0.006     ; 2.019      ;
+; -0.993 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[17]    ; clock        ; clock       ; 1.000        ; -0.006     ; 2.019      ;
+; -0.992 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[2]     ; clock        ; clock       ; 1.000        ; -0.006     ; 2.018      ;
+; -0.992 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 1.000        ; -0.006     ; 2.018      ;
+; -0.991 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.029      ;
+; -0.987 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[22]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.019      ;
+; -0.985 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 1.000        ; 0.004      ; 2.021      ;
+; -0.982 ; temporizador:instancia_Temporizador|counter[5]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.007      ; 2.021      ;
+; -0.978 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 1.000        ; -0.009     ; 2.001      ;
+; -0.978 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 1.000        ; 0.010      ; 2.020      ;
+; -0.975 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[16]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.007      ;
+; -0.974 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[18]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.006      ;
+; -0.973 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 1.000        ; -0.009     ; 1.996      ;
+; -0.973 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[20]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.005      ;
+; -0.973 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[21]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.005      ;
+; -0.972 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 1.000        ; 0.000      ; 2.004      ;
+; -0.972 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[22]    ; clock        ; clock       ; 1.000        ; 0.000      ; 2.004      ;
+; -0.970 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[1]     ; clock        ; clock       ; 1.000        ; 0.000      ; 2.002      ;
+; -0.969 ; temporizador:instancia_Temporizador|counter[5]  ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 1.000        ; -0.009     ; 1.992      ;
+; -0.967 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[8]     ; clock        ; clock       ; 1.000        ; 0.000      ; 1.999      ;
+; -0.967 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 1.000        ; 0.000      ; 1.999      ;
+; -0.966 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[5]     ; clock        ; clock       ; 1.000        ; 0.009      ; 2.007      ;
+; -0.965 ; temporizador:instancia_Temporizador|counter[4]  ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.003      ;
+; -0.965 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[6]     ; clock        ; clock       ; 1.000        ; 0.000      ; 1.997      ;
+; -0.965 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[10]    ; clock        ; clock       ; 1.000        ; 0.000      ; 1.997      ;
+; -0.965 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[17]    ; clock        ; clock       ; 1.000        ; 0.000      ; 1.997      ;
+; -0.964 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[2]     ; clock        ; clock       ; 1.000        ; 0.000      ; 1.996      ;
+; -0.964 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 1.000        ; 0.000      ; 1.996      ;
+; -0.964 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 1.000        ; 0.008      ; 2.004      ;
+; -0.963 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[3]     ; clock        ; clock       ; 1.000        ; 0.009      ; 2.004      ;
+; -0.962 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 1.000        ; 0.006      ; 2.000      ;
+; -0.961 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[16]    ; clock        ; clock       ; 1.000        ; -0.002     ; 1.991      ;
+; -0.960 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[18]    ; clock        ; clock       ; 1.000        ; -0.002     ; 1.990      ;
+; -0.959 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[20]    ; clock        ; clock       ; 1.000        ; -0.002     ; 1.989      ;
+; -0.959 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[21]    ; clock        ; clock       ; 1.000        ; -0.002     ; 1.989      ;
+; -0.958 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[22]    ; clock        ; clock       ; 1.000        ; 0.000      ; 1.990      ;
+; -0.958 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 1.000        ; -0.002     ; 1.988      ;
+; -0.958 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[22]    ; clock        ; clock       ; 1.000        ; -0.002     ; 1.988      ;
+; -0.957 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 1.000        ; 0.010      ; 1.999      ;
+; -0.956 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[1]     ; clock        ; clock       ; 1.000        ; -0.002     ; 1.986      ;
+; -0.953 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[8]     ; clock        ; clock       ; 1.000        ; -0.002     ; 1.983      ;
+; -0.953 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 1.000        ; -0.002     ; 1.983      ;
+; -0.951 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[6]     ; clock        ; clock       ; 1.000        ; -0.002     ; 1.981      ;
+; -0.951 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[10]    ; clock        ; clock       ; 1.000        ; -0.002     ; 1.981      ;
+; -0.951 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[17]    ; clock        ; clock       ; 1.000        ; -0.002     ; 1.981      ;
+; -0.950 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[2]     ; clock        ; clock       ; 1.000        ; -0.002     ; 1.980      ;
+; -0.950 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 1.000        ; -0.002     ; 1.980      ;
+; -0.945 ; temporizador:instancia_Temporizador|counter[6]  ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 1.000        ; 0.022      ; 1.999      ;
+; -0.944 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[11]    ; clock        ; clock       ; 1.000        ; -0.004     ; 1.972      ;
+; -0.943 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter_out[0] ; clock        ; clock       ; 1.000        ; -0.004     ; 1.971      ;
+; -0.943 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 1.000        ; 0.008      ; 1.983      ;
+; -0.942 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[15]    ; clock        ; clock       ; 1.000        ; -0.004     ; 1.970      ;
+; -0.940 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[12]    ; clock        ; clock       ; 1.000        ; -0.004     ; 1.968      ;
+; -0.940 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter[13]    ; clock        ; clock       ; 1.000        ; -0.004     ; 1.968      ;
+; -0.940 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter_out[2] ; clock        ; clock       ; 1.000        ; -0.004     ; 1.968      ;
+; -0.939 ; temporizador:instancia_Temporizador|counter[14] ; temporizador:instancia_Temporizador|counter_out[1] ; clock        ; clock       ; 1.000        ; -0.004     ; 1.967      ;
+; -0.938 ; temporizador:instancia_Temporizador|counter[5]  ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 1.000        ; -0.009     ; 1.961      ;
+; -0.938 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[16]    ; clock        ; clock       ; 1.000        ; -0.006     ; 1.964      ;
+; -0.938 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[5]     ; clock        ; clock       ; 1.000        ; 0.015      ; 1.985      ;
+; -0.936 ; temporizador:instancia_Temporizador|counter[4]  ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 1.000        ; 0.006      ; 1.974      ;
+; -0.935 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[3]     ; clock        ; clock       ; 1.000        ; 0.015      ; 1.982      ;
+; -0.934 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 1.000        ; -0.009     ; 1.957      ;
++--------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                                                           ;
++-------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                       ; To Node                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; temporizador:instancia_Temporizador|state[2]    ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:instancia_Temporizador|state[1]    ; temporizador:instancia_Temporizador|state[1]       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|state[0]       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter[0]     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.342 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter_out[2] ; clock        ; clock       ; 0.000        ; 0.002      ; 0.496      ;
+; 0.444 ; temporizador:instancia_Temporizador|state[1]    ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.596      ;
+; 0.455 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter_out[1] ; clock        ; clock       ; 0.000        ; 0.002      ; 0.609      ;
+; 0.496 ; temporizador:instancia_Temporizador|state[2]    ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.648      ;
+; 0.540 ; temporizador:instancia_Temporizador|timeout     ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.692      ;
+; 0.551 ; temporizador:instancia_Temporizador|state[2]    ; temporizador:instancia_Temporizador|counter[0]     ; clock        ; clock       ; 0.000        ; -0.004     ; 0.699      ;
+; 0.564 ; temporizador:instancia_Temporizador|counter[0]  ; temporizador:instancia_Temporizador|counter_out[0] ; clock        ; clock       ; 0.000        ; -0.004     ; 0.712      ;
+; 0.572 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter_out[3] ; clock        ; clock       ; 0.000        ; -0.020     ; 0.704      ;
+; 0.613 ; temporizador:instancia_Temporizador|state[2]    ; temporizador:instancia_Temporizador|state[1]       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.765      ;
+; 0.622 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter_out[3] ; clock        ; clock       ; 0.000        ; -0.013     ; 0.761      ;
+; 0.636 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|state[1]       ; clock        ; clock       ; 0.000        ; 0.002      ; 0.790      ;
+; 0.668 ; temporizador:instancia_Temporizador|state[1]    ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.820      ;
+; 0.677 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.829      ;
+; 0.685 ; temporizador:instancia_Temporizador|counter[23] ; temporizador:instancia_Temporizador|counter[23]    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.837      ;
+; 0.691 ; temporizador:instancia_Temporizador|counter[28] ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.843      ;
+; 0.692 ; temporizador:instancia_Temporizador|counter[9]  ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.844      ;
+; 0.694 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[1]     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.846      ;
+; 0.695 ; temporizador:instancia_Temporizador|counter[25] ; temporizador:instancia_Temporizador|counter[25]    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.847      ;
+; 0.696 ; temporizador:instancia_Temporizador|counter[27] ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.848      ;
+; 0.698 ; temporizador:instancia_Temporizador|counter[30] ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.850      ;
+; 0.699 ; temporizador:instancia_Temporizador|counter[4]  ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.851      ;
+; 0.702 ; temporizador:instancia_Temporizador|counter[8]  ; temporizador:instancia_Temporizador|counter[8]     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.854      ;
+; 0.715 ; temporizador:instancia_Temporizador|counter[7]  ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.867      ;
+; 0.719 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 0.000        ; -0.016     ; 0.855      ;
+; 0.719 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[19]    ; clock        ; clock       ; 0.000        ; -0.016     ; 0.855      ;
+; 0.765 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 0.000        ; 0.002      ; 0.919      ;
+; 0.769 ; temporizador:instancia_Temporizador|counter[5]  ; temporizador:instancia_Temporizador|counter[5]     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.921      ;
+; 0.774 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|state[1]       ; clock        ; clock       ; 0.000        ; -0.012     ; 0.914      ;
+; 0.798 ; temporizador:instancia_Temporizador|state[1]    ; temporizador:instancia_Temporizador|state[0]       ; clock        ; clock       ; 0.000        ; -0.002     ; 0.948      ;
+; 0.813 ; temporizador:instancia_Temporizador|counter[29] ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.965      ;
+; 0.814 ; temporizador:instancia_Temporizador|counter[30] ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 0.000        ; 0.016      ; 0.982      ;
+; 0.814 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|state[2]       ; clock        ; clock       ; 0.000        ; 0.002      ; 0.968      ;
+; 0.815 ; temporizador:instancia_Temporizador|counter[24] ; temporizador:instancia_Temporizador|counter[24]    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.967      ;
+; 0.821 ; temporizador:instancia_Temporizador|state[2]    ; temporizador:instancia_Temporizador|state[0]       ; clock        ; clock       ; 0.000        ; -0.002     ; 0.971      ;
+; 0.824 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[2]     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.976      ;
+; 0.828 ; temporizador:instancia_Temporizador|counter[28] ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.980      ;
+; 0.831 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[3]     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.983      ;
+; 0.831 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 0.000        ; -0.016     ; 0.967      ;
+; 0.832 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[14]    ; clock        ; clock       ; 0.000        ; -0.016     ; 0.968      ;
+; 0.832 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 0.000        ; -0.016     ; 0.968      ;
+; 0.833 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[25]    ; clock        ; clock       ; 0.000        ; -0.016     ; 0.969      ;
+; 0.833 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 0.000        ; -0.016     ; 0.969      ;
+; 0.833 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[24]    ; clock        ; clock       ; 0.000        ; -0.016     ; 0.969      ;
+; 0.835 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 0.000        ; -0.016     ; 0.971      ;
+; 0.835 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[0]     ; clock        ; clock       ; 0.000        ; -0.002     ; 0.985      ;
+; 0.836 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[23]    ; clock        ; clock       ; 0.000        ; -0.016     ; 0.972      ;
+; 0.837 ; temporizador:instancia_Temporizador|counter[8]  ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.989      ;
+; 0.838 ; temporizador:instancia_Temporizador|counter[27] ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.990      ;
+; 0.841 ; temporizador:instancia_Temporizador|counter[10] ; temporizador:instancia_Temporizador|counter[10]    ; clock        ; clock       ; 0.000        ; 0.000      ; 0.993      ;
+; 0.844 ; temporizador:instancia_Temporizador|counter[3]  ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 0.000        ; -0.015     ; 0.981      ;
+; 0.847 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|timeout        ; clock        ; clock       ; 0.000        ; -0.012     ; 0.987      ;
+; 0.854 ; temporizador:instancia_Temporizador|counter[6]  ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.006      ;
+; 0.859 ; temporizador:instancia_Temporizador|counter[28] ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.011      ;
+; 0.859 ; temporizador:instancia_Temporizador|state[1]    ; temporizador:instancia_Temporizador|counter[0]     ; clock        ; clock       ; 0.000        ; -0.004     ; 1.007      ;
+; 0.864 ; temporizador:instancia_Temporizador|counter[25] ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.016      ;
+; 0.872 ; temporizador:instancia_Temporizador|counter[28] ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 0.000        ; 0.016      ; 1.040      ;
+; 0.872 ; temporizador:instancia_Temporizador|counter[27] ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.024      ;
+; 0.872 ; temporizador:instancia_Temporizador|counter[2]  ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.024      ;
+; 0.874 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 0.000        ; 0.014      ; 1.040      ;
+; 0.884 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[14]    ; clock        ; clock       ; 0.000        ; -0.002     ; 1.034      ;
+; 0.884 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[23]    ; clock        ; clock       ; 0.000        ; -0.002     ; 1.034      ;
+; 0.884 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[24]    ; clock        ; clock       ; 0.000        ; -0.002     ; 1.034      ;
+; 0.884 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[25]    ; clock        ; clock       ; 0.000        ; -0.002     ; 1.034      ;
+; 0.884 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 0.000        ; -0.002     ; 1.034      ;
+; 0.884 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[27]    ; clock        ; clock       ; 0.000        ; -0.002     ; 1.034      ;
+; 0.884 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 0.000        ; -0.002     ; 1.034      ;
+; 0.884 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 0.000        ; -0.002     ; 1.034      ;
+; 0.884 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 0.000        ; -0.002     ; 1.034      ;
+; 0.884 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[19]    ; clock        ; clock       ; 0.000        ; -0.002     ; 1.034      ;
+; 0.889 ; temporizador:instancia_Temporizador|counter[23] ; temporizador:instancia_Temporizador|counter[24]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.041      ;
+; 0.891 ; temporizador:instancia_Temporizador|counter[5]  ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 0.000        ; -0.015     ; 1.028      ;
+; 0.892 ; temporizador:instancia_Temporizador|counter[19] ; temporizador:instancia_Temporizador|counter[19]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.044      ;
+; 0.894 ; temporizador:instancia_Temporizador|counter[26] ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.046      ;
+; 0.899 ; temporizador:instancia_Temporizador|counter[7]  ; temporizador:instancia_Temporizador|counter[8]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.051      ;
+; 0.899 ; temporizador:instancia_Temporizador|counter[4]  ; temporizador:instancia_Temporizador|counter[5]     ; clock        ; clock       ; 0.000        ; 0.015      ; 1.066      ;
+; 0.901 ; temporizador:instancia_Temporizador|counter[1]  ; temporizador:instancia_Temporizador|counter[4]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.053      ;
+; 0.902 ; temporizador:instancia_Temporizador|counter[11] ; temporizador:instancia_Temporizador|counter[11]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.054      ;
+; 0.903 ; temporizador:instancia_Temporizador|counter[25] ; temporizador:instancia_Temporizador|counter[28]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.055      ;
+; 0.903 ; temporizador:instancia_Temporizador|counter[27] ; temporizador:instancia_Temporizador|counter[30]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.055      ;
+; 0.904 ; temporizador:instancia_Temporizador|counter[15] ; temporizador:instancia_Temporizador|counter[15]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.056      ;
+; 0.908 ; temporizador:instancia_Temporizador|counter[25] ; temporizador:instancia_Temporizador|counter[26]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.060      ;
+; 0.910 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[11]    ; clock        ; clock       ; 0.000        ; -0.006     ; 1.056      ;
+; 0.910 ; temporizador:instancia_Temporizador|counter[12] ; temporizador:instancia_Temporizador|counter[12]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.062      ;
+; 0.910 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[12]    ; clock        ; clock       ; 0.000        ; -0.006     ; 1.056      ;
+; 0.910 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[13]    ; clock        ; clock       ; 0.000        ; -0.006     ; 1.056      ;
+; 0.910 ; temporizador:instancia_Temporizador|state[0]    ; temporizador:instancia_Temporizador|counter[15]    ; clock        ; clock       ; 0.000        ; -0.006     ; 1.056      ;
+; 0.911 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|state[0]       ; clock        ; clock       ; 0.000        ; -0.014     ; 1.049      ;
+; 0.916 ; temporizador:instancia_Temporizador|counter[27] ; temporizador:instancia_Temporizador|counter[31]    ; clock        ; clock       ; 0.000        ; 0.016      ; 1.084      ;
+; 0.918 ; temporizador:instancia_Temporizador|counter[4]  ; temporizador:instancia_Temporizador|counter[7]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.070      ;
+; 0.919 ; temporizador:instancia_Temporizador|counter[13] ; temporizador:instancia_Temporizador|counter[13]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.071      ;
+; 0.920 ; temporizador:instancia_Temporizador|counter[6]  ; temporizador:instancia_Temporizador|counter[6]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.072      ;
+; 0.926 ; temporizador:instancia_Temporizador|counter[31] ; temporizador:instancia_Temporizador|counter[0]     ; clock        ; clock       ; 0.000        ; -0.016     ; 1.062      ;
+; 0.931 ; temporizador:instancia_Temporizador|counter[23] ; temporizador:instancia_Temporizador|counter[25]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.083      ;
+; 0.931 ; temporizador:instancia_Temporizador|counter[7]  ; temporizador:instancia_Temporizador|counter[9]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.083      ;
+; 0.937 ; temporizador:instancia_Temporizador|counter[25] ; temporizador:instancia_Temporizador|counter[29]    ; clock        ; clock       ; 0.000        ; 0.000      ; 1.089      ;
+; 0.938 ; temporizador:instancia_Temporizador|counter[6]  ; temporizador:instancia_Temporizador|counter[8]     ; clock        ; clock       ; 0.000        ; 0.000      ; 1.090      ;
++-------+-------------------------------------------------+----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[2]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[2]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[3]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Modo|Q[3]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[0]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[0]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[1]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[1]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[2]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[2]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[3]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; RegW:instancia_Reg_Vol_Agua|Q[3]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[10]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[10]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[11]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[11]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[12]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[12]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[13]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[13]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[14]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[14]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[15]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[15]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[16]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[16]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[17]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[17]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[18]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[18]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[19]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[19]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[20]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[20]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[21]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[21]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[22]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[22]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[23]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[23]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[24]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[24]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[25]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[25]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[26]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[26]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[27]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[27]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[28]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[28]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[29]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[29]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[30]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[30]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[31]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[31]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[9]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter[9]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|counter_out[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|state[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|state[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|state[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|state[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|state[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|state[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; temporizador:instancia_Temporizador|timeout        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; temporizador:instancia_Temporizador|timeout        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; Load_Modo        ; clock      ; 1.850 ; 1.850 ; Rise       ; clock           ;
+; Load_Vol_Agua    ; clock      ; 2.004 ; 2.004 ; Rise       ; clock           ;
+; Load_temp        ; clock      ; 0.695 ; 0.695 ; Rise       ; clock           ;
+; Modo_Lavagem[*]  ; clock      ; 1.766 ; 1.766 ; Rise       ; clock           ;
+;  Modo_Lavagem[0] ; clock      ; 1.709 ; 1.709 ; Rise       ; clock           ;
+;  Modo_Lavagem[1] ; clock      ; 1.597 ; 1.597 ; Rise       ; clock           ;
+;  Modo_Lavagem[2] ; clock      ; 1.766 ; 1.766 ; Rise       ; clock           ;
+;  Modo_Lavagem[3] ; clock      ; 1.667 ; 1.667 ; Rise       ; clock           ;
+; Reset_Cont       ; clock      ; 0.331 ; 0.331 ; Rise       ; clock           ;
+; Volume_Agua[*]   ; clock      ; 1.762 ; 1.762 ; Rise       ; clock           ;
+;  Volume_Agua[0]  ; clock      ; 1.723 ; 1.723 ; Rise       ; clock           ;
+;  Volume_Agua[1]  ; clock      ; 1.762 ; 1.762 ; Rise       ; clock           ;
+;  Volume_Agua[2]  ; clock      ; 1.740 ; 1.740 ; Rise       ; clock           ;
+;  Volume_Agua[3]  ; clock      ; 1.697 ; 1.697 ; Rise       ; clock           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Hold Times                                                                     ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; Load_Modo        ; clock      ; -1.730 ; -1.730 ; Rise       ; clock           ;
+; Load_Vol_Agua    ; clock      ; -1.884 ; -1.884 ; Rise       ; clock           ;
+; Load_temp        ; clock      ; 0.094  ; 0.094  ; Rise       ; clock           ;
+; Modo_Lavagem[*]  ; clock      ; -1.477 ; -1.477 ; Rise       ; clock           ;
+;  Modo_Lavagem[0] ; clock      ; -1.589 ; -1.589 ; Rise       ; clock           ;
+;  Modo_Lavagem[1] ; clock      ; -1.477 ; -1.477 ; Rise       ; clock           ;
+;  Modo_Lavagem[2] ; clock      ; -1.646 ; -1.646 ; Rise       ; clock           ;
+;  Modo_Lavagem[3] ; clock      ; -1.547 ; -1.547 ; Rise       ; clock           ;
+; Reset_Cont       ; clock      ; -0.211 ; -0.211 ; Rise       ; clock           ;
+; Volume_Agua[*]   ; clock      ; -1.577 ; -1.577 ; Rise       ; clock           ;
+;  Volume_Agua[0]  ; clock      ; -1.603 ; -1.603 ; Rise       ; clock           ;
+;  Volume_Agua[1]  ; clock      ; -1.642 ; -1.642 ; Rise       ; clock           ;
+;  Volume_Agua[2]  ; clock      ; -1.620 ; -1.620 ; Rise       ; clock           ;
+;  Volume_Agua[3]  ; clock      ; -1.577 ; -1.577 ; Rise       ; clock           ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; BCD[*]           ; clock      ; 4.451 ; 4.451 ; Rise       ; clock           ;
+;  BCD[0]          ; clock      ; 4.451 ; 4.451 ; Rise       ; clock           ;
+;  BCD[1]          ; clock      ; 4.375 ; 4.375 ; Rise       ; clock           ;
+;  BCD[2]          ; clock      ; 4.369 ; 4.369 ; Rise       ; clock           ;
+;  BCD[3]          ; clock      ; 4.451 ; 4.451 ; Rise       ; clock           ;
+;  BCD[4]          ; clock      ; 4.260 ; 4.260 ; Rise       ; clock           ;
+;  BCD[5]          ; clock      ; 4.389 ; 4.389 ; Rise       ; clock           ;
+;  BCD[6]          ; clock      ; 4.344 ; 4.344 ; Rise       ; clock           ;
+; Timeout          ; clock      ; 3.950 ; 3.950 ; Rise       ; clock           ;
+; pino_alto        ; clock      ; 3.900 ; 3.900 ; Rise       ; clock           ;
+; pino_baixo       ; clock      ; 3.916 ; 3.916 ; Rise       ; clock           ;
+; pino_delicado    ; clock      ; 3.872 ; 3.872 ; Rise       ; clock           ;
+; pino_economico   ; clock      ; 3.798 ; 3.798 ; Rise       ; clock           ;
+; pino_extra_baixo ; clock      ; 3.886 ; 3.886 ; Rise       ; clock           ;
+; pino_medio       ; clock      ; 3.863 ; 3.863 ; Rise       ; clock           ;
+; pino_normal      ; clock      ; 3.795 ; 3.795 ; Rise       ; clock           ;
+; pino_pesado      ; clock      ; 3.777 ; 3.777 ; Rise       ; clock           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; BCD[*]           ; clock      ; 4.140 ; 4.140 ; Rise       ; clock           ;
+;  BCD[0]          ; clock      ; 4.330 ; 4.330 ; Rise       ; clock           ;
+;  BCD[1]          ; clock      ; 4.254 ; 4.254 ; Rise       ; clock           ;
+;  BCD[2]          ; clock      ; 4.241 ; 4.241 ; Rise       ; clock           ;
+;  BCD[3]          ; clock      ; 4.330 ; 4.330 ; Rise       ; clock           ;
+;  BCD[4]          ; clock      ; 4.140 ; 4.140 ; Rise       ; clock           ;
+;  BCD[5]          ; clock      ; 4.263 ; 4.263 ; Rise       ; clock           ;
+;  BCD[6]          ; clock      ; 4.219 ; 4.219 ; Rise       ; clock           ;
+; Timeout          ; clock      ; 3.950 ; 3.950 ; Rise       ; clock           ;
+; pino_alto        ; clock      ; 3.757 ; 3.757 ; Rise       ; clock           ;
+; pino_baixo       ; clock      ; 3.763 ; 3.763 ; Rise       ; clock           ;
+; pino_delicado    ; clock      ; 3.750 ; 3.750 ; Rise       ; clock           ;
+; pino_economico   ; clock      ; 3.677 ; 3.677 ; Rise       ; clock           ;
+; pino_extra_baixo ; clock      ; 3.745 ; 3.745 ; Rise       ; clock           ;
+; pino_medio       ; clock      ; 3.732 ; 3.732 ; Rise       ; clock           ;
+; pino_normal      ; clock      ; 3.676 ; 3.676 ; Rise       ; clock           ;
+; pino_pesado      ; clock      ; 3.650 ; 3.650 ; Rise       ; clock           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.777   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  clock           ; -3.777   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -134.162 ; 0.0   ; 0.0      ; 0.0     ; -49.38              ;
+;  clock           ; -134.162 ; 0.000 ; N/A      ; N/A     ; -49.380             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; Load_Modo        ; clock      ; 3.204 ; 3.204 ; Rise       ; clock           ;
+; Load_Vol_Agua    ; clock      ; 3.556 ; 3.556 ; Rise       ; clock           ;
+; Load_temp        ; clock      ; 1.941 ; 1.941 ; Rise       ; clock           ;
+; Modo_Lavagem[*]  ; clock      ; 3.192 ; 3.192 ; Rise       ; clock           ;
+;  Modo_Lavagem[0] ; clock      ; 3.112 ; 3.112 ; Rise       ; clock           ;
+;  Modo_Lavagem[1] ; clock      ; 2.844 ; 2.844 ; Rise       ; clock           ;
+;  Modo_Lavagem[2] ; clock      ; 3.192 ; 3.192 ; Rise       ; clock           ;
+;  Modo_Lavagem[3] ; clock      ; 3.037 ; 3.037 ; Rise       ; clock           ;
+; Reset_Cont       ; clock      ; 1.215 ; 1.215 ; Rise       ; clock           ;
+; Volume_Agua[*]   ; clock      ; 3.171 ; 3.171 ; Rise       ; clock           ;
+;  Volume_Agua[0]  ; clock      ; 3.128 ; 3.128 ; Rise       ; clock           ;
+;  Volume_Agua[1]  ; clock      ; 3.171 ; 3.171 ; Rise       ; clock           ;
+;  Volume_Agua[2]  ; clock      ; 3.146 ; 3.146 ; Rise       ; clock           ;
+;  Volume_Agua[3]  ; clock      ; 3.071 ; 3.071 ; Rise       ; clock           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Hold Times                                                                     ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; Load_Modo        ; clock      ; -1.730 ; -1.730 ; Rise       ; clock           ;
+; Load_Vol_Agua    ; clock      ; -1.884 ; -1.884 ; Rise       ; clock           ;
+; Load_temp        ; clock      ; 0.094  ; 0.094  ; Rise       ; clock           ;
+; Modo_Lavagem[*]  ; clock      ; -1.477 ; -1.477 ; Rise       ; clock           ;
+;  Modo_Lavagem[0] ; clock      ; -1.589 ; -1.589 ; Rise       ; clock           ;
+;  Modo_Lavagem[1] ; clock      ; -1.477 ; -1.477 ; Rise       ; clock           ;
+;  Modo_Lavagem[2] ; clock      ; -1.646 ; -1.646 ; Rise       ; clock           ;
+;  Modo_Lavagem[3] ; clock      ; -1.547 ; -1.547 ; Rise       ; clock           ;
+; Reset_Cont       ; clock      ; -0.211 ; -0.211 ; Rise       ; clock           ;
+; Volume_Agua[*]   ; clock      ; -1.577 ; -1.577 ; Rise       ; clock           ;
+;  Volume_Agua[0]  ; clock      ; -1.603 ; -1.603 ; Rise       ; clock           ;
+;  Volume_Agua[1]  ; clock      ; -1.642 ; -1.642 ; Rise       ; clock           ;
+;  Volume_Agua[2]  ; clock      ; -1.620 ; -1.620 ; Rise       ; clock           ;
+;  Volume_Agua[3]  ; clock      ; -1.577 ; -1.577 ; Rise       ; clock           ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; BCD[*]           ; clock      ; 8.156 ; 8.156 ; Rise       ; clock           ;
+;  BCD[0]          ; clock      ; 8.140 ; 8.140 ; Rise       ; clock           ;
+;  BCD[1]          ; clock      ; 8.110 ; 8.110 ; Rise       ; clock           ;
+;  BCD[2]          ; clock      ; 8.098 ; 8.098 ; Rise       ; clock           ;
+;  BCD[3]          ; clock      ; 8.156 ; 8.156 ; Rise       ; clock           ;
+;  BCD[4]          ; clock      ; 7.826 ; 7.826 ; Rise       ; clock           ;
+;  BCD[5]          ; clock      ; 8.111 ; 8.111 ; Rise       ; clock           ;
+;  BCD[6]          ; clock      ; 8.080 ; 8.080 ; Rise       ; clock           ;
+; Timeout          ; clock      ; 7.012 ; 7.012 ; Rise       ; clock           ;
+; pino_alto        ; clock      ; 7.072 ; 7.072 ; Rise       ; clock           ;
+; pino_baixo       ; clock      ; 7.075 ; 7.075 ; Rise       ; clock           ;
+; pino_delicado    ; clock      ; 7.032 ; 7.032 ; Rise       ; clock           ;
+; pino_economico   ; clock      ; 6.783 ; 6.783 ; Rise       ; clock           ;
+; pino_extra_baixo ; clock      ; 7.035 ; 7.035 ; Rise       ; clock           ;
+; pino_medio       ; clock      ; 7.007 ; 7.007 ; Rise       ; clock           ;
+; pino_normal      ; clock      ; 6.792 ; 6.792 ; Rise       ; clock           ;
+; pino_pesado      ; clock      ; 6.800 ; 6.800 ; Rise       ; clock           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; BCD[*]           ; clock      ; 4.140 ; 4.140 ; Rise       ; clock           ;
+;  BCD[0]          ; clock      ; 4.330 ; 4.330 ; Rise       ; clock           ;
+;  BCD[1]          ; clock      ; 4.254 ; 4.254 ; Rise       ; clock           ;
+;  BCD[2]          ; clock      ; 4.241 ; 4.241 ; Rise       ; clock           ;
+;  BCD[3]          ; clock      ; 4.330 ; 4.330 ; Rise       ; clock           ;
+;  BCD[4]          ; clock      ; 4.140 ; 4.140 ; Rise       ; clock           ;
+;  BCD[5]          ; clock      ; 4.263 ; 4.263 ; Rise       ; clock           ;
+;  BCD[6]          ; clock      ; 4.219 ; 4.219 ; Rise       ; clock           ;
+; Timeout          ; clock      ; 3.950 ; 3.950 ; Rise       ; clock           ;
+; pino_alto        ; clock      ; 3.757 ; 3.757 ; Rise       ; clock           ;
+; pino_baixo       ; clock      ; 3.763 ; 3.763 ; Rise       ; clock           ;
+; pino_delicado    ; clock      ; 3.750 ; 3.750 ; Rise       ; clock           ;
+; pino_economico   ; clock      ; 3.677 ; 3.677 ; Rise       ; clock           ;
+; pino_extra_baixo ; clock      ; 3.745 ; 3.745 ; Rise       ; clock           ;
+; pino_medio       ; clock      ; 3.732 ; 3.732 ; Rise       ; clock           ;
+; pino_normal      ; clock      ; 3.676 ; 3.676 ; Rise       ; clock           ;
+; pino_pesado      ; clock      ; 3.650 ; 3.650 ; Rise       ; clock           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 2318     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 2318     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 14    ; 14   ;
+; Unconstrained Input Port Paths  ; 104   ; 104  ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 61    ; 61   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jan 19 22:56:37 2025
+Info: Command: quartus_sta Datapath -c Datapath
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 3 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Datapath.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.777
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.777      -134.162 clock 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -49.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.263
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.263       -39.822 clock 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -49.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4555 megabytes
+    Info: Processing ended: Sun Jan 19 22:56:37 2025
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
