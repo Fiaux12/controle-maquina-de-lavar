@@ -1,0 +1,82 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\amand\Documents\GitHub\controle-maquina-de-lavar\Trabalho Final\Comparador_Vol_Agua\simulation\modelsim
+Ecomparador_vol_agua
+Z1 w1737324235
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\amand\Documents\GitHub\controle-maquina-de-lavar\Trabalho Final\Comparador_Vol_Agua\simulation\modelsim
+Z6 8C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd
+Z7 FC:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd
+l0
+L5
+Vi@[5Sld>YheZfXB7<R6RV1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1737324607.343000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd|
+Z11 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 n:@c_Qczbh@koo_z]F6MJ1
+!i10b 1
+Artl
+R2
+R3
+R4
+Z14 DEx4 work 19 comparador_vol_agua 0 22 i@[5Sld>YheZfXB7<R6RV1
+l22
+L21
+V;IT7ZZV3^]P^J2<:fKELk3
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 CJAVj_JWTb8B2m`ehWoYB3
+!i10b 1
+Etb_comparador_vol_agua
+Z15 w1737324466
+Z16 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R2
+R3
+R4
+R5
+Z17 8C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/tb_Comparador_Vol_Agua.vhd
+Z18 FC:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/tb_Comparador_Vol_Agua.vhd
+l0
+L7
+VB8?]EPFJ@X^jKD0Ni;5ME0
+!s100 WonQHXOg7IKe[C9Cm85S40
+R8
+31
+!i10b 1
+Z19 !s108 1737324607.466000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/tb_Comparador_Vol_Agua.vhd|
+Z21 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/tb_Comparador_Vol_Agua.vhd|
+R12
+R13
+Atb
+R14
+R16
+R2
+R3
+R4
+DEx4 work 22 tb_comparador_vol_agua 0 22 B8?]EPFJ@X^jKD0Ni;5ME0
+l17
+L10
+VU=2G;:4G<G;cOjCocZja_0
+!s100 G6BD_^VQ_=BHn0:Hz<70G1
+R8
+31
+!i10b 1
+R19
+R20
+R21
+R12
+R13

@@ -5,37 +5,69 @@ use IEEE.NUMERIC_STD.ALL;
 entity tb_temporizador is
 end entity tb_temporizador;
 
-architecture temp of tb_temporizador is
+architecture behavior of tb_temporizador is
+    signal clock        : STD_LOGIC := '0';
+    signal reset        : STD_LOGIC := '0';
+    signal enable       : STD_LOGIC := '0';
+    signal modo_lav     : std_logic_vector(3 downto 0) := "0000"; -- Modos de lavagem
+    signal vol_agua     : std_logic_vector(3 downto 0) := "0000"; -- Volume de água
+    signal timeout      : STD_LOGIC;
+	 signal counter_out  : std_logic_vector(3 downto 0) := "0000";
+
     component temporizador
+        generic (
+            DATA_WIDTH : natural := 4
+        );
         Port (
             clock        : in  STD_LOGIC;
             reset        : in  STD_LOGIC;
             enable       : in  STD_LOGIC;
-            tempo_limite : in  INTEGER;
-            timeout      : out STD_LOGIC
+            modo_lav     : in std_logic_vector ((DATA_WIDTH-1) downto 0);
+            vol_agua     : in std_logic_vector ((DATA_WIDTH-1) downto 0);
+            timeout      : out STD_LOGIC;
+				counter_out  : out std_logic_vector ((DATA_WIDTH-1) downto 0)
         );
     end component;
 
-    signal clock        : STD_LOGIC := '0';        
-    signal reset        : STD_LOGIC := '0';         
-    signal enable       : STD_LOGIC := '0';         
-    signal tempo_limite : INTEGER := 10;           
-    signal timeout      : STD_LOGIC;               
-
 begin
-     uut: temporizador
-	  Port map (
-			clock        => clock,
-			reset        => reset,
-			enable       => enable,
-			tempo_limite => tempo_limite,
-			timeout      => timeout
-	  );
+    uut: temporizador
+        port map (
+            clock        => clock,
+            reset        => reset,
+            enable       => enable,
+            modo_lav     => modo_lav,
+            vol_agua     => vol_agua,
+            timeout      => timeout,
+				counter_out  => counter_out
+        );
 
-    clock <= not clock after 10 ms; 
+    clock_process: process
+    begin
+        clock <= '0';
+        wait for 10 ns;
+        clock <= '1';
+        wait for 10 ns;
+    end process clock_process;
 
-    reset        <= '1' after 10 ms, '0' after 20 ms;           
-    enable       <= '0' after 20 ms, '1' after 30 ms, '0' after 60 ms, '1' after 90 ms;  
-    tempo_limite <= 3  after 30 ms;
-	 
-end architecture temp;
+    -- Processo para aplicar os estímulos com tempos de atraso
+    stimulus_process: process
+    begin
+        -- Teste 1: Reset do sistema
+        reset <= '1';
+        wait for 20 ns;
+        reset <= '0';
+        wait for 20 ns;
+
+        -- Teste 2: Modo de lavagem e volume de água
+        modo_lav <= "0001";  -- Exemplo de modo de lavagem 1
+        vol_agua <= "0001";  -- Volume de água 1
+        enable <= '1';
+        wait for 100 ns;
+
+		  -- Tempo suficiente para passar por todos os estágios
+
+        -- Finalizando a simulação
+        wait;
+    end process stimulus_process;
+
+end architecture behavior;

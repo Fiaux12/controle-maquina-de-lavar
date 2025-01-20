@@ -1,0 +1,82 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\amand\Documents\GitHub\controle-maquina-de-lavar\Trabalho Final\Comparador_Modo_Lavgm\simulation\modelsim
+Ecomparador_modo_lavgm
+Z1 w1737323136
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\amand\Documents\GitHub\controle-maquina-de-lavar\Trabalho Final\Comparador_Modo_Lavgm\simulation\modelsim
+Z6 8C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd
+Z7 FC:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd
+l0
+L5
+Vn@6g5oz4oQf[mEKcMO96<2
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1737323753.245000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd|
+Z11 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 eecUc8XakR[Z?d]R=bdGB0
+!i10b 1
+Artl
+R2
+R3
+R4
+Z14 DEx4 work 21 comparador_modo_lavgm 0 22 n@6g5oz4oQf[mEKcMO96<2
+l22
+L21
+VLPaVKj?3G2P?F697zC2Fl1
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 FmG>J1S^H`_6NFGbbZfE`3
+!i10b 1
+Etb_comparador_modo_lavgm
+Z15 w1737323564
+Z16 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R2
+R3
+R4
+R5
+Z17 8C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/tb_Comparador_Modo_Lavgm.vhd
+Z18 FC:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/tb_Comparador_Modo_Lavgm.vhd
+l0
+L7
+VN>;^nkfzN4gWh[1RPZLo_3
+!s100 ^MOek2UfKnQIJeZmQ4MEH3
+R8
+31
+!i10b 1
+Z19 !s108 1737323753.345000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/tb_Comparador_Modo_Lavgm.vhd|
+Z21 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/tb_Comparador_Modo_Lavgm.vhd|
+R12
+R13
+Atb
+R14
+R16
+R2
+R3
+R4
+DEx4 work 24 tb_comparador_modo_lavgm 0 22 N>;^nkfzN4gWh[1RPZLo_3
+l17
+L10
+VC^4P;ee]XKf3m4<T]LbKG3
+!s100 RkoZ5zoZhH^U:i58bXNJB1
+R8
+31
+!i10b 1
+R19
+R20
+R21
+R12
+R13

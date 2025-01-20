@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {Comparador_Modo_Lavgm.vho Comparador_Modo_Lavgm_vhd.sdo}}
+	{{"Fast Model"} {Comparador_Modo_Lavgm_fast.vho Comparador_Modo_Lavgm_vhd_fast.sdo}}
+}

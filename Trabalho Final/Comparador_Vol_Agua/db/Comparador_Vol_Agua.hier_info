@@ -1,0 +1,23 @@
+|Comparador_Vol_Agua
+vol_agua[0] => Equal0.IN3
+vol_agua[0] => Equal1.IN2
+vol_agua[0] => Equal2.IN2
+vol_agua[0] => Equal3.IN2
+vol_agua[1] => Equal0.IN2
+vol_agua[1] => Equal1.IN3
+vol_agua[1] => Equal2.IN1
+vol_agua[1] => Equal3.IN1
+vol_agua[2] => Equal0.IN1
+vol_agua[2] => Equal1.IN1
+vol_agua[2] => Equal2.IN3
+vol_agua[2] => Equal3.IN0
+vol_agua[3] => Equal0.IN0
+vol_agua[3] => Equal1.IN0
+vol_agua[3] => Equal2.IN0
+vol_agua[3] => Equal3.IN3
+pino_extra_baixo <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+pino_baixo <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+pino_medio <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+pino_alto <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
+
+

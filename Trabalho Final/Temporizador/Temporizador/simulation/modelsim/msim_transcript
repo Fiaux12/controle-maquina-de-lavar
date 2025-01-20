@@ -26,7 +26,7 @@
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity tb_temporizador
-# -- Compiling architecture temp of tb_temporizador
+# -- Compiling architecture behavior of tb_temporizador
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  tb_temporizador
 # vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_temporizador 
@@ -34,7 +34,7 @@
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.tb_temporizador(temp)
+# Loading work.tb_temporizador(behavior)
 # Loading work.temporizador(temp)
 # 
 # add wave *
@@ -42,4 +42,5 @@
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 1000 ms
+# run 1000 ns
+# WARNING: No extended dataflow license exists
