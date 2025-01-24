@@ -91,7 +91,10 @@ begin
                 end if;
 
             when Load =>
-                -- Verificar volume válido
+					Load_Modo     <= '1';
+               Load_Vol_Agua     <= '1';
+               
+					-- Verificar volume válido
                 if pino_extra_baixo = '1' and pino_baixo = '0' and pino_medio = '0' and pino_alto = '0' then
                     volume_valido := '1';
                 elsif pino_baixo = '1' and pino_extra_baixo = '0' and pino_medio = '0' and pino_alto = '0' then
@@ -120,11 +123,9 @@ begin
                 -- Avançar estado
                 if volume_valido = '1' and modo_valido = '1' then
                     Load_temp <= '1';
-                    Reset_Cont <= '0';
                     proximo_estado <= Enchendo;
                 else
                     Load_temp <= '0';
-                    Reset_Cont <= '1';
                     proximo_estado <= Load;
                 end if;
 
@@ -132,6 +133,7 @@ begin
                 if Timeout = '0' then
                     Led_Enchendo <= '1';
                     Valvula_Agua <= '1';
+                    proximo_estado <= Enchendo;
                 else
                     Led_Enchendo <= '0';
                     Valvula_Agua <= '0';
@@ -141,6 +143,8 @@ begin
             when Molho => 
                 if Timeout = '0' then
                     Led_Molho <= '1';
+                    proximo_estado <= Molho;
+						  
                 else
                     Led_Molho <= '0';
                     proximo_estado <= Lavar;
@@ -150,6 +154,8 @@ begin
                 if Timeout = '0' then
                     Led_Lavar <= '1';
                     Load_Motor <= '1';
+						  
+                    proximo_estado <= Lavar;
                 else
                     Led_Lavar  <= '0';
                     Load_Motor <= '0';
@@ -160,6 +166,8 @@ begin
                 if Timeout = '0' then
                     Led_Enxague <= '1';
                     Load_Motor  <= '1';
+						  
+                    proximo_estado <= Enxague;
                 else
                     Led_Enxague <= '0';
                     Load_Motor  <= '0';
@@ -170,6 +178,8 @@ begin
                 if Timeout = '0' then
                     Led_Centrifuga <= '1';
                     Load_Motor <= '1';
+						  
+                    proximo_estado <= Centrifuga;
                 else
                     Led_Centrifuga <= '0';
                     Load_Motor <= '0';
@@ -179,6 +189,7 @@ begin
             when Finalizado =>
                 if Timeout = '0' then
                     Led_Finalizado <= '1';
+						  proximo_estado <= Finalizado;
                 else
                     Led_Finalizado <= '0';
                     proximo_estado <= Ligar;

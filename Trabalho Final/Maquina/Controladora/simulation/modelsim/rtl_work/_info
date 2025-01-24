@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\amand\Documents\GitHub\controle-maquina-de-lavar\Trabalho Final\Maquina\Controladora\simulation\modelsim
+Econtroladora
+Z1 w1737759967
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\amand\Documents\GitHub\controle-maquina-de-lavar\Trabalho Final\Maquina\Controladora\simulation\modelsim
+Z5 8C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd
+Z6 FC:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd
+l0
+L4
+VX>ndgVB6WjYD0FM8aQ>[51
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1737760222.636000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd|
+Z10 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 1Z9`zag=fN5g^?A1<4_?V0
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 12 controladora 0 22 X>ndgVB6WjYD0FM8aQ>[51
+l49
+L36
+VT9GYz]8f?OC3lCNi:R5cD0
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 kX3NC]7I=TK_?Ulj[Ga141
+!i10b 1
+Etb_controladora
+Z13 w1737760211
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/tb_Controladora.vhd
+Z16 FC:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/tb_Controladora.vhd
+l0
+L5
+VcRHieT>iMjD6`P4i8ze@l2
+!s100 IBnTG?XHO=G8jbRZ1WeU62
+R7
+31
+!i10b 1
+Z17 !s108 1737760222.683000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/tb_Controladora.vhd|
+Z19 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/tb_Controladora.vhd|
+R11
+R12
+Atb
+R14
+R2
+R3
+DEx4 work 15 tb_controladora 0 22 cRHieT>iMjD6`P4i8ze@l2
+l74
+L8
+V^2XP3XV`G4=F=EZjGeT8A0
+!s100 mZkJ1eB8A6NBAh6^zb4h?0
+R7
+31
+!i10b 1
+R17
+R18
+R19
+R11
+R12

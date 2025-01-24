@@ -123,57 +123,7 @@ begin
         wait for 20 ns;
         RESET <= '0';
 
-        -- Turn on the machine
-        Ligar_maquina <= '1';
-        wait for 20 ns;
-
-        -- Set valid volume and mode inputs
-        pino_baixo <= '1';
-        pino_normal <= '1';
-        wait for 30 ns;
-
-        -- Simulate Timeout during Enchendo
-        Timeout <= '1';
-        wait for 10 ns;
-        Timeout <= '0';
-        wait for 10 ns;
-
-        -- Simulate Timeout during Molho
-        Timeout <= '1';
-        wait for 10 ns;
-        Timeout <= '0';
-        wait for 10 ns;
-		  
-		  -- Simulate Timeout during Lavar
-		  Timeout <= '1';
-        wait for 10 ns;
-        Timeout <= '0';
-        wait for 10 ns;
-
-        -- Simulate Timeout during Enxaguar
-        Timeout <= '1';
-        wait for 10 ns;
-        Timeout <= '0';
-        wait for 10 ns;
-		  
-		  -- Simulate Timeout during Centrifuga
-        Timeout <= '1';
-        wait for 10 ns;
-        Timeout <= '0';
-        wait for 10 ns;
-		  
-		  -- Simulate Timeout during Finalizar
-        Timeout <= '1';
-        wait for 20 ns;
-        Timeout <= '0';
-        wait for 20 ns;
-
-        -- Continue simulation for other states...
-        wait for 200 ns;
-
-        -- Stop the simulation
         wait;
     end process;
-
 
 end tb;

@@ -1,0 +1,109 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'estado_atual.Ligar'
+Slack : -2.149
+TNS   : -7.752
+
+Type  : Slow Model Setup 'estado_atual.Enchendo'
+Slack : -0.320
+TNS   : -0.320
+
+Type  : Slow Model Setup 'estado_atual.Centrifuga'
+Slack : -0.244
+TNS   : -0.244
+
+Type  : Slow Model Setup 'CLOCK'
+Slack : 0.084
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK'
+Slack : -2.535
+TNS   : -9.979
+
+Type  : Slow Model Hold 'estado_atual.Centrifuga'
+Slack : -0.570
+TNS   : -0.985
+
+Type  : Slow Model Hold 'estado_atual.Ligar'
+Slack : -0.512
+TNS   : -1.306
+
+Type  : Slow Model Hold 'estado_atual.Enchendo'
+Slack : -0.119
+TNS   : -0.119
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK'
+Slack : -1.380
+TNS   : -9.380
+
+Type  : Slow Model Minimum Pulse Width 'estado_atual.Centrifuga'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'estado_atual.Enchendo'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'estado_atual.Ligar'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'estado_atual.Load'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'estado_atual.Ligar'
+Slack : -0.604
+TNS   : -1.972
+
+Type  : Fast Model Setup 'estado_atual.Enchendo'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Fast Model Setup 'estado_atual.Centrifuga'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Fast Model Setup 'CLOCK'
+Slack : 0.535
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK'
+Slack : -1.579
+TNS   : -6.506
+
+Type  : Fast Model Hold 'estado_atual.Ligar'
+Slack : -0.222
+TNS   : -0.585
+
+Type  : Fast Model Hold 'estado_atual.Centrifuga'
+Slack : -0.216
+TNS   : -0.403
+
+Type  : Fast Model Hold 'estado_atual.Enchendo'
+Slack : -0.047
+TNS   : -0.047
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK'
+Slack : -1.380
+TNS   : -9.380
+
+Type  : Fast Model Minimum Pulse Width 'estado_atual.Centrifuga'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'estado_atual.Enchendo'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'estado_atual.Ligar'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'estado_atual.Load'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------
