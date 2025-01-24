@@ -87,6 +87,7 @@ begin
                             state <= 1; 
                             counter <= 1; 
 									 counter_out <= std_logic_vector(to_unsigned(0, DATA_WIDTH));
+									 timeout <= '1';
                         end if;
                     when 1 => -- Molho
 								
@@ -98,6 +99,7 @@ begin
                             state <= 2; 
                             counter <= 1; 
 									 counter_out <= std_logic_vector(to_unsigned(0, DATA_WIDTH));
+									 timeout <= '1';
                         end if;
                     when 2 => -- Lavagem
                         if counter <= tempo_limite_lavagem then
@@ -108,6 +110,7 @@ begin
                             state <= 3; 
                             counter <= 1; 
 									 counter_out <= std_logic_vector(to_unsigned(0, DATA_WIDTH));
+									 timeout <= '1';
                         end if;
 						  when 3 => -- Enxague
                         if counter <= tempo_limite_enxague then
@@ -118,6 +121,7 @@ begin
                             state <= 4; 
                             counter <= 1; 
 									 counter_out <= std_logic_vector(to_unsigned(0, DATA_WIDTH));
+									 timeout <= '1';
                         end if;
                     when 4 => -- Centrifuga
                         if counter <= tempo_limite_centrifuga then
@@ -129,6 +133,7 @@ begin
                             state <= 5;
                             counter <= 1;
 									 counter_out <= std_logic_vector(to_unsigned(0, DATA_WIDTH)); 
+									 timeout <= '1';
                         end if;
 							when 5 => -- Finaliza
                             timeout <= '1';      -- Quando trabalhar na controladora, colocar o enable em 0 aqui

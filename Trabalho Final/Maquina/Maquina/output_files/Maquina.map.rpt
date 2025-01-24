@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Maquina
-Fri Jan 24 16:51:04 2025
+Fri Jan 24 20:22:42 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,21 +14,22 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |Maquina|Controladora:instancia_controladora|estado_atual
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
  11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: Top-level Entity: |Maquina
- 14. Parameter Settings for User Entity Instance: Datapath:instance_datapath
- 15. Parameter Settings for User Entity Instance: Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua
- 16. Parameter Settings for User Entity Instance: Datapath:instance_datapath|RegW:instancia_Reg_Modo
- 17. Parameter Settings for User Entity Instance: Datapath:instance_datapath|Comparador_Vol_Agua:instancia_Comp_vol_agua
- 18. Parameter Settings for User Entity Instance: Datapath:instance_datapath|Comparador_Modo_Lavgm:instancia_Comp_modo_lavgm
- 19. Parameter Settings for User Entity Instance: Datapath:instance_datapath|temporizador:instancia_Temporizador
- 20. Port Connectivity Checks: "Datapath:instance_datapath|RegW:instancia_Reg_Modo"
- 21. Port Connectivity Checks: "Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua"
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |Maquina
+ 15. Parameter Settings for User Entity Instance: Datapath:instance_datapath
+ 16. Parameter Settings for User Entity Instance: Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua
+ 17. Parameter Settings for User Entity Instance: Datapath:instance_datapath|RegW:instancia_Reg_Modo
+ 18. Parameter Settings for User Entity Instance: Datapath:instance_datapath|Comparador_Vol_Agua:instancia_Comp_vol_agua
+ 19. Parameter Settings for User Entity Instance: Datapath:instance_datapath|Comparador_Modo_Lavgm:instancia_Comp_modo_lavgm
+ 20. Parameter Settings for User Entity Instance: Datapath:instance_datapath|temporizador:instancia_Temporizador
+ 21. Port Connectivity Checks: "Datapath:instance_datapath|RegW:instancia_Reg_Modo"
+ 22. Port Connectivity Checks: "Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua"
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -54,15 +55,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan 24 16:51:04 2025           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 24 20:22:42 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Maquina                                         ;
 ; Top-level Entity Name              ; Maquina                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
+; Total logic elements               ; 164                                             ;
+;     Total combinational functions  ; 151                                             ;
+;     Dedicated logic registers      ; 56                                              ;
+; Total registers                    ; 56                                              ;
 ; Total pins                         ; 27                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -162,25 +163,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
-+-------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                ; Library ;
-+-------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
-; ../../Temporizador/Temporizador/Temporizador.vhd      ; yes             ; User VHDL File  ; C:/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd      ;         ;
-; ../../Reg_W/RegW/RegW.vhd                             ; yes             ; User VHDL File  ; C:/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd                             ;         ;
-; ../../BCD_7seg/BCD_7seg/BCD_7seg.vhd                  ; yes             ; User VHDL File  ; C:/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd                  ;         ;
-; ../../Comparador_Vol_Agua/Comparador_Vol_Agua.vhd     ; yes             ; User VHDL File  ; C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd     ;         ;
-; ../../Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd ; yes             ; User VHDL File  ; C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd ;         ;
-; Maquina.vhd                                           ; yes             ; User VHDL File  ; C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/Maquina.vhd                     ;         ;
-; ../Controladora/Controladora.vhd                      ; yes             ; User VHDL File  ; C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd           ;         ;
-; ../Datapath/Datapath.vhd                              ; yes             ; User VHDL File  ; C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd                   ;         ;
-+-------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                         ;
++-------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                             ; Library ;
++-------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; ../../Temporizador/Temporizador/Temporizador.vhd      ; yes             ; User VHDL File  ; C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd      ;         ;
+; ../../Reg_W/RegW/RegW.vhd                             ; yes             ; User VHDL File  ; C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd                             ;         ;
+; ../../BCD_7seg/BCD_7seg/BCD_7seg.vhd                  ; yes             ; User VHDL File  ; C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd                  ;         ;
+; ../../Comparador_Vol_Agua/Comparador_Vol_Agua.vhd     ; yes             ; User VHDL File  ; C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd     ;         ;
+; ../../Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd ; yes             ; User VHDL File  ; C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd ;         ;
+; Maquina.vhd                                           ; yes             ; User VHDL File  ; C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/Maquina.vhd                     ;         ;
+; ../Controladora/Controladora.vhd                      ; yes             ; User VHDL File  ; C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd           ;         ;
+; ../Datapath/Datapath.vhd                              ; yes             ; User VHDL File  ; C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd                   ;         ;
++-------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -188,33 +189,45 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
+; Estimated Total logic elements              ; 164   ;
 ;                                             ;       ;
-; Total combinational functions               ; 0     ;
+; Total combinational functions               ; 151   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
+;     -- 4 input functions                    ; 45    ;
+;     -- 3 input functions                    ; 22    ;
+;     -- <=2 input functions                  ; 84    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
+;     -- normal mode                          ; 120   ;
+;     -- arithmetic mode                      ; 31    ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
+; Total registers                             ; 56    ;
+;     -- Dedicated logic registers            ; 56    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 27    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; CLOCK ;
+; Maximum fan-out                             ; 56    ;
+; Total fan-out                               ; 635   ;
+; Average fan-out                             ; 2.71  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Maquina                   ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |Maquina            ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                              ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Library Name ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
+; |Maquina                                            ; 151 (0)           ; 56 (0)       ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |Maquina                                                                        ; work         ;
+;    |Controladora:instancia_controladora|            ; 30 (30)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Controladora:instancia_controladora                                    ; work         ;
+;    |Datapath:instance_datapath|                     ; 121 (0)           ; 48 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath                                             ; work         ;
+;       |Bcd_7seg:instancia_Bcd_7seg|                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath|Bcd_7seg:instancia_Bcd_7seg                 ; work         ;
+;       |Comparador_Vol_Agua:instancia_Comp_vol_agua| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath|Comparador_Vol_Agua:instancia_Comp_vol_agua ; work         ;
+;       |RegW:instancia_Reg_Modo|                     ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath|RegW:instancia_Reg_Modo                     ; work         ;
+;       |RegW:instancia_Reg_Vol_Agua|                 ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua                 ; work         ;
+;       |temporizador:instancia_Temporizador|         ; 113 (113)         ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath|temporizador:instancia_Temporizador         ; work         ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -236,99 +249,41 @@ Encoding Type:  One-Hot
 +-------------------------+--------------------+-------------------------+-------------------------+----------------------+--------------------+--------------------+-----------------------+-------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                           ;
-+----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
-; Register name                                                                    ; Reason for Removal                                                                        ;
-+----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
-; Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua|Q[0..3]                   ; Stuck at GND due to stuck port clock                                                      ;
-; Datapath:instance_datapath|RegW:instancia_Reg_Modo|Q[0..3]                       ; Lost fanout                                                                               ;
-; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[1..31]    ; Stuck at GND due to stuck port clock_enable                                               ;
-; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[0..31]      ; Stuck at GND due to stuck port clock_enable                                               ;
-; Datapath:instance_datapath|temporizador:instancia_Temporizador|timeout           ; Stuck at GND due to stuck port clock_enable                                               ;
-; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[0]        ; Lost fanout                                                                               ;
-; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[1..3] ; Merged with Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[0] ;
-; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[0]    ; Stuck at GND due to stuck port data_in                                                    ;
-; Controladora:instancia_controladora|estado_atual.Pause                           ; Lost fanout                                                                               ;
-; Controladora:instancia_controladora|estado_atual.Enchendo                        ; Merged with Controladora:instancia_controladora|estado_atual.Centrifuga                   ;
-; Controladora:instancia_controladora|estado_atual.Enxague                         ; Merged with Controladora:instancia_controladora|estado_atual.Centrifuga                   ;
-; Controladora:instancia_controladora|estado_atual.Finalizado                      ; Merged with Controladora:instancia_controladora|estado_atual.Centrifuga                   ;
-; Controladora:instancia_controladora|estado_atual.Lavar                           ; Merged with Controladora:instancia_controladora|estado_atual.Centrifuga                   ;
-; Controladora:instancia_controladora|estado_atual.Molho                           ; Merged with Controladora:instancia_controladora|estado_atual.Centrifuga                   ;
-; Controladora:instancia_controladora|estado_atual.Centrifuga                      ; Stuck at GND due to stuck port data_in                                                    ;
-; Total Number of Removed Registers = 84                                           ;                                                                                           ;
-+----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                                       ;
++-----------------------------------------------------------------------------------------+--------------------------------------------------------+------------------------+
+; Latch Name                                                                              ; Latch Enable Signal                                    ; Free of Timing Hazards ;
++-----------------------------------------------------------------------------------------+--------------------------------------------------------+------------------------+
+; Controladora:instancia_controladora|Led_Enchendo                                        ; Controladora:instancia_controladora|WideOr1            ; yes                    ;
+; Controladora:instancia_controladora|Led_Molho                                           ; Controladora:instancia_controladora|WideOr2            ; yes                    ;
+; Controladora:instancia_controladora|Led_Lavar                                           ; Controladora:instancia_controladora|WideOr3            ; yes                    ;
+; Controladora:instancia_controladora|Led_Enxague                                         ; Controladora:instancia_controladora|WideOr4            ; yes                    ;
+; Controladora:instancia_controladora|Led_Centrifuga                                      ; Controladora:instancia_controladora|WideOr5            ; yes                    ;
+; Controladora:instancia_controladora|Led_Finalizado                                      ; Controladora:instancia_controladora|WideOr6            ; yes                    ;
+; Controladora:instancia_controladora|Valvula_Agua                                        ; Controladora:instancia_controladora|WideOr1            ; yes                    ;
+; Controladora:instancia_controladora|Load_Motor                                          ; Controladora:instancia_controladora|WideOr0            ; yes                    ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[2] ; GND                                                    ; yes                    ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[1] ; GND                                                    ; yes                    ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[0] ; GND                                                    ; yes                    ;
+; Controladora:instancia_controladora|Load_temp                                           ; Controladora:instancia_controladora|estado_atual.Load  ; yes                    ;
+; Controladora:instancia_controladora|Reset_Cont                                          ; Controladora:instancia_controladora|estado_atual.Ligar ; yes                    ;
+; Controladora:instancia_controladora|Reset_Vol_Agua                                      ; Controladora:instancia_controladora|estado_atual.Ligar ; yes                    ;
+; Controladora:instancia_controladora|Reset_Modo                                          ; Controladora:instancia_controladora|estado_atual.Ligar ; yes                    ;
+; Number of user-specified and inferred latches = 15                                      ;                                                        ;                        ;
++-----------------------------------------------------------------------------------------+--------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                           ;
-+-------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------------+
-; Register name                                               ; Reason for Removal      ; Registers Removed due to This Register                                        ;
-+-------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------------+
-; Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua|Q[3] ; Stuck at GND            ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[31],   ;
-;                                                             ; due to stuck port clock ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[30],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[29],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[28],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[27],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[26],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[25],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[24],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[23],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[22],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[21],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[20],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[19],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[18],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[17],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[16],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[15],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[14],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[13],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[12],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[11],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[10],   ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[9],    ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[8],    ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[7],    ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[6],    ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[5],    ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[4],    ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[31],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[30],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[29],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[28],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[27],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[26],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[25],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[24],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[23],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[22],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[21],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[20],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[19],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[18],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[17],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[16],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[15],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[14],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[13],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[12],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[11],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[10],     ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[9],      ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[8],      ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[7],      ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[6],      ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[5],      ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[4],      ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[3],      ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[2],      ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[1],      ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[0],      ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|timeout,       ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[0],    ;
-;                                                             ;                         ; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[0] ;
-+-------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                       ;
++-----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+; Register name                                                                     ; Reason for Removal                                                                   ;
++-----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[3..9,11..31] ; Merged with Datapath:instance_datapath|temporizador:instancia_Temporizador|state[10] ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[10]          ; Stuck at GND due to stuck port data_in                                               ;
+; Controladora:instancia_controladora|estado_atual.Pause                            ; Stuck at GND due to stuck port data_in                                               ;
+; Total Number of Removed Registers = 30                                            ;                                                                                      ;
++-----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -336,23 +291,35 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 56    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 52    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 43    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 10:1               ; 9 bits    ; 54 LEs        ; 9 LEs                ; 45 LEs                 ; No         ; |Maquina|Controladora:instancia_controladora|Selector2 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                        ;
++---------------------------------------------------------------------------+---------+
+; Inverted Register                                                         ; Fan out ;
++---------------------------------------------------------------------------+---------+
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[0] ; 4       ;
+; Total number of inverted registers = 1                                    ;         ;
++---------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; 15:1               ; 35 bits   ; 350 LEs       ; 35 LEs               ; 315 LEs                ; Yes        ; |Maquina|Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[2]           ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 8 LEs                ; 14 LEs                 ; Yes        ; |Maquina|Datapath:instance_datapath|temporizador:instancia_Temporizador|state[2]                 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |Maquina|Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -458,22 +425,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jan 24 16:51:03 2025
+    Info: Processing started: Fri Jan 24 20:22:41 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Maquina -c Maquina
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /controle-maquina-de-lavar/trabalho final/temporizador/temporizador/temporizador.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/amand/documents/github/controle-maquina-de-lavar/trabalho final/temporizador/temporizador/temporizador.vhd
     Info (12022): Found design unit 1: temporizador-temp
     Info (12023): Found entity 1: temporizador
-Info (12021): Found 2 design units, including 1 entities, in source file /controle-maquina-de-lavar/trabalho final/reg_w/regw/regw.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/amand/documents/github/controle-maquina-de-lavar/trabalho final/reg_w/regw/regw.vhd
     Info (12022): Found design unit 1: RegW-RTL
     Info (12023): Found entity 1: RegW
-Info (12021): Found 2 design units, including 1 entities, in source file /controle-maquina-de-lavar/trabalho final/bcd_7seg/bcd_7seg/bcd_7seg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/amand/documents/github/controle-maquina-de-lavar/trabalho final/bcd_7seg/bcd_7seg/bcd_7seg.vhd
     Info (12022): Found design unit 1: Bcd_7seg-with_select_bcd7seg
     Info (12023): Found entity 1: Bcd_7seg
-Info (12021): Found 2 design units, including 1 entities, in source file /controle-maquina-de-lavar/trabalho final/comparador_vol_agua/comparador_vol_agua.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/amand/documents/github/controle-maquina-de-lavar/trabalho final/comparador_vol_agua/comparador_vol_agua.vhd
     Info (12022): Found design unit 1: Comparador_Vol_Agua-rtl
     Info (12023): Found entity 1: Comparador_Vol_Agua
-Info (12021): Found 2 design units, including 1 entities, in source file /controle-maquina-de-lavar/trabalho final/comparador_modo_lavgm/comparador_modo_lavgm.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/amand/documents/github/controle-maquina-de-lavar/trabalho final/comparador_modo_lavgm/comparador_modo_lavgm.vhd
     Info (12022): Found design unit 1: Comparador_Modo_Lavgm-rtl
     Info (12023): Found entity 1: Comparador_Modo_Lavgm
 Info (12021): Found 2 design units, including 1 entities, in source file tb_maquina.vhd
@@ -482,15 +449,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb_maqu
 Info (12021): Found 2 design units, including 1 entities, in source file maquina.vhd
     Info (12022): Found design unit 1: Maquina-FSM
     Info (12023): Found entity 1: Maquina
-Info (12021): Found 2 design units, including 1 entities, in source file /controle-maquina-de-lavar/trabalho final/maquina/controladora/controladora.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/amand/documents/github/controle-maquina-de-lavar/trabalho final/maquina/controladora/controladora.vhd
     Info (12022): Found design unit 1: Controladora-arch
     Info (12023): Found entity 1: Controladora
-Info (12021): Found 2 design units, including 1 entities, in source file /controle-maquina-de-lavar/trabalho final/maquina/datapath/datapath.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/amand/documents/github/controle-maquina-de-lavar/trabalho final/maquina/datapath/datapath.vhd
     Info (12022): Found design unit 1: Datapath-RTL
     Info (12023): Found entity 1: Datapath
 Info (12127): Elaborating entity "Maquina" for the top level hierarchy
 Info (12128): Elaborating entity "Controladora" for hierarchy "Controladora:instancia_controladora"
-Warning (10541): VHDL Signal Declaration warning at Controladora.vhd(13): used implicit default value for signal "Load_Modo" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_Motor", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Enchendo", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Molho", which holds its previous value in one or more paths through the process
@@ -502,10 +468,12 @@ Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferri
 Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Reset_Vol_Agua", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Reset_Modo", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Reset_Cont", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_temp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_Modo", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_Vol_Agua", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "Load_Vol_Agua" at Controladora.vhd(62)
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_temp", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "Load_temp" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Load_Vol_Agua" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Load_Modo" at Controladora.vhd(62)
 Info (10041): Inferred latch for "Reset_Cont" at Controladora.vhd(62)
 Info (10041): Inferred latch for "Reset_Modo" at Controladora.vhd(62)
 Info (10041): Inferred latch for "Reset_Vol_Agua" at Controladora.vhd(62)
@@ -696,44 +664,39 @@ Info (10041): Inferred latch for "tempo_limite_enchendo[28]" at Temporizador.vhd
 Info (10041): Inferred latch for "tempo_limite_enchendo[29]" at Temporizador.vhd(35)
 Info (10041): Inferred latch for "tempo_limite_enchendo[30]" at Temporizador.vhd(35)
 Info (10041): Inferred latch for "tempo_limite_enchendo[31]" at Temporizador.vhd(35)
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Display_7seg[0]" is stuck at GND
-    Warning (13410): Pin "Display_7seg[1]" is stuck at GND
-    Warning (13410): Pin "Display_7seg[2]" is stuck at GND
-    Warning (13410): Pin "Display_7seg[3]" is stuck at GND
-    Warning (13410): Pin "Display_7seg[4]" is stuck at GND
-    Warning (13410): Pin "Display_7seg[5]" is stuck at GND
-    Warning (13410): Pin "Display_7seg[6]" is stuck at VCC
-    Warning (13410): Pin "Led_Enchendo" is stuck at GND
-    Warning (13410): Pin "Led_Molho" is stuck at GND
-    Warning (13410): Pin "Led_Lavar" is stuck at GND
-    Warning (13410): Pin "Led_Enxague" is stuck at GND
-    Warning (13410): Pin "Led_Centrifuga" is stuck at GND
-    Warning (13410): Pin "Led_Finalizado" is stuck at GND
-    Warning (13410): Pin "Valvula_Agua" is stuck at GND
-    Warning (13410): Pin "Load_Motor" is stuck at GND
-Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "Controladora:instancia_controladora|Valvula_Agua" merged with LATCH primitive "Controladora:instancia_controladora|Led_Enchendo"
+    Info (13026): Duplicate LATCH primitive "Controladora:instancia_controladora|Reset_Vol_Agua" merged with LATCH primitive "Controladora:instancia_controladora|Reset_Cont"
+    Info (13026): Duplicate LATCH primitive "Controladora:instancia_controladora|Reset_Modo" merged with LATCH primitive "Controladora:instancia_controladora|Reset_Cont"
+Warning (13012): Latch Controladora:instancia_controladora|Led_Enchendo has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Enchendo
+Warning (13012): Latch Controladora:instancia_controladora|Led_Molho has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Molho
+Warning (13012): Latch Controladora:instancia_controladora|Led_Lavar has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Lavar
+Warning (13012): Latch Controladora:instancia_controladora|Led_Enxague has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Enxague
+Warning (13012): Latch Controladora:instancia_controladora|Led_Centrifuga has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Centrifuga
+Warning (13012): Latch Controladora:instancia_controladora|Led_Finalizado has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Finalizado
+Warning (13012): Latch Controladora:instancia_controladora|Load_Motor has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Ligar
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[0] will power up to High
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Porta"
-    Warning (15610): No output dependent on input pin "vol_agua[0]"
-    Warning (15610): No output dependent on input pin "vol_agua[1]"
-    Warning (15610): No output dependent on input pin "vol_agua[2]"
-    Warning (15610): No output dependent on input pin "vol_agua[3]"
-    Warning (15610): No output dependent on input pin "modo_lavgm[0]"
-    Warning (15610): No output dependent on input pin "modo_lavgm[1]"
-    Warning (15610): No output dependent on input pin "modo_lavgm[2]"
-    Warning (15610): No output dependent on input pin "modo_lavgm[3]"
-    Warning (15610): No output dependent on input pin "CLOCK"
-    Warning (15610): No output dependent on input pin "RESET"
-    Warning (15610): No output dependent on input pin "Ligar_maquina"
-Info (21057): Implemented 27 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 191 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 15 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 57 warnings
-    Info: Peak virtual memory: 4635 megabytes
-    Info: Processing ended: Fri Jan 24 16:51:04 2025
+    Info (21061): Implemented 164 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 4647 megabytes
+    Info: Processing ended: Fri Jan 24 20:22:42 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

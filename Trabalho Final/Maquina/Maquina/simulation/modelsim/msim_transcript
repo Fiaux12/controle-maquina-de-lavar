@@ -10,7 +10,7 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd}
+# vcom -93 -work work {C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -18,21 +18,21 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity temporizador
 # -- Compiling architecture temp of temporizador
-# vcom -93 -work work {C:/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd}
+# vcom -93 -work work {C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity RegW
 # -- Compiling architecture RTL of RegW
-# vcom -93 -work work {C:/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd}
+# vcom -93 -work work {C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Bcd_7seg
 # -- Compiling architecture with_select_bcd7seg of Bcd_7seg
-# vcom -93 -work work {C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd}
+# vcom -93 -work work {C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -40,7 +40,7 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Comparador_Vol_Agua
 # -- Compiling architecture rtl of Comparador_Vol_Agua
-# vcom -93 -work work {C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd}
+# vcom -93 -work work {C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -48,21 +48,21 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Comparador_Modo_Lavgm
 # -- Compiling architecture rtl of Comparador_Modo_Lavgm
-# vcom -93 -work work {C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/Maquina.vhd}
+# vcom -93 -work work {C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/Maquina.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Maquina
 # -- Compiling architecture FSM of Maquina
-# vcom -93 -work work {C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd}
+# vcom -93 -work work {C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Controladora
 # -- Compiling architecture arch of Controladora
-# vcom -93 -work work {C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd}
+# vcom -93 -work work {C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -70,7 +70,7 @@
 # -- Compiling entity Datapath
 # -- Compiling architecture RTL of Datapath
 # 
-# vcom -93 -work work {C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/tb_maquina.vhd}
+# vcom -93 -work work {C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/tb_maquina.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -93,14 +93,19 @@
 # Loading work.comparador_modo_lavgm(rtl)
 # Loading work.bcd_7seg(with_select_bcd7seg)
 # Loading work.temporizador(temp)
-# ** Warning: (vsim-8683) Uninitialized out port /tb_maquina/uut/instancia_controladora/Load_Modo has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Elaine  Hostname: DESKTOP-UT9RB7D  ProcessID: 16444
+# 
+#           Attempting to use alternate WLF file "./wlft9gxk1d".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft9gxk1d
+# 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 100 sec
+# run 1000 ns

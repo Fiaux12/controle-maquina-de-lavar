@@ -1,5 +1,5 @@
 Fitter report for Maquina
-Fri Jan 24 16:51:10 2025
+Fri Jan 24 20:22:47 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -24,11 +24,21 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  16. Fitter Resource Utilization by Entity
  17. Delay Chain Summary
  18. Pad To Core Delay Chain Fanout
- 19. Other Routing Usage Summary
- 20. Fitter Device Options
- 21. Operating Settings and Conditions
- 22. Fitter Messages
- 23. Fitter Suppressed Messages
+ 19. Control Signals
+ 20. Global & Other Fast Signals
+ 21. Non-Global High Fan-Out Signals
+ 22. Other Routing Usage Summary
+ 23. LAB Logic Elements
+ 24. LAB-wide Signals
+ 25. LAB Signals Sourced
+ 26. LAB Signals Sourced Out
+ 27. LAB Distinct Inputs
+ 28. Fitter Device Options
+ 29. Operating Settings and Conditions
+ 30. Estimated Delay Added for Hold Timing Summary
+ 31. Estimated Delay Added for Hold Timing Details
+ 32. Fitter Messages
+ 33. Fitter Suppressed Messages
 
 
 
@@ -54,17 +64,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Jan 24 16:51:10 2025           ;
+; Fitter Status                      ; Successful - Fri Jan 24 20:22:47 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Maquina                                         ;
 ; Top-level Entity Name              ; Maquina                                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 0 / 33,216 ( 0 % )                              ;
-;     Total combinational functions  ; 0 / 33,216 ( 0 % )                              ;
-;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                              ;
-; Total registers                    ; 0                                               ;
+; Total logic elements               ; 154 / 33,216 ( < 1 % )                          ;
+;     Total combinational functions  ; 151 / 33,216 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 56 / 33,216 ( < 1 % )                           ;
+; Total registers                    ; 56                                              ;
 ; Total pins                         ; 27 / 475 ( 6 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
@@ -129,7 +139,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -140,8 +150,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 31 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 31 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 240 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 240 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -164,7 +174,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 28      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 237     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -172,121 +182,126 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/output_files/Maquina.pin.
+The pin-out file can be found in C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/output_files/Maquina.pin.
 
 
-+-------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                     ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Total logic elements                        ; 0 / 33,216 ( 0 % )  ;
-;     -- Combinational with no register       ; 0                   ;
-;     -- Register only                        ; 0                   ;
-;     -- Combinational with a register        ; 0                   ;
-;                                             ;                     ;
-; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 0                   ;
-;     -- 3 input functions                    ; 0                   ;
-;     -- <=2 input functions                  ; 0                   ;
-;     -- Register only                        ; 0                   ;
-;                                             ;                     ;
-; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 0                   ;
-;     -- arithmetic mode                      ; 0                   ;
-;                                             ;                     ;
-; Total registers*                            ; 0 / 34,593 ( 0 % )  ;
-;     -- Dedicated logic registers            ; 0 / 33,216 ( 0 % )  ;
-;     -- I/O registers                        ; 0 / 1,377 ( 0 % )   ;
-;                                             ;                     ;
-; Total LABs:  partially or completely used   ; 0 / 2,076 ( 0 % )   ;
-; Virtual pins                                ; 0                   ;
-; I/O pins                                    ; 27 / 475 ( 6 % )    ;
-;     -- Clock pins                           ; 1 / 8 ( 13 % )      ;
-;                                             ;                     ;
-; Global signals                              ; 0                   ;
-; M4Ks                                        ; 0 / 105 ( 0 % )     ;
-; Total block memory bits                     ; 0 / 483,840 ( 0 % ) ;
-; Total block memory implementation bits      ; 0 / 483,840 ( 0 % ) ;
-; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )      ;
-; PLLs                                        ; 0 / 4 ( 0 % )       ;
-; Global clocks                               ; 0 / 16 ( 0 % )      ;
-; JTAGs                                       ; 0 / 1 ( 0 % )       ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )       ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%        ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%        ;
-+---------------------------------------------+---------------------+
++----------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                        ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Total logic elements                        ; 154 / 33,216 ( < 1 % ) ;
+;     -- Combinational with no register       ; 98                     ;
+;     -- Register only                        ; 3                      ;
+;     -- Combinational with a register        ; 53                     ;
+;                                             ;                        ;
+; Logic element usage by number of LUT inputs ;                        ;
+;     -- 4 input functions                    ; 45                     ;
+;     -- 3 input functions                    ; 22                     ;
+;     -- <=2 input functions                  ; 84                     ;
+;     -- Register only                        ; 3                      ;
+;                                             ;                        ;
+; Logic elements by mode                      ;                        ;
+;     -- normal mode                          ; 120                    ;
+;     -- arithmetic mode                      ; 31                     ;
+;                                             ;                        ;
+; Total registers*                            ; 56 / 34,593 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 56 / 33,216 ( < 1 % )  ;
+;     -- I/O registers                        ; 0 / 1,377 ( 0 % )      ;
+;                                             ;                        ;
+; Total LABs:  partially or completely used   ; 11 / 2,076 ( < 1 % )   ;
+; Virtual pins                                ; 0                      ;
+; I/O pins                                    ; 27 / 475 ( 6 % )       ;
+;     -- Clock pins                           ; 2 / 8 ( 25 % )         ;
+;                                             ;                        ;
+; Global signals                              ; 2                      ;
+; M4Ks                                        ; 0 / 105 ( 0 % )        ;
+; Total block memory bits                     ; 0 / 483,840 ( 0 % )    ;
+; Total block memory implementation bits      ; 0 / 483,840 ( 0 % )    ;
+; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )         ;
+; PLLs                                        ; 0 / 4 ( 0 % )          ;
+; Global clocks                               ; 2 / 16 ( 13 % )        ;
+; JTAGs                                       ; 0 / 1 ( 0 % )          ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
+; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%           ;
+; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%           ;
+; Maximum fan-out                             ; 50                     ;
+; Highest non-global fan-out                  ; 46                     ;
+; Total fan-out                               ; 640                    ;
+; Average fan-out                             ; 2.64                   ;
++---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+--------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                      ;
-+---------------------------------------------+-------------------+--------------------------------+
-; Statistic                                   ; Top               ; hard_block:auto_generated_inst ;
-+---------------------------------------------+-------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low               ; Low                            ;
-;                                             ;                   ;                                ;
-; Total logic elements                        ; 0 / 33216 ( 0 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 0                 ; 0                              ;
-;     -- Register only                        ; 0                 ; 0                              ;
-;     -- Combinational with a register        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Logic element usage by number of LUT inputs ;                   ;                                ;
-;     -- 4 input functions                    ; 0                 ; 0                              ;
-;     -- 3 input functions                    ; 0                 ; 0                              ;
-;     -- <=2 input functions                  ; 0                 ; 0                              ;
-;     -- Register only                        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Logic elements by mode                      ;                   ;                                ;
-;     -- normal mode                          ; 0                 ; 0                              ;
-;     -- arithmetic mode                      ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Total registers                             ; 0                 ; 0                              ;
-;     -- Dedicated logic registers            ; 0 / 33216 ( 0 % ) ; 0 / 33216 ( 0 % )              ;
-;                                             ;                   ;                                ;
-; Total LABs:  partially or completely used   ; 0 / 2076 ( 0 % )  ; 0 / 2076 ( 0 % )               ;
-;                                             ;                   ;                                ;
-; Virtual pins                                ; 0                 ; 0                              ;
-; I/O pins                                    ; 27                ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )    ; 0 / 70 ( 0 % )                 ;
-; Total memory bits                           ; 0                 ; 0                              ;
-; Total RAM block bits                        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Connections                                 ;                   ;                                ;
-;     -- Input Connections                    ; 0                 ; 0                              ;
-;     -- Registered Input Connections         ; 0                 ; 0                              ;
-;     -- Output Connections                   ; 0                 ; 0                              ;
-;     -- Registered Output Connections        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Internal Connections                        ;                   ;                                ;
-;     -- Total Connections                    ; 0                 ; 0                              ;
-;     -- Registered Connections               ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; External Connections                        ;                   ;                                ;
-;     -- Top                                  ; 0                 ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Partition Interface                         ;                   ;                                ;
-;     -- Input Ports                          ; 12                ; 0                              ;
-;     -- Output Ports                         ; 15                ; 0                              ;
-;     -- Bidir Ports                          ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Registered Ports                            ;                   ;                                ;
-;     -- Registered Input Ports               ; 0                 ; 0                              ;
-;     -- Registered Output Ports              ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Port Connectivity                           ;                   ;                                ;
-;     -- Input Ports driven by GND            ; 0                 ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                 ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                 ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                 ; 0                              ;
-;     -- Input Ports with no Source           ; 0                 ; 0                              ;
-;     -- Output Ports with no Source          ; 0                 ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                 ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                 ; 0                              ;
-+---------------------------------------------+-------------------+--------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                          ;
++---------------------------------------------+-----------------------+--------------------------------+
+; Statistic                                   ; Top                   ; hard_block:auto_generated_inst ;
++---------------------------------------------+-----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                   ; Low                            ;
+;                                             ;                       ;                                ;
+; Total logic elements                        ; 154 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 98                    ; 0                              ;
+;     -- Register only                        ; 3                     ; 0                              ;
+;     -- Combinational with a register        ; 53                    ; 0                              ;
+;                                             ;                       ;                                ;
+; Logic element usage by number of LUT inputs ;                       ;                                ;
+;     -- 4 input functions                    ; 45                    ; 0                              ;
+;     -- 3 input functions                    ; 22                    ; 0                              ;
+;     -- <=2 input functions                  ; 84                    ; 0                              ;
+;     -- Register only                        ; 3                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Logic elements by mode                      ;                       ;                                ;
+;     -- normal mode                          ; 120                   ; 0                              ;
+;     -- arithmetic mode                      ; 31                    ; 0                              ;
+;                                             ;                       ;                                ;
+; Total registers                             ; 56                    ; 0                              ;
+;     -- Dedicated logic registers            ; 56 / 33216 ( < 1 % )  ; 0 / 33216 ( 0 % )              ;
+;                                             ;                       ;                                ;
+; Total LABs:  partially or completely used   ; 11 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
+;                                             ;                       ;                                ;
+; Virtual pins                                ; 0                     ; 0                              ;
+; I/O pins                                    ; 27                    ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )        ; 0 / 70 ( 0 % )                 ;
+; Total memory bits                           ; 0                     ; 0                              ;
+; Total RAM block bits                        ; 0                     ; 0                              ;
+; Clock control block                         ; 2 / 20 ( 10 % )       ; 0 / 20 ( 0 % )                 ;
+;                                             ;                       ;                                ;
+; Connections                                 ;                       ;                                ;
+;     -- Input Connections                    ; 0                     ; 0                              ;
+;     -- Registered Input Connections         ; 0                     ; 0                              ;
+;     -- Output Connections                   ; 0                     ; 0                              ;
+;     -- Registered Output Connections        ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Internal Connections                        ;                       ;                                ;
+;     -- Total Connections                    ; 640                   ; 0                              ;
+;     -- Registered Connections               ; 216                   ; 0                              ;
+;                                             ;                       ;                                ;
+; External Connections                        ;                       ;                                ;
+;     -- Top                                  ; 0                     ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Partition Interface                         ;                       ;                                ;
+;     -- Input Ports                          ; 12                    ; 0                              ;
+;     -- Output Ports                         ; 15                    ; 0                              ;
+;     -- Bidir Ports                          ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Registered Ports                            ;                       ;                                ;
+;     -- Registered Input Ports               ; 0                     ; 0                              ;
+;     -- Registered Output Ports              ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Port Connectivity                           ;                       ;                                ;
+;     -- Input Ports driven by GND            ; 0                     ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                     ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                     ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                     ; 0                              ;
+;     -- Input Ports with no Source           ; 0                     ; 0                              ;
+;     -- Output Ports with no Source          ; 0                     ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                     ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                     ; 0                              ;
++---------------------------------------------+-----------------------+--------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -294,18 +309,18 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 +---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; CLOCK         ; B10   ; 3        ; 22           ; 36           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Ligar_maquina ; C10   ; 3        ; 20           ; 36           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; CLOCK         ; P2    ; 1        ; 0            ; 18           ; 2           ; 7                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Ligar_maquina ; D13   ; 3        ; 31           ; 36           ; 3           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; Porta         ; C13   ; 3        ; 31           ; 36           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; RESET         ; D10   ; 3        ; 20           ; 36           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; modo_lavgm[0] ; AC9   ; 8        ; 20           ; 0            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; modo_lavgm[1] ; AB25  ; 6        ; 65           ; 7            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; modo_lavgm[2] ; AC10  ; 8        ; 20           ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; modo_lavgm[3] ; T2    ; 1        ; 0            ; 15           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; vol_agua[0]   ; D13   ; 3        ; 31           ; 36           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; vol_agua[1]   ; AE23  ; 7        ; 63           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; vol_agua[2]   ; C6    ; 3        ; 1            ; 36           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; vol_agua[3]   ; AE20  ; 7        ; 53           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; RESET         ; P1    ; 1        ; 0            ; 18           ; 3           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; modo_lavgm[0] ; F24   ; 5        ; 65           ; 30           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; modo_lavgm[1] ; C24   ; 5        ; 65           ; 32           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; modo_lavgm[2] ; J20   ; 5        ; 65           ; 30           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; modo_lavgm[3] ; B24   ; 5        ; 65           ; 32           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; vol_agua[0]   ; B25   ; 5        ; 65           ; 32           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; vol_agua[1]   ; F25   ; 5        ; 65           ; 29           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; vol_agua[2]   ; C25   ; 5        ; 65           ; 32           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; vol_agua[3]   ; F23   ; 5        ; 65           ; 30           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -314,21 +329,21 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; Display_7seg[0] ; C9    ; 3        ; 16           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Display_7seg[1] ; AB4   ; 1        ; 0            ; 3            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Display_7seg[2] ; B12   ; 3        ; 29           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Display_7seg[3] ; V24   ; 6        ; 65           ; 10           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Display_7seg[4] ; U21   ; 6        ; 65           ; 11           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Display_7seg[5] ; U26   ; 6        ; 65           ; 13           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Display_7seg[6] ; D6    ; 3        ; 11           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Led_Centrifuga  ; F7    ; 2        ; 0            ; 32           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Led_Enchendo    ; C8    ; 3        ; 14           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Led_Enxague     ; G11   ; 3        ; 22           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Led_Finalizado  ; D5    ; 3        ; 5            ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Led_Lavar       ; U9    ; 1        ; 0            ; 13           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Led_Molho       ; AA18  ; 7        ; 50           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Load_Motor      ; Y18   ; 7        ; 57           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Valvula_Agua    ; B21   ; 4        ; 59           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Display_7seg[0] ; J18   ; 4        ; 59           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Display_7seg[1] ; K16   ; 4        ; 57           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Display_7seg[2] ; B21   ; 4        ; 59           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Display_7seg[3] ; J16   ; 4        ; 57           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Display_7seg[4] ; K17   ; 4        ; 59           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Display_7seg[5] ; D20   ; 4        ; 57           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Display_7seg[6] ; A21   ; 4        ; 59           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Led_Centrifuga  ; J21   ; 5        ; 65           ; 30           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Led_Enchendo    ; E23   ; 5        ; 65           ; 33           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Led_Enxague     ; D25   ; 5        ; 65           ; 31           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Led_Finalizado  ; E25   ; 5        ; 65           ; 31           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Led_Lavar       ; E26   ; 5        ; 65           ; 31           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Led_Molho       ; D26   ; 5        ; 65           ; 31           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Load_Motor      ; J22   ; 5        ; 65           ; 31           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Valvula_Agua    ; E24   ; 5        ; 65           ; 33           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -337,14 +352,14 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 3 / 64 ( 5 % )   ; 3.3V          ; --           ;
-; 2        ; 3 / 59 ( 5 % )   ; 3.3V          ; --           ;
-; 3        ; 12 / 56 ( 21 % ) ; 3.3V          ; --           ;
-; 4        ; 1 / 58 ( 2 % )   ; 3.3V          ; --           ;
-; 5        ; 0 / 65 ( 0 % )   ; 3.3V          ; --           ;
-; 6        ; 5 / 59 ( 8 % )   ; 3.3V          ; --           ;
-; 7        ; 4 / 58 ( 7 % )   ; 3.3V          ; --           ;
-; 8        ; 2 / 56 ( 4 % )   ; 3.3V          ; --           ;
+; 1        ; 2 / 64 ( 3 % )   ; 3.3V          ; --           ;
+; 2        ; 2 / 59 ( 3 % )   ; 3.3V          ; --           ;
+; 3        ; 2 / 56 ( 4 % )   ; 3.3V          ; --           ;
+; 4        ; 7 / 58 ( 12 % )  ; 3.3V          ; --           ;
+; 5        ; 16 / 65 ( 25 % ) ; 3.3V          ; --           ;
+; 6        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
+; 7        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
+; 8        ; 0 / 56 ( 0 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -372,7 +387,7 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; A18      ; 406        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A19      ; 394        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A20      ; 390        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A21      ; 382        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A21      ; 382        ; 4        ; Display_7seg[6]                          ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A22      ; 379        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A23      ; 378        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A24      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -394,7 +409,7 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; AA15     ; 197        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA16     ; 209        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA17     ; 219        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AA18     ; 220        ; 7        ; Led_Molho                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA18     ; 220        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA19     ;            ;          ; VCCA_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; AA20     ; 230        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA21     ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -406,7 +421,7 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; AB1      ; 115        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB2      ; 114        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB3      ; 126        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AB4      ; 127        ; 1        ; Display_7seg[1]                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AB4      ; 127        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB5      ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB6      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB7      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -427,7 +442,7 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; AB22     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB23     ; 258        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB24     ; 257        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AB25     ; 263        ; 6        ; modo_lavgm[1]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AB25     ; 263        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB26     ; 262        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AC1      ; 119        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AC2      ; 118        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -437,8 +452,8 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; AC6      ; 134        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC7      ; 143        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AC8      ; 148        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC9      ; 163        ; 8        ; modo_lavgm[0]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AC10     ; 164        ; 8        ; modo_lavgm[2]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC9      ; 163        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC10     ; 164        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC11     ; 168        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC12     ; 172        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AC13     ; 185        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -500,10 +515,10 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; AE17     ; 206        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE18     ; 212        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE19     ; 214        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE20     ; 224        ; 7        ; vol_agua[3]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE20     ; 224        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE21     ; 228        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE22     ; 236        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE23     ; 244        ; 7        ; vol_agua[1]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE23     ; 244        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE24     ; 247        ; 6        ; ~LVDS150p/nCEO~                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AE25     ; 246        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AE26     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -540,9 +555,9 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; B7       ; 466        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B8       ; 458        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B9       ; 452        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B10      ; 448        ; 3        ; CLOCK                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B10      ; 448        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B11      ; 435        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B12      ; 433        ; 3        ; Display_7seg[2]                          ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B12      ; 433        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B13      ; 429        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B14      ; 428        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B15      ; 420        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -551,22 +566,22 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; B18      ; 405        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B19      ; 393        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B20      ; 389        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B21      ; 381        ; 4        ; Valvula_Agua                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B21      ; 381        ; 4        ; Display_7seg[2]                          ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B22      ; 380        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B23      ; 377        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B24      ; 363        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; B25      ; 362        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; B24      ; 363        ; 5        ; modo_lavgm[3]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; B25      ; 362        ; 5        ; vol_agua[0]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; B26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; C2       ; 6          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C3       ; 7          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C4       ; 478        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C5       ; 486        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C6       ; 485        ; 3        ; vol_agua[2]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C6       ; 485        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C7       ; 468        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C8       ; 463        ; 3        ; Led_Enchendo                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C9       ; 459        ; 3        ; Display_7seg[0]                          ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C10      ; 450        ; 3        ; Ligar_maquina                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C8       ; 463        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C9       ; 459        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C10      ; 450        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C11      ; 436        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C12      ; 434        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C13      ; 431        ; 3        ; Porta                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
@@ -580,35 +595,35 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; C21      ; 375        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C22      ; 374        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C23      ; 373        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C24      ; 360        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; C25      ; 361        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; C24      ; 360        ; 5        ; modo_lavgm[1]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C25      ; 361        ; 5        ; vol_agua[2]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; C26      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; D1       ; 13         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D2       ; 12         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D3       ; 1          ; 2        ; ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; D4       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D5       ; 477        ; 3        ; Led_Finalizado                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D6       ; 467        ; 3        ; Display_7seg[6]                          ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D5       ; 477        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D6       ; 467        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D7       ; 469        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D8       ; 464        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D9       ; 460        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D10      ; 449        ; 3        ; RESET                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D10      ; 449        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D11      ; 445        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D12      ; 443        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D13      ; 432        ; 3        ; vol_agua[0]                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D13      ; 432        ; 3        ; Ligar_maquina                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D14      ; 426        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D15      ; 417        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 415        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D17      ; 403        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D18      ; 396        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D19      ; 392        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D20      ; 387        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; D20      ; 387        ; 4        ; Display_7seg[5]                          ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D21      ; 376        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D22      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; D23      ; 369        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D24      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D25      ; 358        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; D26      ; 359        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D25      ; 358        ; 5        ; Led_Enxague                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D26      ; 359        ; 5        ; Led_Molho                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; E1       ; 20         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E2       ; 19         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E3       ; 0          ; 2        ; ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
@@ -631,17 +646,17 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; E20      ; 388        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; E21      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E22      ; 370        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E23      ; 365        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E24      ; 364        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E25      ; 355        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E26      ; 356        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; E23      ; 365        ; 5        ; Led_Enchendo                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E24      ; 364        ; 5        ; Valvula_Agua                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E25      ; 355        ; 5        ; Led_Finalizado                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E26      ; 356        ; 5        ; Led_Lavar                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F1       ; 29         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F2       ; 28         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F3       ; 10         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F4       ; 11         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F5       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; F6       ; 5          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F7       ; 14         ; 2        ; Led_Centrifuga                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F7       ; 14         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F8       ;            ;          ; GNDA_PLL3                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F9       ; 470        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F10      ; 462        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -657,9 +672,9 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; F20      ; 372        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F21      ; 371        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; F23      ; 353        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F24      ; 354        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F25      ; 350        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F23      ; 353        ; 5        ; vol_agua[3]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F24      ; 354        ; 5        ; modo_lavgm[0]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F25      ; 350        ; 5        ; vol_agua[1]                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F26      ; 349        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G1       ; 30         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G2       ; 31         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -671,7 +686,7 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; G8       ;            ;          ; VCCA_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G9       ; 471        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G10      ; 461        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G11      ; 446        ; 3        ; Led_Enxague                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G11      ; 446        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G12      ; 439        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G13      ; 422        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G14      ; 424        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -728,13 +743,13 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; J13      ; 442        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J14      ; 441        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; J15      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; J16      ; 385        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; J16      ; 385        ; 4        ; Display_7seg[3]                          ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J17      ; 399        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; J18      ; 383        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; J18      ; 383        ; 4        ; Display_7seg[0]                          ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J19      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; J20      ; 351        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J21      ; 352        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J22      ; 357        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; J20      ; 351        ; 5        ; modo_lavgm[2]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J21      ; 352        ; 5        ; Led_Centrifuga                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J22      ; 357        ; 5        ; Load_Motor                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J23      ; 339        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J24      ; 338        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J25      ; 327        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -754,8 +769,8 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; K13      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K14      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K15      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; K16      ; 386        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; K17      ; 384        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; K16      ; 386        ; 4        ; Display_7seg[1]                          ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; K17      ; 384        ; 4        ; Display_7seg[4]                          ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; K18      ; 334        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K19      ; 333        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K20      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -843,8 +858,8 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; N24      ; 310        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N25      ; 309        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; N26      ; 308        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; P1       ; 68         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; P2       ; 67         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; P1       ; 68         ; 1        ; RESET                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P2       ; 67         ; 1        ; CLOCK                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P3       ; 69         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P4       ; 70         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P5       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -896,7 +911,7 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; R25      ; 303        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T1       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; T2       ; 79         ; 1        ; modo_lavgm[3]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T2       ; 79         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T3       ; 80         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T4       ; 83         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; T5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -929,7 +944,7 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; U6       ; 98         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U7       ; 99         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; U9       ; 86         ; 1        ; Led_Lavar                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U9       ; 86         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U10      ; 87         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U12      ; 178        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -941,12 +956,12 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; U18      ; 232        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; U19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; U20      ; 280        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U21      ; 279        ; 6        ; Display_7seg[4]                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U21      ; 279        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U22      ; 270        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U23      ; 284        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U24      ; 283        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U25      ; 285        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U26      ; 286        ; 6        ; Display_7seg[5]                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U26      ; 286        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V1       ; 90         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V2       ; 91         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V3       ; 95         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -970,7 +985,7 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; V21      ; 252        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V22      ; 259        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; V23      ; 275        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V24      ; 276        ; 6        ; Display_7seg[3]                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V24      ; 276        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V25      ; 277        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V26      ; 278        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W1       ; 97         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1016,7 +1031,7 @@ The pin-out file can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maq
 ; Y15      ; 196        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y16      ; 210        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y17      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; Y18      ; 229        ; 7        ; Load_Motor                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; Y18      ; 229        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; Y19      ;            ;          ; GNDA_PLL4                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y20      ;            ;          ; VCCD_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; Y21      ; 250        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1066,13 +1081,20 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |Maquina                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 27   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Maquina            ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                ;
++-----------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                          ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                             ; Library Name ;
++-----------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------+--------------+
+; |Maquina                                            ; 154 (0)     ; 56 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 27   ; 0            ; 98 (0)       ; 3 (0)             ; 53 (0)           ; |Maquina                                                                        ; work         ;
+;    |Controladora:instancia_controladora|            ; 31 (31)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 1 (1)             ; 9 (9)            ; |Maquina|Controladora:instancia_controladora                                    ; work         ;
+;    |Datapath:instance_datapath|                     ; 125 (0)     ; 48 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 77 (0)       ; 2 (0)             ; 46 (0)           ; |Maquina|Datapath:instance_datapath                                             ; work         ;
+;       |Bcd_7seg:instancia_Bcd_7seg|                 ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Maquina|Datapath:instance_datapath|Bcd_7seg:instancia_Bcd_7seg                 ; work         ;
+;       |Comparador_Vol_Agua:instancia_Comp_vol_agua| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Maquina|Datapath:instance_datapath|Comparador_Vol_Agua:instancia_Comp_vol_agua ; work         ;
+;       |RegW:instancia_Reg_Modo|                     ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |Maquina|Datapath:instance_datapath|RegW:instancia_Reg_Modo                     ; work         ;
+;       |RegW:instancia_Reg_Vol_Agua|                 ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 2 (2)            ; |Maquina|Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua                 ; work         ;
+;       |temporizador:instancia_Temporizador|         ; 113 (113)   ; 40 (40)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 70 (70)      ; 0 (0)             ; 43 (43)          ; |Maquina|Datapath:instance_datapath|temporizador:instancia_Temporizador         ; work         ;
++-----------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1089,14 +1111,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Display_7seg[4] ; Output   ; --            ; --            ; --                    ; --  ;
 ; Display_7seg[5] ; Output   ; --            ; --            ; --                    ; --  ;
 ; Display_7seg[6] ; Output   ; --            ; --            ; --                    ; --  ;
-; vol_agua[0]     ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; vol_agua[1]     ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; vol_agua[2]     ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; vol_agua[3]     ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; modo_lavgm[0]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; modo_lavgm[1]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; modo_lavgm[2]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; modo_lavgm[3]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; Led_Enchendo    ; Output   ; --            ; --            ; --                    ; --  ;
 ; Led_Molho       ; Output   ; --            ; --            ; --                    ; --  ;
 ; Led_Lavar       ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1105,45 +1119,489 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Led_Finalizado  ; Output   ; --            ; --            ; --                    ; --  ;
 ; Valvula_Agua    ; Output   ; --            ; --            ; --                    ; --  ;
 ; Load_Motor      ; Output   ; --            ; --            ; --                    ; --  ;
-; CLOCK           ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; RESET           ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; CLOCK           ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; Ligar_maquina   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; RESET           ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; vol_agua[1]     ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; vol_agua[0]     ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; vol_agua[2]     ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; vol_agua[3]     ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; modo_lavgm[1]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; modo_lavgm[0]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; modo_lavgm[3]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; modo_lavgm[2]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 +-----------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; Porta               ;                   ;         ;
-; vol_agua[0]         ;                   ;         ;
-; vol_agua[1]         ;                   ;         ;
-; vol_agua[2]         ;                   ;         ;
-; vol_agua[3]         ;                   ;         ;
-; modo_lavgm[0]       ;                   ;         ;
-; modo_lavgm[1]       ;                   ;         ;
-; modo_lavgm[2]       ;                   ;         ;
-; modo_lavgm[3]       ;                   ;         ;
-; CLOCK               ;                   ;         ;
-; RESET               ;                   ;         ;
-; Ligar_maquina       ;                   ;         ;
-+---------------------+-------------------+---------+
++---------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                          ;
++---------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                       ; Pad To Core Index ; Setting ;
++---------------------------------------------------------------------------+-------------------+---------+
+; Porta                                                                     ;                   ;         ;
+; CLOCK                                                                     ;                   ;         ;
+; Ligar_maquina                                                             ;                   ;         ;
+; RESET                                                                     ;                   ;         ;
+; vol_agua[1]                                                               ;                   ;         ;
+;      - Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua|Q[1]~feeder ; 1                 ; 6       ;
+; vol_agua[0]                                                               ;                   ;         ;
+;      - Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua|Q[0]        ; 1                 ; 6       ;
+; vol_agua[2]                                                               ;                   ;         ;
+;      - Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua|Q[2]        ; 1                 ; 6       ;
+; vol_agua[3]                                                               ;                   ;         ;
+;      - Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua|Q[3]~feeder ; 0                 ; 6       ;
+; modo_lavgm[1]                                                             ;                   ;         ;
+;      - Datapath:instance_datapath|RegW:instancia_Reg_Modo|Q[1]            ; 1                 ; 6       ;
+; modo_lavgm[0]                                                             ;                   ;         ;
+;      - Datapath:instance_datapath|RegW:instancia_Reg_Modo|Q[0]            ; 0                 ; 6       ;
+; modo_lavgm[3]                                                             ;                   ;         ;
+;      - Datapath:instance_datapath|RegW:instancia_Reg_Modo|Q[3]            ; 1                 ; 6       ;
+; modo_lavgm[2]                                                             ;                   ;         ;
+;      - Datapath:instance_datapath|RegW:instancia_Reg_Modo|Q[2]            ; 1                 ; 6       ;
++---------------------------------------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------+
-; Other Routing Usage Summary                      ;
-+-----------------------------+--------------------+
-; Other Routing Resource Type ; Usage              ;
-+-----------------------------+--------------------+
-; Block interconnects         ; 0 / 94,460 ( 0 % ) ;
-; C16 interconnects           ; 0 / 3,315 ( 0 % )  ;
-; C4 interconnects            ; 0 / 60,840 ( 0 % ) ;
-; Global clocks               ; 0 / 16 ( 0 % )     ;
-; Local interconnects         ; 0 / 33,216 ( 0 % ) ;
-; R24 interconnects           ; 0 / 3,091 ( 0 % )  ;
-; R4 interconnects            ; 0 / 81,294 ( 0 % ) ;
-+-----------------------------+--------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                              ;
++---------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                            ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLOCK                                                                           ; PIN_P2             ; 7       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; CLOCK                                                                           ; PIN_P2             ; 50      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; Controladora:instancia_controladora|Load_temp                                   ; LCCOMB_X60_Y31_N12 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Controladora:instancia_controladora|Reset_Cont                                  ; LCCOMB_X61_Y31_N26 ; 46      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Controladora:instancia_controladora|WideOr0~0                                   ; LCCOMB_X61_Y31_N16 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Controladora:instancia_controladora|WideOr0~1                                   ; LCCOMB_X61_Y31_N20 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Controladora:instancia_controladora|WideOr1~0                                   ; LCCOMB_X62_Y31_N16 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Controladora:instancia_controladora|WideOr2~0                                   ; LCCOMB_X61_Y31_N6  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Controladora:instancia_controladora|WideOr4~0                                   ; LCCOMB_X61_Y31_N30 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Controladora:instancia_controladora|WideOr5~0                                   ; LCCOMB_X62_Y31_N14 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Controladora:instancia_controladora|WideOr6~0                                   ; LCCOMB_X61_Y31_N14 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Controladora:instancia_controladora|estado_atual.Ligar                          ; LCFF_X61_Y31_N27   ; 11      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Controladora:instancia_controladora|estado_atual.Load                           ; LCFF_X60_Y31_N15   ; 3       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[3]~4 ; LCCOMB_X60_Y32_N22 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[3]~5 ; LCCOMB_X59_Y31_N8  ; 31      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|timeout          ; LCFF_X59_Y31_N15   ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; RESET                                                                           ; PIN_P1             ; 8       ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
++---------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                      ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+; CLOCK ; PIN_P2   ; 50      ; Global Clock         ; GCLK3            ; --                        ;
+; RESET ; PIN_P1   ; 8       ; Global Clock         ; GCLK1            ; --                        ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                   ;
++-----------------------------------------------------------------------------------------+---------+
+; Name                                                                                    ; Fan-Out ;
++-----------------------------------------------------------------------------------------+---------+
+; Controladora:instancia_controladora|Reset_Cont                                          ; 46      ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[2]~2         ; 34      ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[3]~5         ; 31      ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|timeout                  ; 14      ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[2]                 ; 14      ;
+; Controladora:instancia_controladora|estado_atual.Ligar                                  ; 11      ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[31]              ; 10      ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[0]                 ; 9       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[1]                 ; 9       ;
+; Controladora:instancia_controladora|Load_temp                                           ; 8       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector35~0             ; 7       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[3]           ; 7       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[2]           ; 7       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[1]           ; 7       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[0]           ; 7       ;
+; CLOCK                                                                                   ; 6       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[2]               ; 6       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[3]               ; 6       ;
+; Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua|Q[3]                             ; 5       ;
+; Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua|Q[2]                             ; 5       ;
+; Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua|Q[0]                             ; 5       ;
+; Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua|Q[1]                             ; 5       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan1~4              ; 5       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan1~3              ; 5       ;
+; Controladora:instancia_controladora|estado_atual.Centrifuga                             ; 4       ;
+; Controladora:instancia_controladora|estado_atual.Enxague                                ; 4       ;
+; Controladora:instancia_controladora|estado_atual.Lavar                                  ; 4       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[3]~4         ; 4       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan0~6              ; 4       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[0]               ; 4       ;
+; Ligar_maquina                                                                           ; 3       ;
+; Controladora:instancia_controladora|Led_Enchendo                                        ; 3       ;
+; Controladora:instancia_controladora|estado_atual.Load                                   ; 3       ;
+; Controladora:instancia_controladora|process_1~0                                         ; 3       ;
+; Controladora:instancia_controladora|modo_valido~0                                       ; 3       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan0~8              ; 3       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan0~7              ; 3       ;
+; Controladora:instancia_controladora|estado_atual.Finalizado                             ; 3       ;
+; Controladora:instancia_controladora|estado_atual.Molho                                  ; 3       ;
+; Controladora:instancia_controladora|estado_atual.Enchendo                               ; 3       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[1]               ; 3       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[0] ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[1] ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[2] ; 2       ;
+; Controladora:instancia_controladora|Load_Motor                                          ; 2       ;
+; Controladora:instancia_controladora|Led_Finalizado                                      ; 2       ;
+; Controladora:instancia_controladora|Led_Centrifuga                                      ; 2       ;
+; Controladora:instancia_controladora|Led_Enxague                                         ; 2       ;
+; Controladora:instancia_controladora|Led_Lavar                                           ; 2       ;
+; Controladora:instancia_controladora|Led_Molho                                           ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector68~1             ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan1~5              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector36~0             ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|comb~1                   ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|comb~0                   ; 2       ;
+; Controladora:instancia_controladora|Selector24~0                                        ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[2]~3         ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[4]               ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[5]               ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[6]               ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[7]               ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[8]               ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[9]               ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[10]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[11]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[12]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[13]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[14]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[15]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[16]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[17]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[18]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[19]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[20]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[21]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[22]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[23]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[24]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[25]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[26]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[27]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[28]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[29]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[30]              ; 2       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan0~1              ; 2       ;
+; modo_lavgm[2]                                                                           ; 1       ;
+; modo_lavgm[3]                                                                           ; 1       ;
+; modo_lavgm[0]                                                                           ; 1       ;
+; modo_lavgm[1]                                                                           ; 1       ;
+; vol_agua[3]                                                                             ; 1       ;
+; vol_agua[2]                                                                             ; 1       ;
+; vol_agua[0]                                                                             ; 1       ;
+; vol_agua[1]                                                                             ; 1       ;
+; Controladora:instancia_controladora|Selector3~1                                         ; 1       ;
+; Controladora:instancia_controladora|Selector3~0                                         ; 1       ;
+; Controladora:instancia_controladora|Selector2~0                                         ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector36~4             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector36~3             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector36~2             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector36~1             ; 1       ;
+; Controladora:instancia_controladora|Selector4~0                                         ; 1       ;
+; Controladora:instancia_controladora|process_1~1                                         ; 1       ;
+; Datapath:instance_datapath|RegW:instancia_Reg_Modo|Q[2]                                 ; 1       ;
+; Datapath:instance_datapath|RegW:instancia_Reg_Modo|Q[3]                                 ; 1       ;
+; Datapath:instance_datapath|RegW:instancia_Reg_Modo|Q[0]                                 ; 1       ;
+; Datapath:instance_datapath|RegW:instancia_Reg_Modo|Q[1]                                 ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector4~0              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector31~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector30~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector29~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector28~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector27~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector26~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector25~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector24~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector23~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector22~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector21~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector20~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector19~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector18~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector17~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector16~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector15~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector14~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector13~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector12~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector11~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector10~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector9~0              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector8~0              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector7~0              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector6~0              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector5~0              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector68~3             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector68~2             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector68~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[1]~5               ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[1]~4               ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[1]~3               ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[2]~2               ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[2]~1               ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|state[2]~0               ; 1       ;
+; Datapath:instance_datapath|Comparador_Vol_Agua:instancia_Comp_vol_agua|Equal2~0         ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|comb~2                   ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector34~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector33~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector32~0             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector35~3             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector35~2             ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector35~1             ; 1       ;
+; Controladora:instancia_controladora|WideOr0~1                                           ; 1       ;
+; Controladora:instancia_controladora|Selector26~0                                        ; 1       ;
+; Controladora:instancia_controladora|WideOr6~0                                           ; 1       ;
+; Controladora:instancia_controladora|Selector14~0                                        ; 1       ;
+; Controladora:instancia_controladora|WideOr5~0                                           ; 1       ;
+; Controladora:instancia_controladora|Selector16~0                                        ; 1       ;
+; Controladora:instancia_controladora|WideOr4~0                                           ; 1       ;
+; Controladora:instancia_controladora|Selector18~0                                        ; 1       ;
+; Controladora:instancia_controladora|WideOr0~0                                           ; 1       ;
+; Controladora:instancia_controladora|Selector20~0                                        ; 1       ;
+; Controladora:instancia_controladora|WideOr2~0                                           ; 1       ;
+; Controladora:instancia_controladora|Selector22~0                                        ; 1       ;
+; Controladora:instancia_controladora|WideOr1~0                                           ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector0~0              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector1~0              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector2~0              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Selector3~0              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan0~5              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan0~4              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan0~3              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan0~2              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[2]~1         ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan1~2              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan1~1              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan1~0              ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[2]~0         ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|LessThan0~0              ; 1       ;
+; Datapath:instance_datapath|Bcd_7seg:instancia_Bcd_7seg|Mux0~0                           ; 1       ;
+; Datapath:instance_datapath|Bcd_7seg:instancia_Bcd_7seg|Mux1~0                           ; 1       ;
+; Datapath:instance_datapath|Bcd_7seg:instancia_Bcd_7seg|Mux2~0                           ; 1       ;
+; Datapath:instance_datapath|Bcd_7seg:instancia_Bcd_7seg|Mux3~0                           ; 1       ;
+; Datapath:instance_datapath|Bcd_7seg:instancia_Bcd_7seg|Mux4~0                           ; 1       ;
+; Datapath:instance_datapath|Bcd_7seg:instancia_Bcd_7seg|Mux5~0                           ; 1       ;
+; Datapath:instance_datapath|Bcd_7seg:instancia_Bcd_7seg|Mux6~0                           ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~62                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~61                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~60                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~59                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~58                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~57                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~56                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~55                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~54                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~53                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~52                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~51                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~50                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~49                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~48                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~47                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~46                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~45                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~44                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~43                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~42                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~41                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~40                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~39                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~38                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~37                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~36                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~35                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~34                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~33                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~32                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~31                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~30                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~29                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~28                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~27                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~26                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~25                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~24                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~23                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~22                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~21                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~20                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~19                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~18                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~17                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~16                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~15                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~14                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~13                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~12                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~11                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~10                  ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~9                   ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~8                   ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~7                   ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~6                   ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~5                   ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~4                   ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~3                   ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~2                   ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~1                   ; 1       ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|Add0~0                   ; 1       ;
++-----------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Other Routing Usage Summary                          ;
++-----------------------------+------------------------+
+; Other Routing Resource Type ; Usage                  ;
++-----------------------------+------------------------+
+; Block interconnects         ; 218 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 2 / 3,315 ( < 1 % )    ;
+; C4 interconnects            ; 64 / 60,840 ( < 1 % )  ;
+; Direct links                ; 90 / 94,460 ( < 1 % )  ;
+; Global clocks               ; 2 / 16 ( 13 % )        ;
+; Local interconnects         ; 86 / 33,216 ( < 1 % )  ;
+; R24 interconnects           ; 5 / 3,091 ( < 1 % )    ;
+; R4 interconnects            ; 99 / 81,294 ( < 1 % )  ;
++-----------------------------+------------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Logic Elements                                                         ;
++---------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 14.00) ; Number of LABs  (Total = 11) ;
++---------------------------------------------+------------------------------+
+; 1                                           ; 0                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 8                            ;
++---------------------------------------------+------------------------------+
+
+
++-------------------------------------------------------------------+
+; LAB-wide Signals                                                  ;
++------------------------------------+------------------------------+
+; LAB-wide Signals  (Average = 1.82) ; Number of LABs  (Total = 11) ;
++------------------------------------+------------------------------+
+; 1 Async. clear                     ; 6                            ;
+; 1 Clock                            ; 7                            ;
+; 1 Clock enable                     ; 5                            ;
+; 2 Async. clears                    ; 1                            ;
+; 2 Clocks                           ; 1                            ;
++------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Signals Sourced  (Average = 19.09) ; Number of LABs  (Total = 11) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 1                            ;
+; 27                                           ; 1                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 1                            ;
++----------------------------------------------+------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                         ;
++--------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 11.18) ; Number of LABs  (Total = 11) ;
++--------------------------------------------------+------------------------------+
+; 0                                                ; 0                            ;
+; 1                                                ; 0                            ;
+; 2                                                ; 0                            ;
+; 3                                                ; 0                            ;
+; 4                                                ; 1                            ;
+; 5                                                ; 0                            ;
+; 6                                                ; 0                            ;
+; 7                                                ; 2                            ;
+; 8                                                ; 0                            ;
+; 9                                                ; 1                            ;
+; 10                                               ; 0                            ;
+; 11                                               ; 1                            ;
+; 12                                               ; 2                            ;
+; 13                                               ; 1                            ;
+; 14                                               ; 0                            ;
+; 15                                               ; 0                            ;
+; 16                                               ; 3                            ;
++--------------------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 16.36) ; Number of LABs  (Total = 11) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 0                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 1                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 1                            ;
++----------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -1175,6 +1633,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
++----------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                ;
++-----------------+--------------------------------------------------------+-------------------+
+; Source Clock(s) ; Destination Clock(s)                                   ; Delay Added in ns ;
++-----------------+--------------------------------------------------------+-------------------+
+; CLOCK           ; Controladora:instancia_controladora|estado_atual.Ligar ; 1.5               ;
++-----------------+--------------------------------------------------------+-------------------+
+Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
+This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                        ;
++-------------------------------------------------------------+----------------------------------------------------+-------------------+
+; Source Register                                             ; Destination Register                               ; Delay Added in ns ;
++-------------------------------------------------------------+----------------------------------------------------+-------------------+
+; Controladora:instancia_controladora|estado_atual.Ligar      ; Controladora:instancia_controladora|Load_Motor     ; 0.150             ;
+; Controladora:instancia_controladora|estado_atual.Enchendo   ; Controladora:instancia_controladora|Led_Enchendo   ; 0.135             ;
+; Controladora:instancia_controladora|estado_atual.Centrifuga ; Controladora:instancia_controladora|Led_Centrifuga ; 0.134             ;
+; Controladora:instancia_controladora|estado_atual.Lavar      ; Controladora:instancia_controladora|Load_Motor     ; 0.134             ;
+; Controladora:instancia_controladora|estado_atual.Enxague    ; Controladora:instancia_controladora|Load_Motor     ; 0.134             ;
+; Controladora:instancia_controladora|estado_atual.Molho      ; Controladora:instancia_controladora|Led_Molho      ; 0.130             ;
+; Controladora:instancia_controladora|estado_atual.Finalizado ; Controladora:instancia_controladora|Led_Finalizado ; 0.130             ;
++-------------------------------------------------------------+----------------------------------------------------+-------------------+
+Note: This table only shows the top 7 path(s) that have the largest delay added for hold.
+
+
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
@@ -1200,14 +1685,6 @@ Critical Warning (169085): No exact pin location assignment(s) for 27 pins of 27
     Info (169086): Pin Display_7seg[4] not assigned to an exact location on the device
     Info (169086): Pin Display_7seg[5] not assigned to an exact location on the device
     Info (169086): Pin Display_7seg[6] not assigned to an exact location on the device
-    Info (169086): Pin vol_agua[0] not assigned to an exact location on the device
-    Info (169086): Pin vol_agua[1] not assigned to an exact location on the device
-    Info (169086): Pin vol_agua[2] not assigned to an exact location on the device
-    Info (169086): Pin vol_agua[3] not assigned to an exact location on the device
-    Info (169086): Pin modo_lavgm[0] not assigned to an exact location on the device
-    Info (169086): Pin modo_lavgm[1] not assigned to an exact location on the device
-    Info (169086): Pin modo_lavgm[2] not assigned to an exact location on the device
-    Info (169086): Pin modo_lavgm[3] not assigned to an exact location on the device
     Info (169086): Pin Led_Enchendo not assigned to an exact location on the device
     Info (169086): Pin Led_Molho not assigned to an exact location on the device
     Info (169086): Pin Led_Lavar not assigned to an exact location on the device
@@ -1217,22 +1694,40 @@ Critical Warning (169085): No exact pin location assignment(s) for 27 pins of 27
     Info (169086): Pin Valvula_Agua not assigned to an exact location on the device
     Info (169086): Pin Load_Motor not assigned to an exact location on the device
     Info (169086): Pin CLOCK not assigned to an exact location on the device
-    Info (169086): Pin RESET not assigned to an exact location on the device
     Info (169086): Pin Ligar_maquina not assigned to an exact location on the device
+    Info (169086): Pin RESET not assigned to an exact location on the device
+    Info (169086): Pin vol_agua[1] not assigned to an exact location on the device
+    Info (169086): Pin vol_agua[0] not assigned to an exact location on the device
+    Info (169086): Pin vol_agua[2] not assigned to an exact location on the device
+    Info (169086): Pin vol_agua[3] not assigned to an exact location on the device
+    Info (169086): Pin modo_lavgm[1] not assigned to an exact location on the device
+    Info (169086): Pin modo_lavgm[0] not assigned to an exact location on the device
+    Info (169086): Pin modo_lavgm[3] not assigned to an exact location on the device
+    Info (169086): Pin modo_lavgm[2] not assigned to an exact location on the device
+Warning (335093): TimeQuest Timing Analyzer is analyzing 12 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Maquina.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (176353): Automatically promoted node CLOCK (placed in PIN P2 (CLK2, LVDSCLK1p, Input))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node Controladora:instancia_controladora|estado_atual.Enchendo
+        Info (176357): Destination node Controladora:instancia_controladora|estado_atual.Molho
+        Info (176357): Destination node Controladora:instancia_controladora|estado_atual.Lavar
+        Info (176357): Destination node Controladora:instancia_controladora|estado_atual.Enxague
+        Info (176357): Destination node Controladora:instancia_controladora|estado_atual.Centrifuga
+        Info (176357): Destination node Controladora:instancia_controladora|estado_atual.Finalizado
+Info (176353): Automatically promoted node RESET (placed in PIN P1 (CLK3, LVDSCLK1n, Input))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G1
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 27 (unused VREF, 3.3V VCCIO, 12 input, 15 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 25 (unused VREF, 3.3V VCCIO, 10 input, 15 output, 0 bidirectional)
         Info (176212): I/O standards used: 3.3-V LVTTL.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  64 pins available
+        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  62 pins available
         Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  57 pins available
         Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
         Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
@@ -1245,15 +1740,14 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y24 to location X10_Y36
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X55_Y24 to location X65_Y36
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-    Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 15 output pins without output pin load capacitance assignment
     Info (306007): Pin "Display_7seg[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1276,17 +1770,17 @@ Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/output_files/Maquina.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/output_files/Maquina.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4879 megabytes
-    Info: Processing ended: Fri Jan 24 16:51:10 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Fri Jan 24 20:22:47 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/output_files/Maquina.fit.smsg.
+The suppressed messages can be found in C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/output_files/Maquina.fit.smsg.
 
 

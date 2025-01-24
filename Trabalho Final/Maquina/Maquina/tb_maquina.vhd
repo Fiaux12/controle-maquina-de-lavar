@@ -45,7 +45,8 @@ architecture behavior of tb_maquina is
     signal valvula_agua  : std_logic;
     signal load_motor    : std_logic;
 
-
+		 -- Clock period
+    constant CLOCK_PERIOD : time := 10 ns;
 begin
 
     uut: maquina
@@ -69,9 +70,30 @@ begin
             valvula_agua  => valvula_agua,
             load_motor    => load_motor
         );
+		  
+	 clock_process: process
+    begin
+        while true loop
+            CLOCK <= '0';
+            wait for CLOCK_PERIOD / 2;
+            CLOCK <= '1';
+            wait for CLOCK_PERIOD / 2;
+        end loop;
+    end process;
 
-        --reset no sistema
-        reset <= '1';
+    stimulus: process
+    begin
+	 
+		ligar_maquina <= '1';
+		Porta <= '1';
+		vol_agua <= "0001";
+		modo_lavgm <= "0001";
+		wait for 20 ns;
+		
+		
+	 
+      wait;
+    end process;
 
 
 
