@@ -2,16 +2,11 @@ LIBRARY IEEE;
 use ieee.std_logic_1164.all;
 
 entity Maquina is
-	generic
-	(
-		DATA_WIDTH : natural := 4
-	);
 	port(
 		RESET   : in    std_logic; -- reset input
-      CLOCK   : in    std_logic; -- clock input
-		E			: in std_logic_vector(DATA_WIDTH -1 downto 0);
-		Sobe 		: out std_logic;
-		Desce		: out std_logic;
+      	CLOCK   : in    std_logic; -- clock input
+		Ligar_maquina 		: in std_logic;
+		Porta		: in std_logic;
 		Display_7seg : out std_logic_vector(6 downto 0)
    );
 end Maquina;
@@ -23,17 +18,60 @@ component Datapath is
 	(
 		DATA_WIDTH : natural := 4
 	);
-
 	port( 
+		Volume_Agua: in std_logic_vector((DATA_WIDTH-1) downto 0); --2 bits
+		Modo_Lavagem: in std_logic_vector((DATA_WIDTH-1) downto 0); --3 bits
+		clock: in std_logic; 
 		
+		Reset_Vol_Agua: in std_logic;
+		Load_Vol_Agua: in std_logic;
+		
+		Reset_Modo: in std_logic;
+		Load_Modo: in std_logic;
+		
+		Load_temp: in std_logic;
+		Reset_Cont: in std_logic;
+		
+		Timeout: out std_logic;
+		
+		pino_extra_baixo: out std_logic;
+		pino_baixo: out std_logic;
+		pino_medio: out std_logic;
+		pino_alto: out std_logic;
+		
+		pino_economico: out std_logic;
+		pino_delicado: out std_logic;
+		pino_pesado: out std_logic;
+		pino_normal: out std_logic;
+		
+		BCD: out std_logic_vector(6 downto 0)
 		
    );
 end component;
 	
 component Controladora is
 	port (
-       
-    );
+        RESET   			: in    std_logic; -- reset input
+		CLOCK   			: in    std_logic; -- clock input
+		Ligar_maquina     : in    std_logic;
+		Porta     			:in    std_logic;
+		Reset_Vol_Agua    : out   std_logic;
+		Load_Vol_Agua     : out   std_logic;
+		Reset_Modo        : out   std_logic;
+		Load_Modo				: out   std_logic;
+		Load_temp				: out   std_logic;
+		Reset_Cont			: out   std_logic;
+		Timeout				: in std_logic;
+		pino_extra_baixo  : in std_logic;
+		pino_baixo			: in std_logic;
+		pino_medio			: in std_logic;
+		pino_alto			: in std_logic;
+
+		pino_economico		: in std_logic;
+		pino_delicado		: in std_logic;
+		pino_pesado			: in std_logic;
+		pino_normal			: in std_logic;
+);
 end component;
 
 --signal Load_E, Reset_MA, Maior, Menor, Descendo, Subindo, Atualize : std_logic;
@@ -41,7 +79,8 @@ end component;
 begin 
 	instancia_controladora: Controladora
 		port map(
-			 
+			  RESET=>RESET,
+			  CLOCK=>CLOCK,
 		);
 	instance_datapath: Datapath
 		port map(
