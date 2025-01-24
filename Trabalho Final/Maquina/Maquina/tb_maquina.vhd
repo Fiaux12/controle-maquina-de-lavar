@@ -1,117 +1,78 @@
-LIBRARY IEEE;
-USE IEEE.std_logic_1164.ALL;
-USE IEEE.numeric_std.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
 
-ENTITY tb_maquina IS
--- Testbench não tem portas
-END tb_maquina;
+entity tb_maquina is
+end tb_maquina;
 
-ARCHITECTURE behavior OF tb_maquina IS
+architecture behavior of tb_maquina is
 
-    -- Component Declaration for the Unit Under Test (UUT)
-    COMPONENT Maquina
-        PORT(
-            RESET        : IN  std_logic;
-            CLOCK        : IN  std_logic;
-            Ligar_maquina: IN  std_logic;
-            Porta        : IN  std_logic;
-            Display_7seg : OUT std_logic_vector(6 DOWNTO 0);
-            vol_agua     : IN  std_logic_vector(3 DOWNTO 0); -- Assumindo DATA_WIDTH = 4
-            modo_lavgm   : IN  std_logic_vector(3 DOWNTO 0); -- Assumindo DATA_WIDTH = 4
-            Led_Enchendo : OUT std_logic;
-            Led_Molho    : OUT std_logic;
-            Led_Lavar    : OUT std_logic;
-            Led_Enxague  : OUT std_logic;
-            Led_Centrifuga: OUT std_logic;
-            Led_Finalizado: OUT std_logic;
-            Valvula_Agua : OUT std_logic;
-            Load_Motor   : OUT std_logic
+    component maquina
+        generic (
+            data_width : natural := 4
         );
-    END COMPONENT;
+        port(
+            reset         : in  std_logic;
+            clock         : in  std_logic;
+            ligar_maquina : in  std_logic;
+            porta         : in  std_logic;
+            display_7seg  : out std_logic_vector(6 downto 0);
+            vol_agua      : in  std_logic_vector((data_width-1) downto 0);
+            modo_lavgm    : in  std_logic_vector((data_width-1) downto 0);
+            led_enchendo  : out std_logic;
+            led_molho     : out std_logic;
+            led_lavar     : out std_logic;
+            led_enxague   : out std_logic;
+            led_centrifuga: out std_logic;
+            led_finalizado: out std_logic;
+            valvula_agua  : out std_logic;
+            load_motor    : out std_logic
+        );
+    end component;
 
-    -- Signals for testing
-    SIGNAL RESET        : std_logic := '0';
-    SIGNAL CLOCK        : std_logic := '0';
-    SIGNAL Ligar_maquina: std_logic := '0';
-    SIGNAL Porta        : std_logic := '0';
-    SIGNAL Display_7seg : std_logic_vector(6 DOWNTO 0);
-    SIGNAL vol_agua     : std_logic_vector(3 DOWNTO 0) := (OTHERS => '0');
-    SIGNAL modo_lavgm   : std_logic_vector(3 DOWNTO 0) := (OTHERS => '0');
-    SIGNAL Led_Enchendo : std_logic;
-    SIGNAL Led_Molho    : std_logic;
-    SIGNAL Led_Lavar    : std_logic;
-    SIGNAL Led_Enxague  : std_logic;
-    SIGNAL Led_Centrifuga: std_logic;
-    SIGNAL Led_Finalizado: std_logic;
-    SIGNAL Valvula_Agua : std_logic;
-    SIGNAL Load_Motor   : std_logic;
+    signal reset         : std_logic := '0';
+    signal clock         : std_logic := '0';
+    signal ligar_maquina : std_logic := '0';
+    signal porta         : std_logic := '0';
+    signal vol_agua      : std_logic_vector(3 downto 0) := (others => '0');
+    signal modo_lavgm    : std_logic_vector(3 downto 0) := (others => '0');
+    signal display_7seg  : std_logic_vector(6 downto 0);
+    signal led_enchendo  : std_logic;
+    signal led_molho     : std_logic;
+    signal led_lavar     : std_logic;
+    signal led_enxague   : std_logic;
+    signal led_centrifuga: std_logic;
+    signal led_finalizado: std_logic;
+    signal valvula_agua  : std_logic;
+    signal load_motor    : std_logic;
 
-    -- Clock period definition
-    CONSTANT clk_period : time := 10 ns;
 
-BEGIN
+begin
 
-    -- Instantiate the Unit Under Test (UUT)
-    uut: Maquina
-        PORT MAP (
-            RESET        => RESET,
-            CLOCK        => CLOCK,
-            Ligar_maquina=> Ligar_maquina,
-            Porta        => Porta,
-            Display_7seg => Display_7seg,
-            vol_agua     => vol_agua,
-            modo_lavgm   => modo_lavgm,
-            Led_Enchendo => Led_Enchendo,
-            Led_Molho    => Led_Molho,
-            Led_Lavar    => Led_Lavar,
-            Led_Enxague  => Led_Enxague,
-            Led_Centrifuga=> Led_Centrifuga,
-            Led_Finalizado=> Led_Finalizado,
-            Valvula_Agua => Valvula_Agua,
-            Load_Motor   => Load_Motor
+    uut: maquina
+        generic map (
+            data_width => 4
+        )
+        port map (
+            reset         => reset,
+            clock         => clock,
+            ligar_maquina => ligar_maquina,
+            porta         => porta,
+            display_7seg  => display_7seg,
+            vol_agua      => vol_agua,
+            modo_lavgm    => modo_lavgm,
+            led_enchendo  => led_enchendo,
+            led_molho     => led_molho,
+            led_lavar     => led_lavar,
+            led_enxague   => led_enxague,
+            led_centrifuga=> led_centrifuga,
+            led_finalizado=> led_finalizado,
+            valvula_agua  => valvula_agua,
+            load_motor    => load_motor
         );
 
-    -- Clock process definitions
-    clk_process :process
-    begin
-        CLOCK <= '0';
-        wait for clk_period/2;
-        CLOCK <= '1';
-        wait for clk_period/2;
-    end process;
+        --reset no sistema
+        reset <= '1';
 
-    -- Stimulus process
-    stim_proc: process
-    begin
-        -- Reset process
-        RESET <= '1';
-        wait for 20 ns;
-        RESET <= '0';
 
-        -- Test Case 1: Ligar máquina com porta fechada
-        Ligar_maquina <= '1';
-        Porta <= '1';
-        vol_agua <= "0011";  -- Volume baixo
-        modo_lavgm <= "0001"; -- Modo econômico
-        wait for 100 ns;
 
-        -- Test Case 2: Modo normal, volume médio
-        modo_lavgm <= "0010";
-        vol_agua <= "0110";
-        wait for 100 ns;
-
-        -- Test Case 3: Porta aberta (erro esperado)
-        Porta <= '0';
-        wait for 50 ns;
-
-        -- Test Case 4: Ligar centrifugação
-        modo_lavgm <= "0101"; -- Simula um modo específico
-        vol_agua <= "1001";  -- Volume alto
-        Porta <= '1';        -- Fechar porta
-        wait for 100 ns;
-
-        -- End simulation
-        wait;
-    end process;
-
-END behavior;
+end behavior;

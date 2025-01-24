@@ -1,0 +1,326 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\controle-maquina-de-lavar\Trabalho Final\Maquina\Maquina\simulation\modelsim
+Ebcd_7seg
+Z1 w1737680281
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\controle-maquina-de-lavar\Trabalho Final\Maquina\Maquina\simulation\modelsim
+Z5 8C:/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd
+Z6 FC:/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd
+l0
+L4
+V`o6UecCXXcKXh[NWIfEzD0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1737748287.072000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd|
+Z10 !s107 C:/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 Mj?kZhT<CDN2m7femMXLG1
+!i10b 1
+Awith_select_bcd7seg
+R2
+R3
+DEx4 work 8 bcd_7seg 0 22 `o6UecCXXcKXh[NWIfEzD0
+l12
+L11
+V68SOUlK];EB9_6D`f82`R3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 m5lPj[nI>=i7UWd9WO7_L0
+!i10b 1
+Ecomparador_modo_lavgm
+Z13 w1737680282
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd
+Z16 FC:/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd
+l0
+L5
+Vn@6g5oz4oQf[mEKcMO96<2
+R7
+31
+Z17 !s108 1737748287.690000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd|
+Z19 !s107 C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd|
+R11
+R12
+!s100 eecUc8XakR[Z?d]R=bdGB0
+!i10b 1
+Artl
+R14
+R2
+R3
+DEx4 work 21 comparador_modo_lavgm 0 22 n@6g5oz4oQf[mEKcMO96<2
+l22
+L21
+VLPaVKj?3G2P?F697zC2Fl1
+R7
+31
+R17
+R18
+R19
+R11
+R12
+!s100 FmG>J1S^H`_6NFGbbZfE`3
+!i10b 1
+Ecomparador_vol_agua
+R13
+R14
+R2
+R3
+R4
+Z20 8C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd
+Z21 FC:/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd
+l0
+L5
+Vi@[5Sld>YheZfXB7<R6RV1
+R7
+31
+Z22 !s108 1737748287.422000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd|
+Z24 !s107 C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd|
+R11
+R12
+!s100 n:@c_Qczbh@koo_z]F6MJ1
+!i10b 1
+Artl
+R14
+R2
+R3
+DEx4 work 19 comparador_vol_agua 0 22 i@[5Sld>YheZfXB7<R6RV1
+l22
+L21
+V;IT7ZZV3^]P^J2<:fKELk3
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 CJAVj_JWTb8B2m`ehWoYB3
+!i10b 1
+Econtroladora
+Z25 w1737721496
+R2
+R3
+R4
+Z26 8C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd
+Z27 FC:/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd
+l0
+L4
+VX>ndgVB6WjYD0FM8aQ>[51
+R7
+31
+Z28 !s108 1737748288.227000
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd|
+Z30 !s107 C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd|
+R11
+R12
+!s100 1Z9`zag=fN5g^?A1<4_?V0
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 12 controladora 0 22 X>ndgVB6WjYD0FM8aQ>[51
+l49
+L36
+V3J1dIH>8hPlTB^Uk6Fe=F1
+R7
+31
+R28
+R29
+R30
+R11
+R12
+!s100 oRhQk=M]mc9;QgVdHMN9z2
+!i10b 1
+Edatapath
+R13
+R2
+R3
+R4
+Z31 8C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd
+Z32 FC:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd
+l0
+L4
+VWhRiQ4Fg4Ybk:Z<Q7Vd6K1
+R7
+31
+Z33 !s108 1737748288.430000
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd|
+Z35 !s107 C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd|
+R11
+R12
+!s100 a@G0AD<laLQ;e7:zib[::1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 8 datapath 0 22 WhRiQ4Fg4Ybk:Z<Q7Vd6K1
+l121
+L42
+VU`HolnSHj?=Bl0;WhoU=63
+R7
+31
+R33
+R34
+R35
+R11
+R12
+!s100 oM2zba8<=;Y0[l15]oD[62
+!i10b 1
+Emaquina
+Z36 w1737745998
+R2
+R3
+R4
+Z37 8C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/Maquina.vhd
+Z38 FC:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/Maquina.vhd
+l0
+L4
+V_DJh@OTKc_M?W=LDGE7]50
+R7
+31
+Z39 !s108 1737748288.021000
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/Maquina.vhd|
+Z41 !s107 C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/Maquina.vhd|
+R11
+R12
+!s100 9aWHC1D8V>TWGH4Xcf[hM0
+!i10b 1
+Afsm
+R2
+R3
+DEx4 work 7 maquina 0 22 _DJh@OTKc_M?W=LDGE7]50
+l108
+L28
+VCO2d:E4_<3J`EeC@6KSa30
+R7
+31
+R39
+R40
+R41
+R11
+R12
+!s100 ZZoh@`KBEaE?_[9B1In_=2
+!i10b 1
+Eregw
+R13
+R2
+R3
+R4
+Z42 8C:/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd
+Z43 FC:/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd
+l0
+L4
+VJlT9:3:G=bSJ8cXG;2kSC2
+R7
+31
+Z44 !s108 1737748286.796000
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd|
+Z46 !s107 C:/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd|
+R11
+R12
+!s100 keCj>i:3`ON_T7S5AlOJ11
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 4 regw 0 22 JlT9:3:G=bSJ8cXG;2kSC2
+l22
+L21
+VL=Z^OPB0KJfd93H8X?8m>0
+R7
+31
+R44
+R45
+R46
+R11
+R12
+!s100 _0HKVA`:nFjB@3n_XAh>^1
+!i10b 1
+Etb_maquina
+Z47 w1737748259
+R2
+R3
+R4
+Z48 8C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/tb_maquina.vhd
+Z49 FC:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/tb_maquina.vhd
+l0
+L4
+VTYVUJL?5Je`4DQ]c@[E]H3
+!s100 N37Q@?=CBA][ffC`>0<9G3
+R7
+31
+!i10b 1
+Z50 !s108 1737748288.710000
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/tb_maquina.vhd|
+Z52 !s107 C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/tb_maquina.vhd|
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 10 tb_maquina 0 22 TYVUJL?5Je`4DQ]c@[E]H3
+l49
+L7
+VGm9Sho=C3ilbDj4nQ:eZZ1
+!s100 _IQ=d;imZfQIhKc<`SFLJ1
+R7
+31
+!i10b 1
+R50
+R51
+R52
+R11
+R12
+Etemporizador
+R13
+R14
+R2
+R3
+R4
+Z53 8C:/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd
+Z54 FC:/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd
+l0
+L5
+VECWZTU5d0UOOlIYjB2aj00
+R7
+31
+Z55 !s108 1737748286.516000
+Z56 !s90 -reportprogress|300|-93|-work|work|C:/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd|
+Z57 !s107 C:/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd|
+R11
+R12
+!s100 4PG7[h^4LgQCme3W<526e3
+!i10b 1
+Atemp
+R14
+R2
+R3
+DEx4 work 12 temporizador 0 22 ECWZTU5d0UOOlIYjB2aj00
+l25
+L21
+V:`^Z^I^[AB8B@ZYE?:FMY1
+R7
+31
+R55
+R56
+R57
+R11
+R12
+!s100 I2<k2f2J3ReQ]dj9Da7PE1
+!i10b 1
