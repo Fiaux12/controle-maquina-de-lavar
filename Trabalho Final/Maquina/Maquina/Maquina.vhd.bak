@@ -7,7 +7,7 @@ entity Maquina is
       	CLOCK   : in    std_logic; -- clock input
 		Ligar_maquina 		: in std_logic;
 		Porta		: in std_logic;
-		Display_7seg : out std_logic_vector(6 downto 0);
+		Display_7seg : out std_logic_vector(6 downto 0)
 		vol_agua	: in std_logic_vector	((DATA_WIDTH-1) downto 0);
 		modo_lavgm	: in std_logic_vector	((DATA_WIDTH-1) downto 0);
 		Led_Enchendo : out std_logic;
@@ -24,7 +24,7 @@ end Maquina;
 architecture FSM of Maquina is
 
 begin 
-	-- InstÃ¢ncia da Controladora
+	-- Instância da Controladora
 	instancia_controladora: Controladora
 		port map(
 			Ligar_maquina   => Ligar_maquina,
@@ -57,7 +57,7 @@ begin
 
 		);
 
-	-- InstÃ¢ncia do Datapath
+	-- Instância do Datapath
 	instance_datapath: Datapath
 		port map(
 			Volume_Agua     => vol_agua,
