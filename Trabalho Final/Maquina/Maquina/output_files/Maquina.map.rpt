@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Maquina
-Fri Jan 24 14:00:05 2025
+Fri Jan 24 15:30:46 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Jan 24 14:00:05 2025               ;
+; Analysis & Synthesis Status        ; Failed - Fri Jan 24 15:30:46 2025               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Maquina                                         ;
 ; Top-level Entity Name              ; Maquina                                         ;
@@ -155,7 +155,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jan 24 14:00:04 2025
+    Info: Processing started: Fri Jan 24 15:30:45 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Maquina -c Maquina
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /controle-maquina-de-lavar/trabalho final/maquina/controladora/controladora.vhd
@@ -164,10 +164,48 @@ Info (12021): Found 2 design units, including 1 entities, in source file /contro
 Info (12021): Found 2 design units, including 1 entities, in source file /controle-maquina-de-lavar/trabalho final/maquina/datapath/datapath.vhd
     Info (12022): Found design unit 1: Datapath-RTL
     Info (12023): Found entity 1: Datapath
-Error (10500): VHDL syntax error at maquina.vhd(11) near text ":";  expecting ";", or ")" File: C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/maquina.vhd Line: 11
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4621 megabytes
-    Error: Processing ended: Fri Jan 24 14:00:05 2025
+Warning (12125): Using design file maquina.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Maquina-FSM
+    Info (12023): Found entity 1: Maquina
+Info (12127): Elaborating entity "Maquina" for the top level hierarchy
+Info (12128): Elaborating entity "Controladora" for hierarchy "Controladora:instancia_controladora"
+Warning (10541): VHDL Signal Declaration warning at Controladora.vhd(13): used implicit default value for signal "Load_Modo" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_Motor", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Enchendo", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Molho", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Lavar", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Enxague", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Centrifuga", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Finalizado", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Valvula_Agua", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Reset_Vol_Agua", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Reset_Modo", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Reset_Cont", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_temp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_Vol_Agua", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Load_Vol_Agua" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Load_temp" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Reset_Cont" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Reset_Modo" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Reset_Vol_Agua" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Valvula_Agua" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Led_Finalizado" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Led_Centrifuga" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Led_Enxague" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Led_Lavar" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Led_Molho" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Led_Enchendo" at Controladora.vhd(62)
+Info (10041): Inferred latch for "Load_Motor" at Controladora.vhd(62)
+Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:instance_datapath"
+Error (12006): Node instance "instancia_Reg_Vol_Agua" instantiates undefined entity "RegW" File: C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd Line: 123
+Error (12006): Node instance "instancia_Reg_Modo" instantiates undefined entity "RegW" File: C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd Line: 126
+Error (12006): Node instance "instancia_Comp_vol_agua" instantiates undefined entity "Comparador_Vol_Agua" File: C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd Line: 129
+Error (12006): Node instance "instancia_Comp_modo_lavgm" instantiates undefined entity "Comparador_Modo_Lavgm" File: C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd Line: 132
+Error (12006): Node instance "instancia_Bcd_7seg" instantiates undefined entity "Bcd_7seg" File: C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd Line: 135
+Error (12006): Node instance "instancia_Temporizador" instantiates undefined entity "temporizador" File: C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd Line: 138
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 6 errors, 16 warnings
+    Error: Peak virtual memory: 4622 megabytes
+    Error: Processing ended: Fri Jan 24 15:30:46 2025
     Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
