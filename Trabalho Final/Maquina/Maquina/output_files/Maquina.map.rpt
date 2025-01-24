@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Maquina
-Fri Jan 24 15:30:46 2025
+Fri Jan 24 16:13:38 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Jan 24 15:30:46 2025               ;
+; Analysis & Synthesis Status        ; Failed - Fri Jan 24 16:13:38 2025               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Maquina                                         ;
 ; Top-level Entity Name              ; Maquina                                         ;
@@ -155,7 +155,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jan 24 15:30:45 2025
+    Info: Processing started: Fri Jan 24 16:13:37 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Maquina -c Maquina
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /controle-maquina-de-lavar/trabalho final/maquina/controladora/controladora.vhd
@@ -204,8 +204,8 @@ Error (12006): Node instance "instancia_Comp_modo_lavgm" instantiates undefined 
 Error (12006): Node instance "instancia_Bcd_7seg" instantiates undefined entity "Bcd_7seg" File: C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd Line: 135
 Error (12006): Node instance "instancia_Temporizador" instantiates undefined entity "temporizador" File: C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd Line: 138
 Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 6 errors, 16 warnings
-    Error: Peak virtual memory: 4622 megabytes
-    Error: Processing ended: Fri Jan 24 15:30:46 2025
+    Error: Peak virtual memory: 4621 megabytes
+    Error: Processing ended: Fri Jan 24 16:13:38 2025
     Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
