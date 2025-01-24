@@ -8,6 +8,9 @@ entity Maquina is
 		Ligar_maquina 		: in std_logic;
 		Porta		: in std_logic;
 		Display_7seg : out std_logic_vector(6 downto 0)
+		vol_agua	: in std_logic_vector	((DATA_WIDTH-1) downto 0);
+		modo_lavgm	: in std_logic_vector	((DATA_WIDTH-1) downto 0);
+
    );
 end Maquina;
 architecture FSM of Maquina is
@@ -19,8 +22,8 @@ component Datapath is
 		DATA_WIDTH : natural := 4
 	);
 	port( 
-		Volume_Agua: in std_logic_vector((DATA_WIDTH-1) downto 0); --2 bits
-		Modo_Lavagem: in std_logic_vector((DATA_WIDTH-1) downto 0); --3 bits
+		Volume_Agua: in std_logic_vector((DATA_WIDTH-1) downto 0); 
+		Modo_Lavagem: in std_logic_vector((DATA_WIDTH-1) downto 0); 
 		clock: in std_logic; 
 		
 		Reset_Vol_Agua: in std_logic;
@@ -81,29 +84,29 @@ begin
 		port map(
 			RESET=>RESET,
 			CLOCK=>CLOCK,
-			Ligar_maquina=>
-			Porta=>
+			Ligar_maquina=>Ligar_maquina,
+			Porta=>Porta,
 			Reset_Vol_Agua=>
 			Load_Vol_Agua=>
 			Reset_Modo=>
 			Load_Modo=>
-			Load_temp=>
-			Reset_Cont=>
-			Timeout	=>
-			pino_extra_baixo =>
-			pino_baixo=>
-			pino_medio=>
-			pino_alto=>
+			Load_temp=>Load_temp,
+			Reset_Cont=>Reset_Cont
+			Timeout	=>Timeout,
+			pino_extra_baixo =>pino_extra_baixo
+			pino_baixo=>pino_baixo
+			pino_medio=>pino_medio
+			pino_alto=>pino_alto
 
-			pino_economico=>
-			pino_delicado=>
-			pino_pesado=>
-			pino_normal=>
+			pino_economico=>pino_economico,
+			pino_delicado=>pino_delicado
+			pino_pesado=>pino_pesado
+			pino_normal=>pino_normal
 		);
 	instance_datapath: Datapath
 		port map(
-			Volume_Agua=>
-			Modo_Lavagem=>
+			Volume_Agua=>vol_agua,
+			Modo_Lavagem=>modo_lavgm,
 			clock=>CLOCK,
 			
 			Reset_Vol_Agua=>
