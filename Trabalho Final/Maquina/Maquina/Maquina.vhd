@@ -79,12 +79,53 @@ end component;
 begin 
 	instancia_controladora: Controladora
 		port map(
-			  RESET=>RESET,
-			  CLOCK=>CLOCK,
+			RESET=>RESET,
+			CLOCK=>CLOCK,
+			Ligar_maquina=>
+			Porta=>
+			Reset_Vol_Agua=>
+			Load_Vol_Agua=>
+			Reset_Modo=>
+			Load_Modo=>
+			Load_temp=>
+			Reset_Cont=>
+			Timeout	=>
+			pino_extra_baixo =>
+			pino_baixo=>
+			pino_medio=>
+			pino_alto=>
+
+			pino_economico=>
+			pino_delicado=>
+			pino_pesado=>
+			pino_normal=>
 		);
 	instance_datapath: Datapath
 		port map(
+			Volume_Agua=>
+			Modo_Lavagem=>
+			clock=>CLOCK,
 			
+			Reset_Vol_Agua=>
+			Load_Vol_Agua=>,
+			
+			Reset_Modo=>
+			Load_Modo=>
+			
+			Load_temp=>
+			Reset_Cont=>
+			
+			Timeout=>
+			
+			pino_extra_baixo=>
+			pino_baixo=>
+			pino_medio=>
+			pino_alto=>
+			
+			pino_economico=>
+			pino_delicado=>
+			pino_pesado=>
+			pino_normal=>
 		);
 	
 	
