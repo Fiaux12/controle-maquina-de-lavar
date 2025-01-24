@@ -1,9 +1,9 @@
 vendor_name = ModelSim
-source_file = 1, C:/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd
-source_file = 1, C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd
-source_file = 1, C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd
 source_file = 1, C:/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd
 source_file = 1, C:/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd
+source_file = 1, C:/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd
+source_file = 1, C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd
+source_file = 1, C:/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd
 source_file = 1, C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/tb_maquina.vhd
 source_file = 1, C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/Maquina.vhd
 source_file = 1, C:/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd

@@ -1,0 +1,12 @@
+
+State Machine - |Maquina|Controladora:instancia_controladora|estado_atual
+Name estado_atual.Pause estado_atual.Finalizado estado_atual.Centrifuga estado_atual.Enxague estado_atual.Lavar estado_atual.Molho estado_atual.Enchendo estado_atual.Load estado_atual.Ligar 
+estado_atual.Ligar 0 0 0 0 0 0 0 0 0 
+estado_atual.Load 0 0 0 0 0 0 0 1 1 
+estado_atual.Enchendo 0 0 0 0 0 0 1 0 1 
+estado_atual.Molho 0 0 0 0 0 1 0 0 1 
+estado_atual.Lavar 0 0 0 0 1 0 0 0 1 
+estado_atual.Enxague 0 0 0 1 0 0 0 0 1 
+estado_atual.Centrifuga 0 0 1 0 0 0 0 0 1 
+estado_atual.Finalizado 0 1 0 0 0 0 0 0 1 
+estado_atual.Pause 1 0 0 0 0 0 0 0 1 

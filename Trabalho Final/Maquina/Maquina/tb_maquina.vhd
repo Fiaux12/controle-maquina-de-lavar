@@ -4,7 +4,7 @@ USE IEEE.numeric_std.ALL;
 
 ENTITY tb_maquina IS
 -- Testbench não tem portas
-END Maquina_tb;
+END tb_maquina;
 
 ARCHITECTURE behavior OF tb_maquina IS
 
