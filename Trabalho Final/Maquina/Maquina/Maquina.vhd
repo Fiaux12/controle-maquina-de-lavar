@@ -10,6 +10,14 @@ entity Maquina is
 		Display_7seg : out std_logic_vector(6 downto 0)
 		vol_agua	: in std_logic_vector	((DATA_WIDTH-1) downto 0);
 		modo_lavgm	: in std_logic_vector	((DATA_WIDTH-1) downto 0);
+		Led_Enchendo : out std_logic;
+		Led_Molho: out std_logic;
+		Led_Lavar: out std_logic;
+		Led_Enxague: out std_logic;
+		Led_Centrifuga: out std_logic;
+		Led_Finalizado: out std_logic;
+		Valvula_Agua: out std_logic;
+		Load_Motor: out std_logic;
 
    );
 end Maquina;
