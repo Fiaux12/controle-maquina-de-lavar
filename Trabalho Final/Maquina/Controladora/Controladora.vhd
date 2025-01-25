@@ -67,7 +67,26 @@ begin
     begin
         -- Estado padrão
         proximo_estado <= estado_atual;
-
+		  
+		  
+		   Load_Motor	     <= '0';
+                Led_Enchendo 	  <= '0';
+                Led_Molho       <= '0';
+                Led_Lavar		  <= '0';
+                Led_Enxague	  <= '0';
+                Led_Centrifuga  <= '0';
+                Led_Finalizado  <= '0';
+                Valvula_Agua    <= '0';
+					 
+					 Reset_Vol_Agua <= '1';
+				    Reset_Modo     <= '1';
+				    Reset_Cont     <= '1';
+				    Load_Vol_Agua   <= '1';
+	
+				
+		  
+		  
+		  
         case estado_atual is
             when Ligar => 
                 Load_Motor	     <= '0';
@@ -78,6 +97,10 @@ begin
                 Led_Centrifuga  <= '0';
                 Led_Finalizado  <= '0';
                 Valvula_Agua    <= '0';
+					 
+					
+				    Load_Vol_Agua   <= '1';
+				    Load_temp 			<= '0';
 				
                 if Ligar_maquina = '0' then
                     Reset_Vol_Agua <= '1';
@@ -93,6 +116,24 @@ begin
             when Load =>
 					Load_Modo     <= '1';
                Load_Vol_Agua     <= '1';
+					
+					
+					
+					Load_Motor	     <= '0';
+                Led_Enchendo 	  <= '0';
+                Led_Molho       <= '0';
+                Led_Lavar		  <= '0';
+                Led_Enxague	  <= '0';
+                Led_Centrifuga  <= '0';
+                Led_Finalizado  <= '0';
+                Valvula_Agua    <= '0';
+					 
+					 Reset_Vol_Agua <= '0';
+				    Reset_Modo     <= '0';
+				    Reset_Cont     <= '0';
+
+					
+					
                
 					-- Verificar volume válido
                 if pino_extra_baixo = '1' and pino_baixo = '0' and pino_medio = '0' and pino_alto = '0' then
@@ -130,76 +171,199 @@ begin
                 end if;
 
             when Enchendo =>
-                if Timeout = '0' then
-                    Led_Enchendo <= '1';
-                    Valvula_Agua <= '1';
-                    proximo_estado <= Enchendo;
-                else
-                    Led_Enchendo <= '0';
-                    Valvula_Agua <= '0';
-                    proximo_estado <= Molho;
-                end if;
+					
+					 Load_Motor	     <= '0';
+                Led_Molho       <= '0';
+                Led_Lavar		  <= '0';
+                Led_Enxague	  <= '0';
+                Led_Centrifuga  <= '0';
+                Led_Finalizado  <= '0';
+       
+					 
+					 Reset_Vol_Agua <= '0';
+				    Reset_Modo     <= '0';
+				    Reset_Cont     <= '0';
+				    Load_Vol_Agua   <= '0';
+					
+					
+					if Porta = '0' then
+						 Load_temp <= '1';
+						 if Timeout = '0' then
+							  Led_Enchendo <= '1';
+							  Valvula_Agua <= '1';
+							  proximo_estado <= Enchendo;
+						 else
+							  Led_Enchendo <= '0';
+							  Valvula_Agua <= '0';
+							  proximo_estado <= Molho;
+						 end if;
+					else
+						Load_temp <= '0';
+						Valvula_Agua <= '0';
+					end if;
+					 
 
             when Molho => 
-                if Timeout = '0' then
-                    Led_Molho <= '1';
-                    proximo_estado <= Molho;
-						  
-                else
-                    Led_Molho <= '0';
-                    proximo_estado <= Lavar;
-                end if;
+					
+					 Load_Motor	     <= '0';
+                Led_Enchendo 	  <= '0';
+                Led_Lavar		  <= '0';
+                Led_Enxague	  <= '0';
+                Led_Centrifuga  <= '0';
+                Led_Finalizado  <= '0';
+                Valvula_Agua    <= '0';
+					 
+					 Reset_Vol_Agua <= '0';
+				    Reset_Modo     <= '0';
+				    Reset_Cont     <= '0';
+				    Load_Vol_Agua   <= '0';
+				
+					if Porta = '0' then
+						Load_temp <= '1';
+						 if Timeout = '0' then
+							  Led_Molho <= '1';
+							  proximo_estado <= Molho;
+							  
+						 else
+							  Led_Molho <= '0';
+							  proximo_estado <= Lavar;
+						 end if;
+					else
+						Load_temp <= '0';
+					end if;
 
             when Lavar =>
-                if Timeout = '0' then
-                    Led_Lavar <= '1';
-                    Load_Motor <= '1';
-						  
-                    proximo_estado <= Lavar;
-                else
-                    Led_Lavar  <= '0';
-                    Load_Motor <= '0';
-                    proximo_estado <= Enxague;
-                end if;
+				
+                Led_Enchendo 	  <= '0';
+                Led_Molho       <= '0';
+                Led_Enxague	  <= '0';
+                Led_Centrifuga  <= '0';
+                Led_Finalizado  <= '0';
+                Valvula_Agua    <= '0';
+					 
+					 Reset_Vol_Agua <= '0';
+				    Reset_Modo     <= '0';
+				    Reset_Cont     <= '0';
+				    Load_Vol_Agua   <= '0';
+				
+					if Porta = '0' then
+						 Load_temp <= '1';
+						 if Timeout = '0' then
+							  Led_Lavar <= '1';
+							  Load_Motor <= '1';
+							  
+							  proximo_estado <= Lavar;
+						 else
+							  Led_Lavar  <= '0';
+							  Load_Motor <= '0';
+							  proximo_estado <= Enxague;
+						 end if;
+					 else
+						Load_Motor <= '0';
+						Load_temp <= '0';
+					end if;
 
             when Enxague =>
-                if Timeout = '0' then
-                    Led_Enxague <= '1';
-                    Load_Motor  <= '1';
-						  
-                    proximo_estado <= Enxague;
-                else
-                    Led_Enxague <= '0';
-                    Load_Motor  <= '0';
-                    proximo_estado <= Centrifuga;
-                end if;
+                Led_Enchendo 	  <= '0';
+                Led_Molho       <= '0';
+                Led_Lavar		  <= '0';
+                Led_Centrifuga  <= '0';
+                Led_Finalizado  <= '0';
+					 
+					 Reset_Vol_Agua <= '0';
+				    Reset_Modo     <= '0';
+				    Reset_Cont     <= '0';
+				    Load_Vol_Agua   <= '0';
+				
+					if Porta = '0' then
+						 Load_temp <= '1';
+						 if Timeout = '0' then
+							  Led_Enxague <= '1';
+							  Load_Motor  <= '1';
+							  Valvula_Agua <= '1';
+							  
+							  proximo_estado <= Enxague;
+						 else
+							  Led_Enxague <= '0';
+							  Load_Motor  <= '0';
+							  Valvula_Agua  <= '0';
+							  proximo_estado <= Centrifuga;
+						 end if;
+					 else
+					   Valvula_Agua  <= '0';
+						Load_Motor  <= '0';
+						Load_temp <= '0';
+					end if;
 
             when Centrifuga =>
-                if Timeout = '0' then
-                    Led_Centrifuga <= '1';
-                    Load_Motor <= '1';
-						  
-                    proximo_estado <= Centrifuga;
-                else
-                    Led_Centrifuga <= '0';
-                    Load_Motor <= '0';
-                    proximo_estado <= Finalizado;
-                end if;
+				
+                Led_Enchendo 	  <= '0';
+                Led_Molho       <= '0';
+                Led_Lavar		  <= '0';
+                Led_Enxague	  <= '0';
+                Led_Finalizado  <= '0';
+                Valvula_Agua    <= '0';
+					 
+					 Reset_Vol_Agua <= '0';
+				    Reset_Modo     <= '0';
+				    Reset_Cont     <= '0';
+				    Load_Vol_Agua   <= '0';
+					 
+					if Porta = '0' then
+						 Load_temp <= '1';
+						 if Timeout = '0' then
+							  Led_Centrifuga <= '1';
+							  Load_Motor <= '1';
+							  
+							  proximo_estado <= Centrifuga;
+						 else
+							  Led_Centrifuga <= '0';
+							  Load_Motor <= '0';
+							  proximo_estado <= Finalizado;
+						 end if;
+					 else
+						Load_temp <= '0';
+						Load_Motor <= '0';
+					end if;
 
             when Finalizado =>
-                if Timeout = '0' then
-                    Led_Finalizado <= '1';
-						  proximo_estado <= Finalizado;
-                else
-                    Led_Finalizado <= '0';
-                    proximo_estado <= Ligar;
-                end if;
+					Load_Motor	     <= '0';
+                Led_Enchendo 	  <= '0';
+                Led_Molho       <= '0';
+                Led_Lavar		  <= '0';
+                Led_Enxague	  <= '0';
+                Led_Centrifuga  <= '0';
+                Valvula_Agua    <= '0';
+					 
+					 Reset_Vol_Agua <= '0';
+				    Reset_Modo     <= '0';
+				    Reset_Cont     <= '0';
+				    Load_Vol_Agua   <= '0';
+					 Load_temp <= '0';
+					 
+                
+					  Led_Finalizado <= '1';
+					  proximo_estado <= Ligar;
+		  
 
             when others =>
                 -- Default para outros estados
-                Reset_Vol_Agua <= '0';
-                Reset_Modo     <= '0';
-                Load_Vol_Agua  <= '0';
+					 
+					 Load_Motor	     <= '0';
+                Led_Enchendo 	  <= '0';
+                Led_Molho       <= '0';
+                Led_Lavar		  <= '0';
+                Led_Enxague	  <= '0';
+                Led_Centrifuga  <= '0';
+                Led_Finalizado  <= '0';
+                Valvula_Agua    <= '0';
+					 
+					 Reset_Vol_Agua <= '0';
+				    Reset_Modo     <= '0';
+				    Reset_Cont     <= '0';
+				    Load_Vol_Agua   <= '0';
+					 Load_temp <= '0';
+
         end case;
     end process;
 end arch;

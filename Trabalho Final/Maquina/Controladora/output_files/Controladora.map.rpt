@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Controladora
-Fri Jan 24 20:07:24 2025
+Fri Jan 24 20:39:53 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,13 +44,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan 24 20:07:24 2025           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 24 20:39:52 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Controladora                                    ;
 ; Top-level Entity Name              ; Controladora                                    ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 35                                              ;
-;     Total combinational functions  ; 30                                              ;
+; Total logic elements               ; 36                                              ;
+;     Total combinational functions  ; 36                                              ;
 ;     Dedicated logic registers      ; 8                                               ;
 ; Total registers                    ; 8                                               ;
 ; Total pins                         ; 27                                              ;
@@ -171,16 +171,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 35      ;
+; Estimated Total logic elements              ; 36      ;
 ;                                             ;         ;
-; Total combinational functions               ; 30      ;
+; Total combinational functions               ; 36      ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 6       ;
-;     -- 3 input functions                    ; 9       ;
-;     -- <=2 input functions                  ; 15      ;
+;     -- 4 input functions                    ; 12      ;
+;     -- 3 input functions                    ; 15      ;
+;     -- <=2 input functions                  ; 9       ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 30      ;
+;     -- normal mode                          ; 36      ;
 ;     -- arithmetic mode                      ; 0       ;
 ;                                             ;         ;
 ; Total registers                             ; 8       ;
@@ -190,9 +190,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                                    ; 27      ;
 ; Embedded Multiplier 9-bit elements          ; 0       ;
 ; Maximum fan-out node                        ; Timeout ;
-; Maximum fan-out                             ; 13      ;
-; Total fan-out                               ; 122     ;
-; Average fan-out                             ; 1.88    ;
+; Maximum fan-out                             ; 14      ;
+; Total fan-out                               ; 147     ;
+; Average fan-out                             ; 2.07    ;
 +---------------------------------------------+---------+
 
 
@@ -201,7 +201,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Controladora              ; 30 (30)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |Controladora       ; work         ;
+; |Controladora              ; 36 (36)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |Controladora       ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -231,16 +231,16 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+---------------------+------------------------+
 ; Reset_Vol_Agua$latch                                ; estado_atual.Ligar  ; yes                    ;
 ; Reset_Modo$latch                                    ; estado_atual.Ligar  ; yes                    ;
-; Load_temp$latch                                     ; estado_atual.Load   ; yes                    ;
+; Load_temp$latch                                     ; WideOr9             ; yes                    ;
 ; Reset_Cont$latch                                    ; estado_atual.Ligar  ; yes                    ;
-; Load_Motor$latch                                    ; WideOr0             ; yes                    ;
-; Led_Enchendo$latch                                  ; WideOr1             ; yes                    ;
-; Led_Molho$latch                                     ; WideOr2             ; yes                    ;
-; Led_Lavar$latch                                     ; WideOr3             ; yes                    ;
-; Led_Enxague$latch                                   ; WideOr4             ; yes                    ;
-; Led_Centrifuga$latch                                ; WideOr5             ; yes                    ;
-; Led_Finalizado$latch                                ; WideOr6             ; yes                    ;
-; Valvula_Agua$latch                                  ; WideOr1             ; yes                    ;
+; Load_Motor$latch                                    ; Selector29          ; yes                    ;
+; Led_Enchendo$latch                                  ; Selector27          ; yes                    ;
+; Led_Molho$latch                                     ; Selector25          ; yes                    ;
+; Led_Lavar$latch                                     ; Selector23          ; yes                    ;
+; Led_Enxague$latch                                   ; Selector21          ; yes                    ;
+; Led_Centrifuga$latch                                ; Selector19          ; yes                    ;
+; Led_Finalizado$latch                                ; WideOr9             ; yes                    ;
+; Valvula_Agua$latch                                  ; Selector27          ; yes                    ;
 ; Number of user-specified and inferred latches = 12  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -266,7 +266,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -286,7 +286,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jan 24 20:07:24 2025
+    Info: Processing started: Fri Jan 24 20:39:51 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Controladora -c Controladora
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file tb_controladora.vhd
@@ -347,16 +347,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Load_Modo" is stuck at VCC
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Porta"
-Info (21057): Implemented 62 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 63 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 35 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4653 megabytes
-    Info: Processing ended: Fri Jan 24 20:07:24 2025
-    Info: Elapsed time: 00:00:00
+    Info (21061): Implemented 36 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 32 warnings
+    Info: Peak virtual memory: 4643 megabytes
+    Info: Processing ended: Fri Jan 24 20:39:53 2025
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

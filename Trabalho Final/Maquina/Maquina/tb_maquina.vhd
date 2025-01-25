@@ -85,10 +85,11 @@ begin
     begin
 	 
 		ligar_maquina <= '1';
-		Porta <= '1';
+		Porta <= '0';
 		vol_agua <= "0001";
 		modo_lavgm <= "0001";
 		wait for 20 ns;
+		ligar_maquina <= '0';
 		
 		
 	 

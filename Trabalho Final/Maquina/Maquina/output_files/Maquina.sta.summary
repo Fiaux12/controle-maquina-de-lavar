@@ -2,92 +2,44 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'Controladora:instancia_controladora|estado_atual.Load'
-Slack : -4.893
-TNS   : -4.893
-
-Type  : Slow Model Setup 'Controladora:instancia_controladora|estado_atual.Ligar'
-Slack : -3.984
-TNS   : -25.969
-
 Type  : Slow Model Setup 'CLOCK'
-Slack : -3.882
-TNS   : -143.123
+Slack : -3.922
+TNS   : -146.203
 
 Type  : Slow Model Hold 'CLOCK'
-Slack : -3.119
-TNS   : -10.658
-
-Type  : Slow Model Hold 'Controladora:instancia_controladora|estado_atual.Ligar'
-Slack : -0.446
-TNS   : -0.446
-
-Type  : Slow Model Hold 'Controladora:instancia_controladora|estado_atual.Load'
-Slack : 3.962
+Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow Model Recovery 'CLOCK'
-Slack : 1.450
-TNS   : 0.000
+Slack : -1.175
+TNS   : -41.804
 
 Type  : Slow Model Removal 'CLOCK'
-Slack : -1.183
-TNS   : -48.050
+Slack : 1.463
+TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLOCK'
 Slack : -1.380
 TNS   : -57.380
 
-Type  : Slow Model Minimum Pulse Width 'Controladora:instancia_controladora|estado_atual.Ligar'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Slow Model Minimum Pulse Width 'Controladora:instancia_controladora|estado_atual.Load'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Fast Model Setup 'Controladora:instancia_controladora|estado_atual.Load'
-Slack : -2.363
-TNS   : -2.363
-
-Type  : Fast Model Setup 'Controladora:instancia_controladora|estado_atual.Ligar'
-Slack : -1.636
-TNS   : -10.554
-
 Type  : Fast Model Setup 'CLOCK'
-Slack : -1.337
-TNS   : -39.701
+Slack : -1.332
+TNS   : -39.892
 
 Type  : Fast Model Hold 'CLOCK'
-Slack : -1.812
-TNS   : -11.563
-
-Type  : Fast Model Hold 'Controladora:instancia_controladora|estado_atual.Ligar'
-Slack : -0.159
-TNS   : -0.159
-
-Type  : Fast Model Hold 'Controladora:instancia_controladora|estado_atual.Load'
-Slack : 2.554
+Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Recovery 'CLOCK'
-Slack : 1.524
-TNS   : 0.000
+Slack : -0.103
+TNS   : -1.514
 
 Type  : Fast Model Removal 'CLOCK'
-Slack : -0.865
-TNS   : -36.318
+Slack : 0.765
+TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLOCK'
 Slack : -1.380
 TNS   : -57.380
-
-Type  : Fast Model Minimum Pulse Width 'Controladora:instancia_controladora|estado_atual.Ligar'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Fast Model Minimum Pulse Width 'Controladora:instancia_controladora|estado_atual.Load'
-Slack : 0.500
-TNS   : 0.000
 
 ------------------------------------------------------------

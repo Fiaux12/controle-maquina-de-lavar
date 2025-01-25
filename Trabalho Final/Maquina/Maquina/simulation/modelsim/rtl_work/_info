@@ -15,7 +15,7 @@ L4
 V`o6UecCXXcKXh[NWIfEzD0
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1737761025.078000
+Z8 !s108 1737765482.491000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd|
 Z10 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/BCD_7seg/BCD_7seg/BCD_7seg.vhd|
 Z11 o-93 -work work -O0
@@ -51,7 +51,7 @@ L5
 Vn@6g5oz4oQf[mEKcMO96<2
 R7
 31
-Z17 !s108 1737761025.192000
+Z17 !s108 1737765482.586000
 Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd|
 Z19 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Modo_Lavgm/Comparador_Modo_Lavgm.vhd|
 R11
@@ -88,7 +88,7 @@ L5
 Vi@[5Sld>YheZfXB7<R6RV1
 R7
 31
-Z23 !s108 1737761025.143000
+Z23 !s108 1737765482.545000
 Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd|
 Z25 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Comparador_Vol_Agua/Comparador_Vol_Agua.vhd|
 R11
@@ -113,7 +113,7 @@ R12
 !s100 CJAVj_JWTb8B2m`ehWoYB3
 !i10b 1
 Econtroladora
-Z26 w1737759967
+Z26 w1737765287
 R2
 R3
 R4
@@ -124,7 +124,7 @@ L4
 VX>ndgVB6WjYD0FM8aQ>[51
 R7
 31
-Z29 !s108 1737761025.283000
+Z29 !s108 1737765482.696000
 Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd|
 Z31 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Controladora/Controladora.vhd|
 R11
@@ -137,7 +137,7 @@ R3
 DEx4 work 12 controladora 0 22 X>ndgVB6WjYD0FM8aQ>[51
 l49
 L36
-VT9GYz]8f?OC3lCNi:R5cD0
+VJS4_8Bhzg>HWAePc908TZ2
 R7
 31
 R29
@@ -145,7 +145,7 @@ R30
 R31
 R11
 R12
-!s100 kX3NC]7I=TK_?Ulj[Ga141
+!s100 XGLXeZ>=<9Z_[knm;_>V50
 !i10b 1
 Edatapath
 Z32 w1737337273
@@ -159,7 +159,7 @@ L4
 VWhRiQ4Fg4Ybk:Z<Q7Vd6K1
 R7
 31
-Z35 !s108 1737761025.327000
+Z35 !s108 1737765482.745000
 Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd|
 Z37 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Datapath/Datapath.vhd|
 R11
@@ -194,7 +194,7 @@ L4
 V_DJh@OTKc_M?W=LDGE7]50
 R7
 31
-Z41 !s108 1737761025.235000
+Z41 !s108 1737765482.644000
 Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/Maquina.vhd|
 Z43 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/Maquina.vhd|
 R11
@@ -229,7 +229,7 @@ L4
 VJlT9:3:G=bSJ8cXG;2kSC2
 R7
 31
-Z47 !s108 1737761025.040000
+Z47 !s108 1737765482.445000
 Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd|
 Z49 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Reg_W/RegW/RegW.vhd|
 R11
@@ -253,7 +253,7 @@ R12
 !s100 _0HKVA`:nFjB@3n_XAh>^1
 !i10b 1
 Etb_maquina
-Z50 w1737760954
+Z50 w1737765385
 R2
 R3
 R4
@@ -266,7 +266,7 @@ VTYVUJL?5Je`4DQ]c@[E]H3
 R7
 31
 !i10b 1
-Z53 !s108 1737761025.374000
+Z53 !s108 1737765482.791000
 Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/tb_maquina.vhd|
 Z55 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Maquina/Maquina/tb_maquina.vhd|
 R11
@@ -277,8 +277,8 @@ R3
 DEx4 work 10 tb_maquina 0 22 TYVUJL?5Je`4DQ]c@[E]H3
 l50
 L7
-VBa2njJoImKaTmIfX[TiG@3
-!s100 [_MghkRbPXkC^UOzoR3B72
+VWJ9^5]WcoA8bGB0:C>m^V1
+!s100 ]hBkTof:n1=lMJodXD1WG0
 R7
 31
 !i10b 1
@@ -300,7 +300,7 @@ L5
 VECWZTU5d0UOOlIYjB2aj00
 R7
 31
-Z59 !s108 1737761024.984000
+Z59 !s108 1737765482.378000
 Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd|
 Z61 !s107 C:/Users/amand/Documents/GitHub/controle-maquina-de-lavar/Trabalho Final/Temporizador/Temporizador/Temporizador.vhd|
 R11

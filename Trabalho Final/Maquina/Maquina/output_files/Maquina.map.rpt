@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Maquina
-Fri Jan 24 20:22:42 2025
+Fri Jan 24 21:28:38 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -55,13 +55,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan 24 20:22:42 2025           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 24 21:28:38 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Maquina                                         ;
 ; Top-level Entity Name              ; Maquina                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 164                                             ;
-;     Total combinational functions  ; 151                                             ;
+; Total logic elements               ; 154                                             ;
+;     Total combinational functions  ; 146                                             ;
 ;     Dedicated logic registers      ; 56                                              ;
 ; Total registers                    ; 56                                              ;
 ; Total pins                         ; 27                                              ;
@@ -189,16 +189,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 164   ;
+; Estimated Total logic elements              ; 154   ;
 ;                                             ;       ;
-; Total combinational functions               ; 151   ;
+; Total combinational functions               ; 146   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 45    ;
-;     -- 3 input functions                    ; 22    ;
-;     -- <=2 input functions                  ; 84    ;
+;     -- 4 input functions                    ; 50    ;
+;     -- 3 input functions                    ; 23    ;
+;     -- <=2 input functions                  ; 73    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 120   ;
+;     -- normal mode                          ; 115   ;
 ;     -- arithmetic mode                      ; 31    ;
 ;                                             ;       ;
 ; Total registers                             ; 56    ;
@@ -210,7 +210,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Maximum fan-out node                        ; CLOCK ;
 ; Maximum fan-out                             ; 56    ;
 ; Total fan-out                               ; 635   ;
-; Average fan-out                             ; 2.71  ;
+; Average fan-out                             ; 2.77  ;
 +---------------------------------------------+-------+
 
 
@@ -219,14 +219,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Library Name ;
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
-; |Maquina                                            ; 151 (0)           ; 56 (0)       ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |Maquina                                                                        ; work         ;
-;    |Controladora:instancia_controladora|            ; 30 (30)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Controladora:instancia_controladora                                    ; work         ;
-;    |Datapath:instance_datapath|                     ; 121 (0)           ; 48 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath                                             ; work         ;
+; |Maquina                                            ; 146 (0)           ; 56 (0)       ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |Maquina                                                                        ; work         ;
+;    |Controladora:instancia_controladora|            ; 26 (26)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Controladora:instancia_controladora                                    ; work         ;
+;    |Datapath:instance_datapath|                     ; 120 (0)           ; 48 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath                                             ; work         ;
 ;       |Bcd_7seg:instancia_Bcd_7seg|                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath|Bcd_7seg:instancia_Bcd_7seg                 ; work         ;
 ;       |Comparador_Vol_Agua:instancia_Comp_vol_agua| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath|Comparador_Vol_Agua:instancia_Comp_vol_agua ; work         ;
 ;       |RegW:instancia_Reg_Modo|                     ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath|RegW:instancia_Reg_Modo                     ; work         ;
 ;       |RegW:instancia_Reg_Vol_Agua|                 ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua                 ; work         ;
-;       |temporizador:instancia_Temporizador|         ; 113 (113)         ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath|temporizador:instancia_Temporizador         ; work         ;
+;       |temporizador:instancia_Temporizador|         ; 112 (112)         ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Maquina|Datapath:instance_datapath|temporizador:instancia_Temporizador         ; work         ;
 +-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -249,28 +249,16 @@ Encoding Type:  One-Hot
 +-------------------------+--------------------+-------------------------+-------------------------+----------------------+--------------------+--------------------+-----------------------+-------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                                                                       ;
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+------------------------+
-; Latch Name                                                                              ; Latch Enable Signal                                    ; Free of Timing Hazards ;
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+------------------------+
-; Controladora:instancia_controladora|Led_Enchendo                                        ; Controladora:instancia_controladora|WideOr1            ; yes                    ;
-; Controladora:instancia_controladora|Led_Molho                                           ; Controladora:instancia_controladora|WideOr2            ; yes                    ;
-; Controladora:instancia_controladora|Led_Lavar                                           ; Controladora:instancia_controladora|WideOr3            ; yes                    ;
-; Controladora:instancia_controladora|Led_Enxague                                         ; Controladora:instancia_controladora|WideOr4            ; yes                    ;
-; Controladora:instancia_controladora|Led_Centrifuga                                      ; Controladora:instancia_controladora|WideOr5            ; yes                    ;
-; Controladora:instancia_controladora|Led_Finalizado                                      ; Controladora:instancia_controladora|WideOr6            ; yes                    ;
-; Controladora:instancia_controladora|Valvula_Agua                                        ; Controladora:instancia_controladora|WideOr1            ; yes                    ;
-; Controladora:instancia_controladora|Load_Motor                                          ; Controladora:instancia_controladora|WideOr0            ; yes                    ;
-; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[2] ; GND                                                    ; yes                    ;
-; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[1] ; GND                                                    ; yes                    ;
-; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[0] ; GND                                                    ; yes                    ;
-; Controladora:instancia_controladora|Load_temp                                           ; Controladora:instancia_controladora|estado_atual.Load  ; yes                    ;
-; Controladora:instancia_controladora|Reset_Cont                                          ; Controladora:instancia_controladora|estado_atual.Ligar ; yes                    ;
-; Controladora:instancia_controladora|Reset_Vol_Agua                                      ; Controladora:instancia_controladora|estado_atual.Ligar ; yes                    ;
-; Controladora:instancia_controladora|Reset_Modo                                          ; Controladora:instancia_controladora|estado_atual.Ligar ; yes                    ;
-; Number of user-specified and inferred latches = 15                                      ;                                                        ;                        ;
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                    ;
++-----------------------------------------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                                                              ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------------------------------------------+---------------------+------------------------+
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[2] ; GND                 ; yes                    ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[1] ; GND                 ; yes                    ;
+; Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[0] ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 3                                       ;                     ;                        ;
++-----------------------------------------------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -296,7 +284,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 52    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 43    ;
+; Number of registers using Clock Enable       ; 42    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -316,7 +304,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
-; 15:1               ; 35 bits   ; 350 LEs       ; 35 LEs               ; 315 LEs                ; Yes        ; |Maquina|Datapath:instance_datapath|temporizador:instancia_Temporizador|counter_out[2]           ;
+; 15:1               ; 35 bits   ; 350 LEs       ; 35 LEs               ; 315 LEs                ; Yes        ; |Maquina|Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[23]              ;
 ; 17:1               ; 2 bits    ; 22 LEs        ; 8 LEs                ; 14 LEs                 ; Yes        ; |Maquina|Datapath:instance_datapath|temporizador:instancia_Temporizador|state[2]                 ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |Maquina|Datapath:instance_datapath|temporizador:instancia_Temporizador|tempo_limite_enchendo[2] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
@@ -425,7 +413,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jan 24 20:22:41 2025
+    Info: Processing started: Fri Jan 24 21:28:37 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Maquina -c Maquina
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/amand/documents/github/controle-maquina-de-lavar/trabalho final/temporizador/temporizador/temporizador.vhd
@@ -457,34 +445,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: Datapath
 Info (12127): Elaborating entity "Maquina" for the top level hierarchy
 Info (12128): Elaborating entity "Controladora" for hierarchy "Controladora:instancia_controladora"
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_Motor", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Enchendo", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Molho", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Lavar", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Enxague", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Centrifuga", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Led_Finalizado", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Valvula_Agua", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Reset_Vol_Agua", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Reset_Modo", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Reset_Cont", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_Modo", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_Vol_Agua", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Controladora.vhd(62): inferring latch(es) for signal or variable "Load_temp", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "Load_temp" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Load_Vol_Agua" at Controladora.vhd(62)
 Info (10041): Inferred latch for "Load_Modo" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Reset_Cont" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Reset_Modo" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Reset_Vol_Agua" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Valvula_Agua" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Led_Finalizado" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Led_Centrifuga" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Led_Enxague" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Led_Lavar" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Led_Molho" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Led_Enchendo" at Controladora.vhd(62)
-Info (10041): Inferred latch for "Load_Motor" at Controladora.vhd(62)
 Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:instance_datapath"
 Info (12128): Elaborating entity "RegW" for hierarchy "Datapath:instance_datapath|RegW:instancia_Reg_Vol_Agua"
 Info (12128): Elaborating entity "Comparador_Vol_Agua" for hierarchy "Datapath:instance_datapath|Comparador_Vol_Agua:instancia_Comp_vol_agua"
@@ -664,39 +626,19 @@ Info (10041): Inferred latch for "tempo_limite_enchendo[28]" at Temporizador.vhd
 Info (10041): Inferred latch for "tempo_limite_enchendo[29]" at Temporizador.vhd(35)
 Info (10041): Inferred latch for "tempo_limite_enchendo[30]" at Temporizador.vhd(35)
 Info (10041): Inferred latch for "tempo_limite_enchendo[31]" at Temporizador.vhd(35)
-Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "Controladora:instancia_controladora|Valvula_Agua" merged with LATCH primitive "Controladora:instancia_controladora|Led_Enchendo"
-    Info (13026): Duplicate LATCH primitive "Controladora:instancia_controladora|Reset_Vol_Agua" merged with LATCH primitive "Controladora:instancia_controladora|Reset_Cont"
-    Info (13026): Duplicate LATCH primitive "Controladora:instancia_controladora|Reset_Modo" merged with LATCH primitive "Controladora:instancia_controladora|Reset_Cont"
-Warning (13012): Latch Controladora:instancia_controladora|Led_Enchendo has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Enchendo
-Warning (13012): Latch Controladora:instancia_controladora|Led_Molho has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Molho
-Warning (13012): Latch Controladora:instancia_controladora|Led_Lavar has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Lavar
-Warning (13012): Latch Controladora:instancia_controladora|Led_Enxague has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Enxague
-Warning (13012): Latch Controladora:instancia_controladora|Led_Centrifuga has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Centrifuga
-Warning (13012): Latch Controladora:instancia_controladora|Led_Finalizado has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Finalizado
-Warning (13012): Latch Controladora:instancia_controladora|Load_Motor has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Controladora:instancia_controladora|estado_atual.Ligar
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register Datapath:instance_datapath|temporizador:instancia_Temporizador|counter[0] will power up to High
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Porta"
-Info (21057): Implemented 191 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 181 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 164 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 46 warnings
-    Info: Peak virtual memory: 4647 megabytes
-    Info: Processing ended: Fri Jan 24 20:22:42 2025
+    Info (21061): Implemented 154 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4653 megabytes
+    Info: Processing ended: Fri Jan 24 21:28:38 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

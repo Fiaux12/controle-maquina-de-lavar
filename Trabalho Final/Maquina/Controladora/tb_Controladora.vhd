@@ -137,8 +137,21 @@ begin
         wait for 10 ns;
         Timeout <= '0';
         wait for 10 ns;
+		  
+		  
+		  Porta <= '1';
 
-        -- Simulate Timeout during Molho
+        -- Simulate Timeout during Pause 
+        Timeout <= '1';
+        wait for 10 ns;
+        Timeout <= '0';
+        wait for 10 ns;
+		  
+		          
+		  Porta <= '0';
+		  wait for 10 ns;
+		  
+		   -- Simulate Timeout during Molho
         Timeout <= '1';
         wait for 10 ns;
         Timeout <= '0';
